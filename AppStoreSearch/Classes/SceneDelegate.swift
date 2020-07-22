@@ -5,11 +5,16 @@
 //  Created by HS Lee on 2020/07/22.
 //  Copyright © 2020 HS Lee. All rights reserved.
 //
-
 import UIKit
+import RxSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // MARK: - * Private --------------------
+    private var appCoordinator: AppCoordinator!
+    private let disposeBag = DisposeBag()
+    
+    // MARK: - * Properties --------------------
     var window: UIWindow?
 
 

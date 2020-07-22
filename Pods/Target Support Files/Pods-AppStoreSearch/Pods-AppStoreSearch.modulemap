@@ -1,4 +1,4 @@
-framework module Pods_AppStoreSearch {
+module Pods_AppStoreSearch {
   umbrella header "Pods-AppStoreSearch-umbrella.h"
 
   export *

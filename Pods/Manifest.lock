@@ -1,16 +1,47 @@
 PODS:
   - FLEX (4.1.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxGesture (3.0.2):
+    - RxCocoa (~> 5.1)
+    - RxSwift (~> 5.1)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxSwiftExt (5.1.1):
+    - RxSwiftExt/Core (= 5.1.1)
+    - RxSwiftExt/RxCocoa (= 5.1.1)
+  - RxSwiftExt/Core (5.1.1):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.1.1):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
 
 DEPENDENCIES:
   - FLEX
+  - RxCocoa (~> 5.1.1)
+  - RxGesture (~> 3.0.2)
+  - RxSwift (~> 5.1.1)
+  - RxSwiftExt (~> 5.1.1)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - FLEX
+    - RxCocoa
+    - RxGesture
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
 
 SPEC CHECKSUMS:
   FLEX: 81096107977a09836eb440173010ceeef01105d6
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxGesture: d6bd7447ca3a596c7a9702a6a2b6a2bb5d8bae54
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxSwiftExt: 0d2fd77523a169d1459be34961b996a194bdef0e
 
-PODFILE CHECKSUM: 65d3976571b2fecfe23d5db67a91c20392329ca4
+PODFILE CHECKSUM: f94a7e7d7d2855ca7ac0bda8fc619d02bdedb9a9
 
 COCOAPODS: 1.9.2

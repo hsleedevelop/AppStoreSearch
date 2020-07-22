@@ -1,26 +1,26 @@
 install! 'cocoapods', :deterministic_uuids => false
 source 'https://github.com/CocoaPods/Specs.git'
 
-# Uncomment this line to define a global platform for your project
 platform :ios, '13.0'
 
 # ignore all warnings from all pods
 inhibit_all_warnings!
 
-# 모든 target 에서 사용할 공용 dependency 선언
+# 모든 target 에서 사용할 공용 pods
 def shared_pods
-    use_frameworks!
-    # RX Core
-    #pod 'RxSwift', '~> 5.1.1'
-    #pod 'RxCocoa', '~> 5.1.1'
-    #pod 'Cosmos'
+  # RX
+  pod 'RxSwift', '~> 5.1.1'
+  pod 'RxCocoa', '~> 5.1.1'
+  pod 'RxSwiftExt', '~> 5.1.1'
+  pod 'RxGesture', '~> 3.0.2'
 end
 
+# 디버그용 pods
 def debug_pods
     pod 'FLEX',   :configurations => ['Debug']
 end
 
-# 각 target 별 dependency 선언
+# 각 target 별 pods 선언
 target 'AppStoreSearch' do
     shared_pods
     debug_pods
