@@ -10,36 +10,38 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
-enum MatchesCoordinationResult {
-    case matches([String])
-    case cancel
-}
 
-final class MatchesCoordinator: BaseCoordinator<MatchesCoordinationResult> {
-
-    private let viewController: UIViewController
-    private let termObs: Observable<String>
-
-    init(termObs: Observable<String>, viewController: UIViewController) {
-        self.termObs = termObs
-        self.viewController = viewController
+final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.MatchesResult> {
+    enum MatchesResult {
+        case flow(Flow)
+        case cancel
+    }
+    
+    enum Flow {
+        case main
+        case search(String)
     }
 
-    override func start() -> Observable<CoordinationResult> {
-        guard let viewController = UIStoryboard(name: "TermScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "TermViewController") as? TermViewController else {
+    // MARK: - * Properties --------------------
+    private let termObs: Observable<String>
+
+    lazy var viewController: MatchesViewController = {
+        guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
             fatalError("TermViewController can't load")
         }
+        viewController.viewModel = .init(termProvider: TermProvider(), termObs: self.termObs)
+        return viewController
+    }()
 
-        let viewModel = TermViewModel(termObs)
-        viewController.viewModel = viewModel
+    // MARK: - * Initialize --------------------
+    init(termObs: Observable<String>) {
+        self.termObs = termObs
+    }
 
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.modalTransitionStyle = .crossDissolve
-        navigationController.modalPresentationStyle = .fullScreen
-        rootViewController.present(navigationController, animated: true)
-
-        let cancel = viewModel.cancelRelay.map { _ in CoordinationResult.cancel }
-        let photo = viewModel.indexRelay.map { CoordinationResult.photo($0) }
-        return Observable.merge(cancel, photo)
+    // MARK: - * Cooridate --------------------
+    override func start() -> Observable<CoordinationResult> {
+        let flow = viewController.viewModel.flowRelay.map { CoordinationResult.flow($0) }
+        let cancel = viewController.viewModel.cancelRelay.map { _ in CoordinationResult.cancel }
+        return Observable.merge(flow, cancel)
     }
 }

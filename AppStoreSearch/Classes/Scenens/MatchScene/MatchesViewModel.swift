@@ -1,5 +1,5 @@
 //
-//  TermViewModel.swift
+//  MatchesViewModel.swift
 //  AppStoreSearch
 //
 //  Created by HS Lee on 2020/07/22.
@@ -10,40 +10,54 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 
-final class TermViewModel: ViewModelType {
+final class MatchesViewModel: ViewModelType {
+    // MARK: - * Dependencies --------------------
+    private let termProvider: TermProviding
+    private var termObs: Observable<String>
+
     // MARK: - * Properties --------------------
     private var disposeBag = DisposeBag()
-    private var termObs: Observable<String>
     
-    let matchRelay: BehaviorRelay<[String]>
+    let matchesRelay: PublishRelay<String>
     let cancelRelay: PublishRelay<Void>
     
-    init(termObs: Observable<String>) {
+    // MARK: - * Properties  --------------------
+    let flowRelay = PublishRelay<MatchesCoordinator.Flow>()
+    
+    init(termProvider: TermProviding, termObs: Observable<String>) {
+        self.termProvider = termProvider
         self.termObs = termObs
 
-        self.matchRelay = .init(value: [])
+        self.matchesRelay = .init()
         self.cancelRelay = .init()
     }
     
     func transform(input: Input) -> Output {
-
-//        let selectedPhoto = indexRelay.withLatestFrom(self.photosObs) { ($0, $1) }
-//            .map { $0.1[$0.0] }
-        let matches = input.matches
-        return Output(list: matches.asDriver { _ in Driver.empty() })
+        input.search
+            .map { MatchesCoordinator.Flow.search($0) }
+            .bind(to: flowRelay)
+            .disposed(by: disposeBag)
         
-        return Output(matches: selectedPhoto.asDriverOnErrorJustComplete(),
-                      term: photosObs.asDriverOnErrorJustComplete())
+        //서치 메인, 키워드 입력 시 매핑
+        let matches = termObs
+            .flatMap ({ [weak self] term -> Observable<[String]> in
+                guard let self = self else { return Observable.empty() }
+                return self.termProvider.fetch()
+                    .map ({ terms in
+                        terms.filter { $0.contains(term) || term.isEmpty }
+                    })
+            })
+        
+        return Output(matches: matches.asDriver(onErrorJustReturn: []))
     }
 }
 
-extension TermViewModel {
+extension MatchesViewModel {
     struct Input {
-        
+        var search: Observable<String>
     }
     
     struct Output {
         var matches: Driver<[String]>
-        var term: Driver<String>
     }
 }
