@@ -1,4 +1,5 @@
 PODS:
+  - Cosmos (22.1.0)
   - Differentiator (4.0.1)
   - FLEX (4.1.1)
   - RxCocoa (5.1.1):
@@ -24,6 +25,7 @@ PODS:
     - RxSwiftExt/Core
 
 DEPENDENCIES:
+  - Cosmos (~> 22.1.0)
   - FLEX
   - RxCocoa (~> 5.1.1)
   - RxDataSources (~> 4.0.1)
@@ -33,6 +35,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Cosmos
     - Differentiator
     - FLEX
     - RxCocoa
@@ -43,6 +46,7 @@ SPEC REPOS:
     - RxSwiftExt
 
 SPEC CHECKSUMS:
+  Cosmos: 2795b36ad4bbea1af3050d6d65576ed63875f86a
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   FLEX: 81096107977a09836eb440173010ceeef01105d6
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
@@ -52,6 +56,6 @@ SPEC CHECKSUMS:
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxSwiftExt: 0d2fd77523a169d1459be34961b996a194bdef0e
 
-PODFILE CHECKSUM: 4d6de4dee5aa163cab51d7ca462967ffb4842f24
+PODFILE CHECKSUM: c5d2e92070366d3b0e60ed54c0c05138b7ff8c7b
 
-COCOAPODS: 1.9.2
+COCOAPODS: 1.8.4

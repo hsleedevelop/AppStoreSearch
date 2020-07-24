@@ -15,7 +15,7 @@ final class Validator {
         var pattern: String {
             switch self {
             case .term:
-                return "^[가-힣ㄱ-ㅎㅏ-ㅣ\\s]$"
+                return "^[가-힣ㄱ-ㅎㅏ-ㅣ0-9\\s]$"
             }
         }
     }
@@ -30,7 +30,7 @@ final class Validator {
             let result = regex.firstMatch(in: target, options: [], range: .init(location: 0, length: target.utf16.count))
             return result != nil
         } catch {
-            print(error.localizedDescription)
+            logW(error.localizedDescription)
             return false
         }
     }

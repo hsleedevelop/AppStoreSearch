@@ -14,6 +14,7 @@ def shared_pods
   pod 'RxSwiftExt', '~> 5.1.1'
   pod 'RxGesture', '~> 3.0.2'
   pod 'RxDataSources', '~> 4.0.1'
+  pod 'Cosmos', '~> 22.1.0'
 end
 
 # 디버그용 pods
