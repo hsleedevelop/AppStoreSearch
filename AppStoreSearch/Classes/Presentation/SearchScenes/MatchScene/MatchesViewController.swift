@@ -24,7 +24,7 @@ class MatchesViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     private let termRelay = PublishRelay<String?>()
-    private let searchRelay = PublishRelay<String?>()
+    private let searchRelay = PublishRelay<String>()
     private let viewReloadRelay = PublishRelay<Void>()
     
     private var dataSource: TermDataSource!
@@ -68,7 +68,7 @@ class MatchesViewController: UIViewController {
     }
     
     private func setupDataSource() {
-        let configureCell: RxTableViewSectionedAnimatedDataSource<TermSectionModel>.ConfigureCell = { (dataSource, tableView, indexPath, item) in
+        let configureCell: TermDataSource.ConfigureCell = { (dataSource, tableView, indexPath, item) in
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier") else {
                 return .init()
             }
@@ -116,9 +116,7 @@ class MatchesViewController: UIViewController {
     }
 
     deinit {
-        #if DEBUG
-        print("\(NSStringFromClass(type(of: self))) deinit")
-        #endif
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }
 

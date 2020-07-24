@@ -10,7 +10,6 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
-
 final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.MatchesResult> {
     // MARK: - * Type Defines --------------------
     enum MatchesResult {
@@ -30,7 +29,9 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.MatchesResult
         guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
             fatalError("TermViewController can't load")
         }
-        viewController.viewModel = .init(termProvider: TermProvider(), termObs: self.termObs)
+        
+        let viewModel = MatchesViewModel(termProvider: TermProvider(), termObs: self.termObs)
+        viewController.viewModel = viewModel
         return viewController
     }()
 
