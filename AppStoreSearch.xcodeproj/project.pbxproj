@@ -226,7 +226,7 @@
 				3A4D90C624C84D9D00D5C11F /* Services */,
 				3A4D90A224C81CAF00D5C11F /* ThirdParty */,
 				3A4D90A924C81D0300D5C11F /* APIEndPoint */,
-				3A4D90AA24C81D4A00D5C11F /* Scenens */,
+				3A4D90AA24C81D4A00D5C11F /* Scenes */,
 				3A4D90C924C8533A00D5C11F /* Utils */,
 				3A4D906C24C7CFC000D5C11F /* AppDelegate.swift */,
 				3A4D90A024C81B1000D5C11F /* AppCoordinator.swift */,
@@ -279,7 +279,7 @@
 			path = APIEndPoint;
 			sourceTree = "<group>";
 		};
-		3A4D90AA24C81D4A00D5C11F /* Scenens */ = {
+		3A4D90AA24C81D4A00D5C11F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				3A4D90AB24C81D5A00D5C11F /* SearchScene */,
@@ -287,7 +287,7 @@
 				3A4D90B624C8205000D5C11F /* SearchResultScene */,
 				3A12DD9424C9739D004728B9 /* AppListScene */,
 			);
-			path = Scenens;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		3A4D90AB24C81D5A00D5C11F /* SearchScene */ = {
@@ -837,7 +837,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRUHN5QC56;
 				INFOPLIST_FILE = AppStoreSearchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -860,7 +860,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRUHN5QC56;
 				INFOPLIST_FILE = AppStoreSearchTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
