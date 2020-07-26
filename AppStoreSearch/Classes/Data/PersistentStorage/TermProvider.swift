@@ -9,6 +9,12 @@
 import Foundation
 import RxSwift
 
+protocol TermProviding: class {
+    @discardableResult
+    func store(_ term: String) -> Observable<Bool>
+    func fetch() -> Observable<[String]>
+}
+
 final class TermProvider: TermProviding {
     static let termsKey = "SEARCH_TERMS"
     static let maxTermsCount = 10

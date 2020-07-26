@@ -11,12 +11,6 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 
-protocol TermProviding: class {
-    @discardableResult
-    func store(_ term: String) -> Observable<Bool>
-    func fetch() -> Observable<[String]>
-}
-
 final class SearchViewModel: ViewModelType {
     
     // MARK: - * Properties  --------------------

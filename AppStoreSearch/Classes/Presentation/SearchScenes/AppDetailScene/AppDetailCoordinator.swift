@@ -10,17 +10,19 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
-final class AppDetailCoordinator: BaseCoordinator<Void> {
+final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
         case showScreenshots([String], Int)
+        case popup
     }
     
     // MARK: - * Properties --------------------
     private let app: SearchResultApp
     private let navigationController: UINavigationController
+    private var screenshotsCoordinatorDisposable: Disposable?
     
-    lazy var viewController: AppDetailViewController = {
+    lazy var viewController: AppDetailViewController = { [unowned self] in
         guard let viewController = UIStoryboard(name: "AppDetailScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "AppDetailViewController") as? AppDetailViewController else {
             fatalError("AppDetailViewController can't load")
         }
@@ -37,14 +39,14 @@ final class AppDetailCoordinator: BaseCoordinator<Void> {
     }
     
     // MARK: - * Cooridate --------------------
-    override func start() -> Observable<Void> {
+    override func start() -> Observable<CoordinationResult> {
         navigationController.pushViewController(viewController, animated: true)
-        bindRx(viewModel: viewController.viewModel)
+        bindFlow(viewModel: viewController.viewModel)
         
-        return Observable.never()
+        return viewController.viewModel.flowRelay.asObservable()
     }
     
-    private func bindRx(viewModel: AppDetailViewModel) {
+    private func bindFlow(viewModel: AppDetailViewModel) {
         viewModel.flowRelay
             .subscribe(onNext: { [weak self] flow in
                 switch flow {
@@ -59,19 +61,18 @@ final class AppDetailCoordinator: BaseCoordinator<Void> {
     
     private func showScreenshotsCarousel(screenshotURLs: [String], index: Int) {
         let coordinator = ScreenshotsCoordinator(rootViewController: viewController, screenshotURLs: screenshotURLs, index: index)
-        coordinate(to: coordinator)
-            .subscribe(onNext: { result in
+        screenshotsCoordinatorDisposable = coordinate(to: coordinator)
+            .subscribe(onNext: { [unowned self] result in
                 switch result {
                 case .dismiss:
                     self.viewController.dismiss(animated: true, completion: nil)
-                case .currentIndex(_):
-                    break
                 }
+                self.screenshotsCoordinatorDisposable?.dispose()
             })
-            .disposed(by: disposeBag)
     }
     
     deinit {
+        screenshotsCoordinatorDisposable?.dispose()
         logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

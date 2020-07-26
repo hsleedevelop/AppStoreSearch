@@ -9,7 +9,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import FLEX
 
 final class AppConfiguration {
     static let shared = AppConfiguration()

@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>018881DE-4C6A-4C2D-A387-D12054A7E012</key>
+		<key>01258A43-3E12-4B76-9C3E-FB6B6D4D5346</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>018881DE-4C6A-4C2D-A387-D12054A7E012.xcactivitylog</string>
+			<string>01258A43-3E12-4B76-9C3E-FB6B6D4D5346.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617430484.03291702</real>
+			<real>617464641.012977</real>
 			<key>timeStoppedRecording</key>
-			<real>617430501.96837401</real>
+			<real>617464665.64664495</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>018881DE-4C6A-4C2D-A387-D12054A7E012</string>
+			<string>01258A43-3E12-4B76-9C3E-FB6B6D4D5346</string>
 		</dict>
-		<key>03D5D674-C724-4FCE-99BD-9087DA87B8C4</key>
+		<key>0210BEFF-0E3E-4729-96AE-22FEE58FF7FE</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>03D5D674-C724-4FCE-99BD-9087DA87B8C4.xcactivitylog</string>
+			<string>0210BEFF-0E3E-4729-96AE-22FEE58FF7FE.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617432346.65856397</real>
+			<real>617454665.43801105</real>
 			<key>timeStoppedRecording</key>
-			<real>617432482.72174501</real>
+			<real>617454812.49485195</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>03D5D674-C724-4FCE-99BD-9087DA87B8C4</string>
+			<string>0210BEFF-0E3E-4729-96AE-22FEE58FF7FE</string>
 		</dict>
-		<key>0596D8ED-1717-4928-9B7D-7F61F49F1C32</key>
+		<key>05B0D604-AFB8-49D8-BF7B-F1252BCA1679</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -83,35 +83,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>0596D8ED-1717-4928-9B7D-7F61F49F1C32.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617434793.61402798</real>
-			<key>timeStoppedRecording</key>
-			<real>617434800.069731</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>0596D8ED-1717-4928-9B7D-7F61F49F1C32</string>
-		</dict>
-		<key>0820824E-D92B-46A2-BB5A-9B85DD7CC0F3</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>0820824E-D92B-46A2-BB5A-9B85DD7CC0F3.xcactivitylog</string>
+			<string>05B0D604-AFB8-49D8-BF7B-F1252BCA1679.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -128,15 +100,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617430336.28919005</real>
+			<real>617457310.04621506</real>
 			<key>timeStoppedRecording</key>
-			<real>617430433.53940403</real>
+			<real>617457494.99093997</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>0820824E-D92B-46A2-BB5A-9B85DD7CC0F3</string>
+			<string>05B0D604-AFB8-49D8-BF7B-F1252BCA1679</string>
 		</dict>
-		<key>12FFCDDD-3F99-427A-A4FB-BB1D7064788C</key>
+		<key>07E4402D-CD4D-4720-91A7-916C3CB23160</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -145,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>12FFCDDD-3F99-427A-A4FB-BB1D7064788C.xcactivitylog</string>
+			<string>07E4402D-CD4D-4720-91A7-916C3CB23160.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -162,15 +134,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434283.63805497</real>
+			<real>617456522.60417497</real>
 			<key>timeStoppedRecording</key>
-			<real>617434302.59972703</real>
+			<real>617456941.13110197</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>12FFCDDD-3F99-427A-A4FB-BB1D7064788C</string>
+			<string>07E4402D-CD4D-4720-91A7-916C3CB23160</string>
 		</dict>
-		<key>13895008-7A2C-47D8-83B5-D8B286F5AEBB</key>
+		<key>0EB86BDB-0C83-4888-9952-EF5E219A6EAA</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -179,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>13895008-7A2C-47D8-83B5-D8B286F5AEBB.xcactivitylog</string>
+			<string>0EB86BDB-0C83-4888-9952-EF5E219A6EAA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -196,15 +168,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617431927.65419102</real>
+			<real>617464699.35811901</real>
 			<key>timeStoppedRecording</key>
-			<real>617432315.65039098</real>
+			<real>617464974.35588598</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>13895008-7A2C-47D8-83B5-D8B286F5AEBB</string>
+			<string>0EB86BDB-0C83-4888-9952-EF5E219A6EAA</string>
 		</dict>
-		<key>144B9813-04E6-4398-9B5A-E43470505E85</key>
+		<key>0FE79A40-31A7-412C-97D0-AF924926B2F6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -213,7 +185,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>144B9813-04E6-4398-9B5A-E43470505E85.xcactivitylog</string>
+			<string>0FE79A40-31A7-412C-97D0-AF924926B2F6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -230,15 +202,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617429981.79512405</real>
+			<real>617455284.89335001</real>
 			<key>timeStoppedRecording</key>
-			<real>617430019.79182196</real>
+			<real>617455305.43233204</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>144B9813-04E6-4398-9B5A-E43470505E85</string>
+			<string>0FE79A40-31A7-412C-97D0-AF924926B2F6</string>
 		</dict>
-		<key>15A59937-0367-4CF9-BCD3-1AEA919E89FB</key>
+		<key>11558FAC-42AC-46A8-9737-ADB8AF774EC9</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -247,63 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>15A59937-0367-4CF9-BCD3-1AEA919E89FB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439336.21270394</real>
-			<key>timeStoppedRecording</key>
-			<real>617439347.65551198</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>15A59937-0367-4CF9-BCD3-1AEA919E89FB</string>
-		</dict>
-		<key>17DD8C05-6C09-4E3A-B0F4-EE2A6A620DF8</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>17DD8C05-6C09-4E3A-B0F4-EE2A6A620DF8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439362.64359605</real>
-			<key>timeStoppedRecording</key>
-			<real>617439517.78601599</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>17DD8C05-6C09-4E3A-B0F4-EE2A6A620DF8</string>
-		</dict>
-		<key>1843FF36-1F5A-4102-8ED4-624530BE878E</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>1843FF36-1F5A-4102-8ED4-624530BE878E.xcactivitylog</string>
+			<string>11558FAC-42AC-46A8-9737-ADB8AF774EC9.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -320,15 +236,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617438641.502316</real>
+			<real>617455695.05646801</real>
 			<key>timeStoppedRecording</key>
-			<real>617438744.97608101</real>
+			<real>617455802.874102</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>1843FF36-1F5A-4102-8ED4-624530BE878E</string>
+			<string>11558FAC-42AC-46A8-9737-ADB8AF774EC9</string>
 		</dict>
-		<key>1FF13364-0663-440E-B919-CE93B929A058</key>
+		<key>13BC5D5D-8D90-4FB1-A815-CCFE462FE91F</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -337,7 +253,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>1FF13364-0663-440E-B919-CE93B929A058.xcactivitylog</string>
+			<string>13BC5D5D-8D90-4FB1-A815-CCFE462FE91F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -354,15 +270,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617432720.624964</real>
+			<real>617462521.94211495</real>
 			<key>timeStoppedRecording</key>
-			<real>617432773.31950295</real>
+			<real>617462723.97718596</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>1FF13364-0663-440E-B919-CE93B929A058</string>
+			<string>13BC5D5D-8D90-4FB1-A815-CCFE462FE91F</string>
 		</dict>
-		<key>22794380-5AA6-49BE-9C19-37D6142CD4F6</key>
+		<key>158929EF-CD23-465D-A813-D6D466CD3651</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -371,7 +287,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>22794380-5AA6-49BE-9C19-37D6142CD4F6.xcactivitylog</string>
+			<string>158929EF-CD23-465D-A813-D6D466CD3651.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -388,15 +304,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617432773.42710805</real>
+			<real>617460823.46619999</real>
 			<key>timeStoppedRecording</key>
-			<real>617432871.34588599</real>
+			<real>617460857.30349898</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>22794380-5AA6-49BE-9C19-37D6142CD4F6</string>
+			<string>158929EF-CD23-465D-A813-D6D466CD3651</string>
 		</dict>
-		<key>22FAFA25-B8FE-4276-90B6-70C7A29EF3FA</key>
+		<key>18F92558-A321-424D-AA4F-1F4196CA20B6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -405,7 +321,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>22FAFA25-B8FE-4276-90B6-70C7A29EF3FA.xcactivitylog</string>
+			<string>18F92558-A321-424D-AA4F-1F4196CA20B6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -422,15 +338,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434682.92170799</real>
+			<real>617455333.66414905</real>
 			<key>timeStoppedRecording</key>
-			<real>617434727.75068498</real>
+			<real>617455693.03283799</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>22FAFA25-B8FE-4276-90B6-70C7A29EF3FA</string>
+			<string>18F92558-A321-424D-AA4F-1F4196CA20B6</string>
 		</dict>
-		<key>25AE07B1-951E-44B6-8910-E1241F68ECAA</key>
+		<key>1B03C471-A5FC-4A14-AAB1-804545F18E73</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -439,91 +355,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>25AE07B1-951E-44B6-8910-E1241F68ECAA.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439520.29388201</real>
-			<key>timeStoppedRecording</key>
-			<real>617439721.262591</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>25AE07B1-951E-44B6-8910-E1241F68ECAA</string>
-		</dict>
-		<key>25BB42E6-7AF5-476A-A839-6B8DB8B3DC79</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>25BB42E6-7AF5-476A-A839-6B8DB8B3DC79.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435120.83676898</real>
-			<key>timeStoppedRecording</key>
-			<real>617435127.67889595</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>25BB42E6-7AF5-476A-A839-6B8DB8B3DC79</string>
-		</dict>
-		<key>2929D690-684C-40AA-B38B-6C5F832501FC</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>2929D690-684C-40AA-B38B-6C5F832501FC.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439115.64285195</real>
-			<key>timeStoppedRecording</key>
-			<real>617439127.89851296</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>2929D690-684C-40AA-B38B-6C5F832501FC</string>
-		</dict>
-		<key>2D26BACF-EE87-49FC-93F1-6D1F790BC59C</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>2D26BACF-EE87-49FC-93F1-6D1F790BC59C.xcactivitylog</string>
+			<string>1B03C471-A5FC-4A14-AAB1-804545F18E73.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -540,15 +372,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617442359.91716397</real>
+			<real>617460047.78044403</real>
 			<key>timeStoppedRecording</key>
-			<real>617442382.73674405</real>
+			<real>617460125.62281501</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>2D26BACF-EE87-49FC-93F1-6D1F790BC59C</string>
+			<string>1B03C471-A5FC-4A14-AAB1-804545F18E73</string>
 		</dict>
-		<key>2D51E425-C52B-42FE-B6B7-A1AAE3396ED8</key>
+		<key>1B491144-CA74-48E4-8C8D-D31EF0F93AA6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -557,7 +389,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2D51E425-C52B-42FE-B6B7-A1AAE3396ED8.xcactivitylog</string>
+			<string>1B491144-CA74-48E4-8C8D-D31EF0F93AA6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -574,15 +406,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617428972.86322796</real>
+			<real>617447998.82937896</real>
 			<key>timeStoppedRecording</key>
-			<real>617429004.71693897</real>
+			<real>617448000.26586604</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>2D51E425-C52B-42FE-B6B7-A1AAE3396ED8</string>
+			<string>1B491144-CA74-48E4-8C8D-D31EF0F93AA6</string>
 		</dict>
-		<key>2FE03AA5-46F3-4599-B03F-03313916E503</key>
+		<key>1FBD310E-4028-4AEC-8836-2C311FB26DFD</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -591,35 +423,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>2FE03AA5-46F3-4599-B03F-03313916E503.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617443018.46974397</real>
-			<key>timeStoppedRecording</key>
-			<real>617443030.63977003</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>2FE03AA5-46F3-4599-B03F-03313916E503</string>
-		</dict>
-		<key>30FB38ED-EA89-4098-967A-0D9D5509F862</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>30FB38ED-EA89-4098-967A-0D9D5509F862.xcactivitylog</string>
+			<string>1FBD310E-4028-4AEC-8836-2C311FB26DFD.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -636,15 +440,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617413084.01814198</real>
+			<real>617452288.57415104</real>
 			<key>timeStoppedRecording</key>
-			<real>617422591.01139402</real>
+			<real>617452424.66153395</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>30FB38ED-EA89-4098-967A-0D9D5509F862</string>
+			<string>1FBD310E-4028-4AEC-8836-2C311FB26DFD</string>
 		</dict>
-		<key>33423C02-CD53-4C96-9615-AD60D6504F59</key>
+		<key>29F5060D-33D0-4637-972B-4179FC2A83FA</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -653,7 +457,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>33423C02-CD53-4C96-9615-AD60D6504F59.xcactivitylog</string>
+			<string>29F5060D-33D0-4637-972B-4179FC2A83FA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -670,15 +474,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617412917.31642497</real>
+			<real>617459687.43836606</real>
 			<key>timeStoppedRecording</key>
-			<real>617412993.38310003</real>
+			<real>617459775.27825797</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>33423C02-CD53-4C96-9615-AD60D6504F59</string>
+			<string>29F5060D-33D0-4637-972B-4179FC2A83FA</string>
 		</dict>
-		<key>3977FEF0-BB56-45F1-81EF-0AE28A7B8CCD</key>
+		<key>384BCD1C-56AC-477A-91B2-CC38BD1A1286</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -687,7 +491,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>3977FEF0-BB56-45F1-81EF-0AE28A7B8CCD.xcactivitylog</string>
+			<string>384BCD1C-56AC-477A-91B2-CC38BD1A1286.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -704,15 +508,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617431822.63077796</real>
+			<real>617459917.17193496</real>
 			<key>timeStoppedRecording</key>
-			<real>617431926.22494304</real>
+			<real>617460046.11166096</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>3977FEF0-BB56-45F1-81EF-0AE28A7B8CCD</string>
+			<string>384BCD1C-56AC-477A-91B2-CC38BD1A1286</string>
 		</dict>
-		<key>3B62AFAD-6820-4F20-B2C2-E629AB8BF8FB</key>
+		<key>3956EDC3-DD37-4F7A-8CF2-C1D65903F951</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -721,63 +525,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>3B62AFAD-6820-4F20-B2C2-E629AB8BF8FB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617438861.79886496</real>
-			<key>timeStoppedRecording</key>
-			<real>617438873.716241</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>3B62AFAD-6820-4F20-B2C2-E629AB8BF8FB</string>
-		</dict>
-		<key>3E0887A3-7DC4-45A0-AE08-B06F53EE8A6C</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>3E0887A3-7DC4-45A0-AE08-B06F53EE8A6C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617434632.08167195</real>
-			<key>timeStoppedRecording</key>
-			<real>617434639.37264299</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>3E0887A3-7DC4-45A0-AE08-B06F53EE8A6C</string>
-		</dict>
-		<key>3EFA1AE5-8255-4980-A0CD-DEF0CD2B4C3C</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>3EFA1AE5-8255-4980-A0CD-DEF0CD2B4C3C.xcactivitylog</string>
+			<string>3956EDC3-DD37-4F7A-8CF2-C1D65903F951.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -794,15 +542,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617431153.60829496</real>
+			<real>617459784.96683204</real>
 			<key>timeStoppedRecording</key>
-			<real>617431195.12752402</real>
+			<real>617459915.76143897</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>3EFA1AE5-8255-4980-A0CD-DEF0CD2B4C3C</string>
+			<string>3956EDC3-DD37-4F7A-8CF2-C1D65903F951</string>
 		</dict>
-		<key>454F47A8-9F95-4F14-A747-3094741D73F6</key>
+		<key>3EF0447C-8244-4D88-9EB7-1C6A431B4AC6</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -811,91 +559,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>454F47A8-9F95-4F14-A747-3094741D73F6.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617438906.48668396</real>
-			<key>timeStoppedRecording</key>
-			<real>617438918.27974904</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>454F47A8-9F95-4F14-A747-3094741D73F6</string>
-		</dict>
-		<key>570BC95C-CB84-43CC-A55F-411A8C5C46D2</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>570BC95C-CB84-43CC-A55F-411A8C5C46D2.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617441415.83615398</real>
-			<key>timeStoppedRecording</key>
-			<real>617441958.78302503</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>570BC95C-CB84-43CC-A55F-411A8C5C46D2</string>
-		</dict>
-		<key>5B397E60-A3D2-4083-928D-C2BFEFAB1580</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>5B397E60-A3D2-4083-928D-C2BFEFAB1580.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435778.33487296</real>
-			<key>timeStoppedRecording</key>
-			<real>617435798.28839302</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>5B397E60-A3D2-4083-928D-C2BFEFAB1580</string>
-		</dict>
-		<key>65D4800C-B7E9-4778-9E27-8827AA8C5896</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>65D4800C-B7E9-4778-9E27-8827AA8C5896.xcactivitylog</string>
+			<string>3EF0447C-8244-4D88-9EB7-1C6A431B4AC6.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -912,15 +576,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434257.56782603</real>
+			<real>617463880.19287705</real>
 			<key>timeStoppedRecording</key>
-			<real>617434261.62605095</real>
+			<real>617464018.28704798</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>65D4800C-B7E9-4778-9E27-8827AA8C5896</string>
+			<string>3EF0447C-8244-4D88-9EB7-1C6A431B4AC6</string>
 		</dict>
-		<key>687C6CD4-A0D5-426D-8D64-7CB0E7123989</key>
+		<key>3F50ED74-42EA-47D2-88DA-70DC4F4A6AE3</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -929,7 +593,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>687C6CD4-A0D5-426D-8D64-7CB0E7123989.xcactivitylog</string>
+			<string>3F50ED74-42EA-47D2-88DA-70DC4F4A6AE3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -946,15 +610,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434195.078951</real>
+			<real>617463197.42662704</real>
 			<key>timeStoppedRecording</key>
-			<real>617434238.86174905</real>
+			<real>617463569.27539301</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>687C6CD4-A0D5-426D-8D64-7CB0E7123989</string>
+			<string>3F50ED74-42EA-47D2-88DA-70DC4F4A6AE3</string>
 		</dict>
-		<key>68F976A5-3C67-4B88-B40D-2DC0D39464FD</key>
+		<key>41E67994-6144-4468-904F-E838EE818272</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -963,35 +627,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>68F976A5-3C67-4B88-B40D-2DC0D39464FD.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439725.75001597</real>
-			<key>timeStoppedRecording</key>
-			<real>617439853.514364</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>68F976A5-3C67-4B88-B40D-2DC0D39464FD</string>
-		</dict>
-		<key>6AA930B6-8B3E-4BA0-9B5C-8F7600951E1E</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>6AA930B6-8B3E-4BA0-9B5C-8F7600951E1E.xcactivitylog</string>
+			<string>41E67994-6144-4468-904F-E838EE818272.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1008,15 +644,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617430503.17242205</real>
+			<real>617456270.13724005</real>
 			<key>timeStoppedRecording</key>
-			<real>617430611.05213594</real>
+			<real>617456521.07234001</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>6AA930B6-8B3E-4BA0-9B5C-8F7600951E1E</string>
+			<string>41E67994-6144-4468-904F-E838EE818272</string>
 		</dict>
-		<key>7248287A-912B-4261-B232-8E50A8DCA1A6</key>
+		<key>45F59D59-279B-4894-9974-5852505992CC</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1025,63 +661,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>7248287A-912B-4261-B232-8E50A8DCA1A6.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439153.02670205</real>
-			<key>timeStoppedRecording</key>
-			<real>617439164.65362799</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>7248287A-912B-4261-B232-8E50A8DCA1A6</string>
-		</dict>
-		<key>734B7513-21CB-4116-BCB1-C627DE2F0D40</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>734B7513-21CB-4116-BCB1-C627DE2F0D40.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617441961.10486305</real>
-			<key>timeStoppedRecording</key>
-			<real>617442162.21426904</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>734B7513-21CB-4116-BCB1-C627DE2F0D40</string>
-		</dict>
-		<key>749121A5-0B0D-491D-8C1E-CBE879B444FD</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>749121A5-0B0D-491D-8C1E-CBE879B444FD.xcactivitylog</string>
+			<string>45F59D59-279B-4894-9974-5852505992CC.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1098,15 +678,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617443051.40380096</real>
+			<real>617456942.49881804</real>
 			<key>timeStoppedRecording</key>
-			<real>617443053.44441605</real>
+			<real>617457116.47494102</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>749121A5-0B0D-491D-8C1E-CBE879B444FD</string>
+			<string>45F59D59-279B-4894-9974-5852505992CC</string>
 		</dict>
-		<key>779BA5BC-BC21-4249-849B-199511A7AC8A</key>
+		<key>46E4E43D-A0E1-4A09-B620-5D0EF8E953E2</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1115,7 +695,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>779BA5BC-BC21-4249-849B-199511A7AC8A.xcactivitylog</string>
+			<string>46E4E43D-A0E1-4A09-B620-5D0EF8E953E2.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1132,15 +712,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434854.67277598</real>
+			<real>617455205.65063798</real>
 			<key>timeStoppedRecording</key>
-			<real>617434876.30671</real>
+			<real>617455283.60997295</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>779BA5BC-BC21-4249-849B-199511A7AC8A</string>
+			<string>46E4E43D-A0E1-4A09-B620-5D0EF8E953E2</string>
 		</dict>
-		<key>7889BE94-EF4A-4362-84E4-33290F7DD808</key>
+		<key>495C803A-9D4E-4B36-A507-5290BB8D08F4</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1149,63 +729,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>7889BE94-EF4A-4362-84E4-33290F7DD808.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617440433.67036605</real>
-			<key>timeStoppedRecording</key>
-			<real>617441240.30042303</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>7889BE94-EF4A-4362-84E4-33290F7DD808</string>
-		</dict>
-		<key>7A29E367-5126-4C54-AEF2-D7249E64C99E</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>7A29E367-5126-4C54-AEF2-D7249E64C99E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435212.80121696</real>
-			<key>timeStoppedRecording</key>
-			<real>617435219.30331194</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>7A29E367-5126-4C54-AEF2-D7249E64C99E</string>
-		</dict>
-		<key>7ECDC979-7855-4BA4-B4C1-4FC8A1312B67</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>7ECDC979-7855-4BA4-B4C1-4FC8A1312B67.xcactivitylog</string>
+			<string>495C803A-9D4E-4B36-A507-5290BB8D08F4.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1222,15 +746,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617432872.54710102</real>
+			<real>617456110.99539101</real>
 			<key>timeStoppedRecording</key>
-			<real>617433453.30425</real>
+			<real>617456160.684937</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>7ECDC979-7855-4BA4-B4C1-4FC8A1312B67</string>
+			<string>495C803A-9D4E-4B36-A507-5290BB8D08F4</string>
 		</dict>
-		<key>83300FF8-4FF6-443E-BD38-325C40AA14CE</key>
+		<key>495CF52F-42DF-4868-85ED-3B9F58DEE891</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1239,7 +763,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>83300FF8-4FF6-443E-BD38-325C40AA14CE.xcactivitylog</string>
+			<string>495CF52F-42DF-4868-85ED-3B9F58DEE891.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1256,15 +780,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617429227.94234705</real>
+			<real>617464040.58645701</real>
 			<key>timeStoppedRecording</key>
-			<real>617429786.15205204</real>
+			<real>617464230.96400905</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>83300FF8-4FF6-443E-BD38-325C40AA14CE</string>
+			<string>495CF52F-42DF-4868-85ED-3B9F58DEE891</string>
 		</dict>
-		<key>86977ED2-4FDB-4019-BEC2-6B2306259DAB</key>
+		<key>4B2717CC-6B18-49BA-897A-FF609A60F75F</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1273,35 +797,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>86977ED2-4FDB-4019-BEC2-6B2306259DAB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617442873.922001</real>
-			<key>timeStoppedRecording</key>
-			<real>617442889.66126204</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>86977ED2-4FDB-4019-BEC2-6B2306259DAB</string>
-		</dict>
-		<key>8805C7E5-BA71-4D1E-A9DD-BA489D98365A</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>8805C7E5-BA71-4D1E-A9DD-BA489D98365A.xcactivitylog</string>
+			<string>4B2717CC-6B18-49BA-897A-FF609A60F75F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1318,15 +814,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617438585.24284005</real>
+			<real>617460858.77856004</real>
 			<key>timeStoppedRecording</key>
-			<real>617438628.62919104</real>
+			<real>617460888.09495103</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>8805C7E5-BA71-4D1E-A9DD-BA489D98365A</string>
+			<string>4B2717CC-6B18-49BA-897A-FF609A60F75F</string>
 		</dict>
-		<key>8D2EC20C-021A-4179-98E4-09216A2713EE</key>
+		<key>50E800E3-F82A-4DC6-B910-C2EDCBB55FB7</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1335,35 +831,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>8D2EC20C-021A-4179-98E4-09216A2713EE.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617442391.92981005</real>
-			<key>timeStoppedRecording</key>
-			<real>617442596.38266695</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>8D2EC20C-021A-4179-98E4-09216A2713EE</string>
-		</dict>
-		<key>94CFA0A9-A436-46A6-B526-874A7CAE4A56</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>94CFA0A9-A436-46A6-B526-874A7CAE4A56.xcactivitylog</string>
+			<string>50E800E3-F82A-4DC6-B910-C2EDCBB55FB7.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1380,15 +848,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617435055.48396206</real>
+			<real>617453383.85867703</real>
 			<key>timeStoppedRecording</key>
-			<real>617435085.54286599</real>
+			<real>617453501.74960399</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>94CFA0A9-A436-46A6-B526-874A7CAE4A56</string>
+			<string>50E800E3-F82A-4DC6-B910-C2EDCBB55FB7</string>
 		</dict>
-		<key>985D92D5-55E8-48D8-9861-9DE4B23DAF22</key>
+		<key>513392FD-6845-472F-A118-F6FC399074B9</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1397,7 +865,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>985D92D5-55E8-48D8-9861-9DE4B23DAF22.xcactivitylog</string>
+			<string>513392FD-6845-472F-A118-F6FC399074B9.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1414,15 +882,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617374339.15066004</real>
+			<real>617451258.93141401</real>
 			<key>timeStoppedRecording</key>
-			<real>617374561.90149498</real>
+			<real>617451394.347785</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>985D92D5-55E8-48D8-9861-9DE4B23DAF22</string>
+			<string>513392FD-6845-472F-A118-F6FC399074B9</string>
 		</dict>
-		<key>9B85D01A-0BB1-4DE8-8473-867BE86180F9</key>
+		<key>55462EC0-8125-40E5-97A8-8E862D19C04E</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1431,35 +899,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>9B85D01A-0BB1-4DE8-8473-867BE86180F9.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617442600.21121001</real>
-			<key>timeStoppedRecording</key>
-			<real>617442741.77586496</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>9B85D01A-0BB1-4DE8-8473-867BE86180F9</string>
-		</dict>
-		<key>9F711C49-F483-4B03-B314-1FA05D1CD936</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>9F711C49-F483-4B03-B314-1FA05D1CD936.xcactivitylog</string>
+			<string>55462EC0-8125-40E5-97A8-8E862D19C04E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1476,15 +916,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617438935.32839501</real>
+			<real>617456161.92178202</real>
 			<key>timeStoppedRecording</key>
-			<real>617438967.51989198</real>
+			<real>617456267.88084698</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>9F711C49-F483-4B03-B314-1FA05D1CD936</string>
+			<string>55462EC0-8125-40E5-97A8-8E862D19C04E</string>
 		</dict>
-		<key>A093864B-4D07-4BB8-95F3-1C50C25C7D3C</key>
+		<key>5C7C8BA6-DCAA-41F6-9252-2658AA0ED043</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1493,7 +933,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>A093864B-4D07-4BB8-95F3-1C50C25C7D3C.xcactivitylog</string>
+			<string>5C7C8BA6-DCAA-41F6-9252-2658AA0ED043.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1510,15 +950,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617433454.43868804</real>
+			<real>617455830.49065602</real>
 			<key>timeStoppedRecording</key>
-			<real>617433503.98672605</real>
+			<real>617455947.080441</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>A093864B-4D07-4BB8-95F3-1C50C25C7D3C</string>
+			<string>5C7C8BA6-DCAA-41F6-9252-2658AA0ED043</string>
 		</dict>
-		<key>A185141C-F085-4AAE-870C-096BD8DC1613</key>
+		<key>65747E03-DFEA-42E2-B677-F1BC363804C1</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1527,7 +967,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>A185141C-F085-4AAE-870C-096BD8DC1613.xcactivitylog</string>
+			<string>65747E03-DFEA-42E2-B677-F1BC363804C1.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1544,15 +984,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617431195.45554101</real>
+			<real>617451395.23518395</real>
 			<key>timeStoppedRecording</key>
-			<real>617431258.680094</real>
+			<real>617451630.08900201</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>A185141C-F085-4AAE-870C-096BD8DC1613</string>
+			<string>65747E03-DFEA-42E2-B677-F1BC363804C1</string>
 		</dict>
-		<key>A521BBAE-4FD0-4ECA-9EE8-499CDA308818</key>
+		<key>6FC463B2-B05F-4184-8F00-EF0B193186F9</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1561,7 +1001,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>A521BBAE-4FD0-4ECA-9EE8-499CDA308818.xcactivitylog</string>
+			<string>6FC463B2-B05F-4184-8F00-EF0B193186F9.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1578,15 +1018,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617412604.73673904</real>
+			<real>617452719.44771802</real>
 			<key>timeStoppedRecording</key>
-			<real>617412900.50613797</real>
+			<real>617453018.125664</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>A521BBAE-4FD0-4ECA-9EE8-499CDA308818</string>
+			<string>6FC463B2-B05F-4184-8F00-EF0B193186F9</string>
 		</dict>
-		<key>AC859DE9-0A58-46DA-9286-DFCADAFF7A6E</key>
+		<key>71A7763F-29EE-4703-8029-0DBB78AD6927</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1595,7 +1035,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AC859DE9-0A58-46DA-9286-DFCADAFF7A6E.xcactivitylog</string>
+			<string>71A7763F-29EE-4703-8029-0DBB78AD6927.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1612,15 +1052,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617430611.68260705</real>
+			<real>617461181.586128</real>
 			<key>timeStoppedRecording</key>
-			<real>617430628.32418001</real>
+			<real>617461359.46691895</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>AC859DE9-0A58-46DA-9286-DFCADAFF7A6E</string>
+			<string>71A7763F-29EE-4703-8029-0DBB78AD6927</string>
 		</dict>
-		<key>AD5C3ECD-5EEA-4CBF-9BCB-7C946A9D7553</key>
+		<key>733DAE68-9186-4E1D-A538-63AFBC601DAB</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1629,7 +1069,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AD5C3ECD-5EEA-4CBF-9BCB-7C946A9D7553.xcactivitylog</string>
+			<string>733DAE68-9186-4E1D-A538-63AFBC601DAB.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1646,15 +1086,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617431466.20964301</real>
+			<real>617453502.164662</real>
 			<key>timeStoppedRecording</key>
-			<real>617431821.31782603</real>
+			<real>617453655.95360899</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>AD5C3ECD-5EEA-4CBF-9BCB-7C946A9D7553</string>
+			<string>733DAE68-9186-4E1D-A538-63AFBC601DAB</string>
 		</dict>
-		<key>AEA1692D-0B57-4BEF-90A2-4383A0BF8385</key>
+		<key>77051F0A-F4F1-486C-8E7D-D8A316644263</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1663,35 +1103,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>AEA1692D-0B57-4BEF-90A2-4383A0BF8385.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439187.51209795</real>
-			<key>timeStoppedRecording</key>
-			<real>617439199.67428303</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>AEA1692D-0B57-4BEF-90A2-4383A0BF8385</string>
-		</dict>
-		<key>B300F6AF-D772-4718-9A14-C777F5E9342D</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>B300F6AF-D772-4718-9A14-C777F5E9342D.xcactivitylog</string>
+			<string>77051F0A-F4F1-486C-8E7D-D8A316644263.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1708,15 +1120,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617439856.292557</real>
+			<real>617455804.43956697</real>
 			<key>timeStoppedRecording</key>
-			<real>617439888.86357701</real>
+			<real>617455829.14453101</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>B300F6AF-D772-4718-9A14-C777F5E9342D</string>
+			<string>77051F0A-F4F1-486C-8E7D-D8A316644263</string>
 		</dict>
-		<key>B46DA625-8ADC-462B-9D4C-9914F78B73B9</key>
+		<key>7B79C111-A575-428B-AFAA-BECA12EAD313</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1725,35 +1137,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>B46DA625-8ADC-462B-9D4C-9914F78B73B9.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435983.81320298</real>
-			<key>timeStoppedRecording</key>
-			<real>617436001.096735</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>B46DA625-8ADC-462B-9D4C-9914F78B73B9</string>
-		</dict>
-		<key>BC3A773D-2477-4241-9F5E-887ED59F2A05</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>BC3A773D-2477-4241-9F5E-887ED59F2A05.xcactivitylog</string>
+			<string>7B79C111-A575-428B-AFAA-BECA12EAD313.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1770,15 +1154,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617429064.55134904</real>
+			<real>617451001.06321096</real>
 			<key>timeStoppedRecording</key>
-			<real>617429226.66568303</real>
+			<real>617451091.16715801</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>BC3A773D-2477-4241-9F5E-887ED59F2A05</string>
+			<string>7B79C111-A575-428B-AFAA-BECA12EAD313</string>
 		</dict>
-		<key>BC7E1111-247B-4C6E-A0C2-45761952A878</key>
+		<key>7B95FE75-EA86-436B-9746-6C53F6994D55</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1787,7 +1171,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>BC7E1111-247B-4C6E-A0C2-45761952A878.xcactivitylog</string>
+			<string>7B95FE75-EA86-436B-9746-6C53F6994D55.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1804,15 +1188,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617431259.142681</real>
+			<real>617457496.31774199</real>
 			<key>timeStoppedRecording</key>
-			<real>617431465.517295</real>
+			<real>617457624.75343394</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>BC7E1111-247B-4C6E-A0C2-45761952A878</string>
+			<string>7B95FE75-EA86-436B-9746-6C53F6994D55</string>
 		</dict>
-		<key>C2195080-FFBC-4E02-9968-35272DC68F52</key>
+		<key>7C1D22EE-9E80-415D-B434-53989948FCA8</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1821,35 +1205,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>C2195080-FFBC-4E02-9968-35272DC68F52.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439960.16797602</real>
-			<key>timeStoppedRecording</key>
-			<real>617440116.961182</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>C2195080-FFBC-4E02-9968-35272DC68F52</string>
-		</dict>
-		<key>C39E3FF2-C161-489C-B7D6-B65E2DE4B5DD</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>C39E3FF2-C161-489C-B7D6-B65E2DE4B5DD.xcactivitylog</string>
+			<string>7C1D22EE-9E80-415D-B434-53989948FCA8.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1866,15 +1222,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434732.07008696</real>
+			<real>617458535.67983305</real>
 			<key>timeStoppedRecording</key>
-			<real>617434765.138363</real>
+			<real>617458670.71269596</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>C39E3FF2-C161-489C-B7D6-B65E2DE4B5DD</string>
+			<string>7C1D22EE-9E80-415D-B434-53989948FCA8</string>
 		</dict>
-		<key>CC1C809F-C535-4EFC-8833-8E30E2B11ABE</key>
+		<key>7D1B5176-F3FD-4B50-910C-06AFA8514247</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -1883,147 +1239,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>CC1C809F-C535-4EFC-8833-8E30E2B11ABE.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435801.30281103</real>
-			<key>timeStoppedRecording</key>
-			<real>617435847.64920998</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>CC1C809F-C535-4EFC-8833-8E30E2B11ABE</string>
-		</dict>
-		<key>D52B5C1F-F0F2-42D4-8D72-0837F8FFE8AF</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D52B5C1F-F0F2-42D4-8D72-0837F8FFE8AF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435022.93637204</real>
-			<key>timeStoppedRecording</key>
-			<real>617435030.04265904</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>D52B5C1F-F0F2-42D4-8D72-0837F8FFE8AF</string>
-		</dict>
-		<key>D537ED1C-2F2F-48B6-9935-76ECE03536FD</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D537ED1C-2F2F-48B6-9935-76ECE03536FD.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617442744.18225503</real>
-			<key>timeStoppedRecording</key>
-			<real>617442871.51894295</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>D537ED1C-2F2F-48B6-9935-76ECE03536FD</string>
-		</dict>
-		<key>D74A3565-0A0A-421C-B77A-848A07C1728F</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D74A3565-0A0A-421C-B77A-848A07C1728F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617442179.03030205</real>
-			<key>timeStoppedRecording</key>
-			<real>617442357.12502003</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>D74A3565-0A0A-421C-B77A-848A07C1728F</string>
-		</dict>
-		<key>D79E3706-3D0D-4725-9865-D76E29F97400</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D79E3706-3D0D-4725-9865-D76E29F97400.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435625.56980395</real>
-			<key>timeStoppedRecording</key>
-			<real>617435768.86763096</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>D79E3706-3D0D-4725-9865-D76E29F97400</string>
-		</dict>
-		<key>D8C1F9F9-549F-4AFF-BBAC-A4D185BEEAA1</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>D8C1F9F9-549F-4AFF-BBAC-A4D185BEEAA1.xcactivitylog</string>
+			<string>7D1B5176-F3FD-4B50-910C-06AFA8514247.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -2040,15 +1256,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617430629.58668697</real>
+			<real>617459066.33965504</real>
 			<key>timeStoppedRecording</key>
-			<real>617430650.616166</real>
+			<real>617459092.74725103</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>D8C1F9F9-549F-4AFF-BBAC-A4D185BEEAA1</string>
+			<string>7D1B5176-F3FD-4B50-910C-06AFA8514247</string>
 		</dict>
-		<key>DE7C710A-0760-4459-BF5A-F6F52192B4A9</key>
+		<key>841E091F-D9FD-43C4-8019-76A31E01C7CA</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -2057,91 +1273,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>DE7C710A-0760-4459-BF5A-F6F52192B4A9.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617439227.35437298</real>
-			<key>timeStoppedRecording</key>
-			<real>617439327.97538805</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>DE7C710A-0760-4459-BF5A-F6F52192B4A9</string>
-		</dict>
-		<key>E5A5BF70-1225-4589-9A2E-42971D360E1F</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>E5A5BF70-1225-4589-9A2E-42971D360E1F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617435333.79424906</real>
-			<key>timeStoppedRecording</key>
-			<real>617435347.03717005</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>E5A5BF70-1225-4589-9A2E-42971D360E1F</string>
-		</dict>
-		<key>ED5E5E9A-A37F-434F-A04F-1D007E097B34</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>ED5E5E9A-A37F-434F-A04F-1D007E097B34.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617441389.18342197</real>
-			<key>timeStoppedRecording</key>
-			<real>617441400.62800002</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>ED5E5E9A-A37F-434F-A04F-1D007E097B34</string>
-		</dict>
-		<key>F093DA67-783F-47DC-BCA5-16C329BD530F</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>F093DA67-783F-47DC-BCA5-16C329BD530F.xcactivitylog</string>
+			<string>841E091F-D9FD-43C4-8019-76A31E01C7CA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -2158,15 +1290,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617434882.00329304</real>
+			<real>617458468.77337396</real>
 			<key>timeStoppedRecording</key>
-			<real>617435018.28473198</real>
+			<real>617458533.99552</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>F093DA67-783F-47DC-BCA5-16C329BD530F</string>
+			<string>841E091F-D9FD-43C4-8019-76A31E01C7CA</string>
 		</dict>
-		<key>F136E90A-D3C8-408B-ACB6-703458BD57E0</key>
+		<key>855A757A-EDB1-4337-BB86-24C5F9E0390F</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -2175,7 +1307,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>F136E90A-D3C8-408B-ACB6-703458BD57E0.xcactivitylog</string>
+			<string>855A757A-EDB1-4337-BB86-24C5F9E0390F.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -2192,15 +1324,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617429807.85338402</real>
+			<real>617454813.85845304</real>
 			<key>timeStoppedRecording</key>
-			<real>617429926.58582306</real>
+			<real>617454886.13617897</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>F136E90A-D3C8-408B-ACB6-703458BD57E0</string>
+			<string>855A757A-EDB1-4337-BB86-24C5F9E0390F</string>
 		</dict>
-		<key>F2B4988F-E001-4A39-82DC-346D36E7911A</key>
+		<key>898F6C38-0764-436C-A144-32B81396EA4E</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -2209,35 +1341,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>F2B4988F-E001-4A39-82DC-346D36E7911A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>Run AppStoreSearch</string>
-			<key>timeStartedRecording</key>
-			<real>617440119.355232</real>
-			<key>timeStoppedRecording</key>
-			<real>617440430.84458697</real>
-			<key>title</key>
-			<string>Run AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>F2B4988F-E001-4A39-82DC-346D36E7911A</string>
-		</dict>
-		<key>F5F6EF8D-516E-424D-8ADE-0B2DA4C0BE36</key>
-		<dict>
-			<key>className</key>
-			<string>DBGConsoleLog</string>
-			<key>documentTypeString</key>
-			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
-			<key>fileName</key>
-			<string>F5F6EF8D-516E-424D-8ADE-0B2DA4C0BE36.xcactivitylog</string>
+			<string>898F6C38-0764-436C-A144-32B81396EA4E.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -2254,15 +1358,15 @@
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617411683.37498701</real>
+			<real>617460126.82607806</real>
 			<key>timeStoppedRecording</key>
-			<real>617412604.02367997</real>
+			<real>617460178.74924898</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>F5F6EF8D-516E-424D-8ADE-0B2DA4C0BE36</string>
+			<string>898F6C38-0764-436C-A144-32B81396EA4E</string>
 		</dict>
-		<key>FB66C6F5-157F-4C76-9A38-574E42EF7933</key>
+		<key>8EE2B83C-CA39-4638-A398-62AE80504731</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -2271,7 +1375,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>FB66C6F5-157F-4C76-9A38-574E42EF7933.xcactivitylog</string>
+			<string>8EE2B83C-CA39-4638-A398-62AE80504731.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -2279,18 +1383,24 @@
 				<key>highLevelStatus</key>
 				<string>S</string>
 			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617443065.73531199</real>
+			<real>617462266.36694205</real>
 			<key>timeStoppedRecording</key>
-			<real>617443088.72639406</real>
+			<real>617462521.51021099</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>FB66C6F5-157F-4C76-9A38-574E42EF7933</string>
+			<string>8EE2B83C-CA39-4638-A398-62AE80504731</string>
 		</dict>
-		<key>FF0F7563-172B-4D4A-AB7A-F369F1673C66</key>
+		<key>904C0D00-30D2-4C70-9D8D-43097080B5C1</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -2299,7 +1409,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>FF0F7563-172B-4D4A-AB7A-F369F1673C66.xcactivitylog</string>
+			<string>904C0D00-30D2-4C70-9D8D-43097080B5C1.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -2307,16 +1417,1110 @@
 				<key>highLevelStatus</key>
 				<string>S</string>
 			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
 			<key>signature</key>
 			<string>Run AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617435244.91208994</real>
+			<real>617460978.98608005</real>
 			<key>timeStoppedRecording</key>
-			<real>617435331.56138694</real>
+			<real>617461009.83162105</real>
 			<key>title</key>
 			<string>Run AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>FF0F7563-172B-4D4A-AB7A-F369F1673C66</string>
+			<string>904C0D00-30D2-4C70-9D8D-43097080B5C1</string>
+		</dict>
+		<key>91ECBAF9-24C2-44B8-9A19-9E8C6D60E0ED</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>91ECBAF9-24C2-44B8-9A19-9E8C6D60E0ED.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617454354.14777398</real>
+			<key>timeStoppedRecording</key>
+			<real>617454663.13774502</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>91ECBAF9-24C2-44B8-9A19-9E8C6D60E0ED</string>
+		</dict>
+		<key>94A08C50-FD15-4769-8C6F-7363F86FB8E8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>94A08C50-FD15-4769-8C6F-7363F86FB8E8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617456016.65530396</real>
+			<key>timeStoppedRecording</key>
+			<real>617456109.586779</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>94A08C50-FD15-4769-8C6F-7363F86FB8E8</string>
+		</dict>
+		<key>95602064-D3BF-49A0-8199-763AEC8E2D99</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>95602064-D3BF-49A0-8199-763AEC8E2D99.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617457626.65419698</real>
+			<key>timeStoppedRecording</key>
+			<real>617458468.67886496</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>95602064-D3BF-49A0-8199-763AEC8E2D99</string>
+		</dict>
+		<key>95A7629B-5AC0-4A20-A011-E73BCC700406</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>95A7629B-5AC0-4A20-A011-E73BCC700406.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617460537.17316496</real>
+			<key>timeStoppedRecording</key>
+			<real>617460565.962708</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>95A7629B-5AC0-4A20-A011-E73BCC700406</string>
+		</dict>
+		<key>9A1D95CF-B416-4A35-B132-E88EF908A9AE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9A1D95CF-B416-4A35-B132-E88EF908A9AE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617451631.47736394</real>
+			<key>timeStoppedRecording</key>
+			<real>617451711.57907104</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>9A1D95CF-B416-4A35-B132-E88EF908A9AE</string>
+		</dict>
+		<key>9AAD49BC-2C7B-438A-9A76-E3DBFE89F987</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9AAD49BC-2C7B-438A-9A76-E3DBFE89F987.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617453658.51127696</real>
+			<key>timeStoppedRecording</key>
+			<real>617453713.73621297</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>9AAD49BC-2C7B-438A-9A76-E3DBFE89F987</string>
+		</dict>
+		<key>AAD34925-0407-4698-9003-74DB974B2CA1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AAD34925-0407-4698-9003-74DB974B2CA1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617459007.59642303</real>
+			<key>timeStoppedRecording</key>
+			<real>617459064.68744099</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>AAD34925-0407-4698-9003-74DB974B2CA1</string>
+		</dict>
+		<key>AEDC0DB8-1777-4309-AB1D-A662B721A6FC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AEDC0DB8-1777-4309-AB1D-A662B721A6FC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617461800.60931003</real>
+			<key>timeStoppedRecording</key>
+			<real>617461863.07699203</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>AEDC0DB8-1777-4309-AB1D-A662B721A6FC</string>
+		</dict>
+		<key>AFD2BC88-AACA-457D-8D2E-5352018F1324</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>AFD2BC88-AACA-457D-8D2E-5352018F1324.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617455093.32217801</real>
+			<key>timeStoppedRecording</key>
+			<real>617455165.27892804</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>AFD2BC88-AACA-457D-8D2E-5352018F1324</string>
+		</dict>
+		<key>B345F809-B486-459B-937F-E5A9E655E6AC</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B345F809-B486-459B-937F-E5A9E655E6AC.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617463569.48072195</real>
+			<key>timeStoppedRecording</key>
+			<real>617463878.73580098</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>B345F809-B486-459B-937F-E5A9E655E6AC</string>
+		</dict>
+		<key>B975B5AF-B1C0-49FB-9013-C76336F82870</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B975B5AF-B1C0-49FB-9013-C76336F82870.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617453716.062289</real>
+			<key>timeStoppedRecording</key>
+			<real>617454352.04200804</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>B975B5AF-B1C0-49FB-9013-C76336F82870</string>
+		</dict>
+		<key>BC3A0FB2-C314-43EF-BC86-A820331D4902</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>BC3A0FB2-C314-43EF-BC86-A820331D4902.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617461011.35156798</real>
+			<key>timeStoppedRecording</key>
+			<real>617461045.10985696</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>BC3A0FB2-C314-43EF-BC86-A820331D4902</string>
+		</dict>
+		<key>C05F7297-C3DF-4753-8C60-81EAA501E12B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C05F7297-C3DF-4753-8C60-81EAA501E12B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617460197.16458404</real>
+			<key>timeStoppedRecording</key>
+			<real>617460275.02231598</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C05F7297-C3DF-4753-8C60-81EAA501E12B</string>
+		</dict>
+		<key>C21E8DB8-437E-4FCB-A880-23F01C97CA2E</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C21E8DB8-437E-4FCB-A880-23F01C97CA2E.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617462111.621912</real>
+			<key>timeStoppedRecording</key>
+			<real>617462265.95251906</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C21E8DB8-437E-4FCB-A880-23F01C97CA2E</string>
+		</dict>
+		<key>C26D8B9D-E9A9-4611-92D4-56CC364DE2B2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C26D8B9D-E9A9-4611-92D4-56CC364DE2B2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617461682.82204604</real>
+			<key>timeStoppedRecording</key>
+			<real>617461799.00150895</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C26D8B9D-E9A9-4611-92D4-56CC364DE2B2</string>
+		</dict>
+		<key>C3AB5A12-B431-4CB2-8AFC-2B268749AAE4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C3AB5A12-B431-4CB2-8AFC-2B268749AAE4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617459148.68138695</real>
+			<key>timeStoppedRecording</key>
+			<real>617459283.943941</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C3AB5A12-B431-4CB2-8AFC-2B268749AAE4</string>
+		</dict>
+		<key>C7416E84-7D18-4545-813A-329CB5BE5A74</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C7416E84-7D18-4545-813A-329CB5BE5A74.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617455306.71075904</real>
+			<key>timeStoppedRecording</key>
+			<real>617455332.35792398</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C7416E84-7D18-4545-813A-329CB5BE5A74</string>
+		</dict>
+		<key>C9CC44F7-A5E6-44E6-A52D-28697F266F16</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>C9CC44F7-A5E6-44E6-A52D-28697F266F16.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617459331.15424299</real>
+			<key>timeStoppedRecording</key>
+			<real>617459371.48862195</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C9CC44F7-A5E6-44E6-A52D-28697F266F16</string>
+		</dict>
+		<key>CE5087F5-8E0E-4759-A406-4E6084498593</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CE5087F5-8E0E-4759-A406-4E6084498593.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617461513.85551095</real>
+			<key>timeStoppedRecording</key>
+			<real>617461534.54117095</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>CE5087F5-8E0E-4759-A406-4E6084498593</string>
+		</dict>
+		<key>D76A89CD-14C8-4818-B841-D2D1B67EA54B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D76A89CD-14C8-4818-B841-D2D1B67EA54B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617460579.14459002</real>
+			<key>timeStoppedRecording</key>
+			<real>617460782.41135502</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>D76A89CD-14C8-4818-B841-D2D1B67EA54B</string>
+		</dict>
+		<key>D9F8DA5E-B695-4550-A9ED-6479ADE4C000</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>D9F8DA5E-B695-4550-A9ED-6479ADE4C000.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617462725.44872499</real>
+			<key>timeStoppedRecording</key>
+			<real>617463195.195858</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>D9F8DA5E-B695-4550-A9ED-6479ADE4C000</string>
+		</dict>
+		<key>DA22013C-9C8D-46B2-BA37-C1E86EB309FB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DA22013C-9C8D-46B2-BA37-C1E86EB309FB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617460784.04605103</real>
+			<key>timeStoppedRecording</key>
+			<real>617460821.91735697</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>DA22013C-9C8D-46B2-BA37-C1E86EB309FB</string>
+		</dict>
+		<key>DA4B2319-86E4-4322-B013-29E59455BAB4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>DA4B2319-86E4-4322-B013-29E59455BAB4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617459285.59820902</real>
+			<key>timeStoppedRecording</key>
+			<real>617459319.75034297</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>DA4B2319-86E4-4322-B013-29E59455BAB4</string>
+		</dict>
+		<key>E2796EA0-761C-442D-BB3C-07A2B5DA384C</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E2796EA0-761C-442D-BB3C-07A2B5DA384C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617454933.67681897</real>
+			<key>timeStoppedRecording</key>
+			<real>617455015.82757902</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>E2796EA0-761C-442D-BB3C-07A2B5DA384C</string>
+		</dict>
+		<key>E32409DD-D62E-4301-ACC6-85FD7107A6F3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E32409DD-D62E-4301-ACC6-85FD7107A6F3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617455948.33959305</real>
+			<key>timeStoppedRecording</key>
+			<real>617456004.01129603</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>E32409DD-D62E-4301-ACC6-85FD7107A6F3</string>
+		</dict>
+		<key>E40F54C6-E016-418D-9FDF-819BC13DBA84</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E40F54C6-E016-418D-9FDF-819BC13DBA84.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617457117.15424502</real>
+			<key>timeStoppedRecording</key>
+			<real>617457228.48717201</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>E40F54C6-E016-418D-9FDF-819BC13DBA84</string>
+		</dict>
+		<key>EE996C64-FF75-4D29-A848-4B31604984AB</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>EE996C64-FF75-4D29-A848-4B31604984AB.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617454886.45358503</real>
+			<key>timeStoppedRecording</key>
+			<real>617454924.55303001</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>EE996C64-FF75-4D29-A848-4B31604984AB</string>
+		</dict>
+		<key>F278291D-E6E3-4BA5-9C71-47CB6BEC1525</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F278291D-E6E3-4BA5-9C71-47CB6BEC1525.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617458764.44277096</real>
+			<key>timeStoppedRecording</key>
+			<real>617458990.68381798</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>F278291D-E6E3-4BA5-9C71-47CB6BEC1525</string>
+		</dict>
+		<key>F4FB6677-96ED-4FF1-8F2F-97235AB5DEB4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F4FB6677-96ED-4FF1-8F2F-97235AB5DEB4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617457228.57627106</real>
+			<key>timeStoppedRecording</key>
+			<real>617457308.14469898</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>F4FB6677-96ED-4FF1-8F2F-97235AB5DEB4</string>
+		</dict>
+		<key>FD51BE34-6FEC-437C-96E0-B49EC1E00F78</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FD51BE34-6FEC-437C-96E0-B49EC1E00F78.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617460935.36316597</real>
+			<key>timeStoppedRecording</key>
+			<real>617460977.44188297</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>FD51BE34-6FEC-437C-96E0-B49EC1E00F78</string>
+		</dict>
+		<key>FED3DA76-272D-4555-8089-E2ED4C3D8752</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FED3DA76-272D-4555-8089-E2ED4C3D8752.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617462048.85663605</real>
+			<key>timeStoppedRecording</key>
+			<real>617462106.63179004</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>FED3DA76-272D-4555-8089-E2ED4C3D8752</string>
+		</dict>
+		<key>FEF9091B-CDE1-45CA-BE59-9B7B7D3887DF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>FEF9091B-CDE1-45CA-BE59-9B7B7D3887DF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617461536.00811195</real>
+			<key>timeStoppedRecording</key>
+			<real>617461681.24612403</real>
+			<key>title</key>
+			<string>Run AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>FEF9091B-CDE1-45CA-BE59-9B7B7D3887DF</string>
 		</dict>
 	</dict>
 </dict>

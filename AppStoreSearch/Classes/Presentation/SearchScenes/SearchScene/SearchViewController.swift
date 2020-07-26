@@ -30,8 +30,8 @@ class SearchViewController: UIViewController {
     
     private var dataSource: TermDataSource!
     
-    private lazy var searchController: UISearchController = {
-        return UISearchController(searchResultsController: resultViewController)
+    private lazy var searchController: UISearchController = { [unowned self] in
+        return UISearchController(searchResultsController: self.resultViewController)
     }()
     
     // MARK: - * IBOutlets --------------------
@@ -109,28 +109,6 @@ class SearchViewController: UIViewController {
     }
     
     private func setupRx() {
-        //검색어 입력
-//        searchController.searchBar.rx.text.orEmpty
-//            .filter { [unowned self] in !$0.isEmpty && self.searchController.searchBar.isFirstResponder }
-//            .distinctUntilChanged()
-//            .bind(to: termRelay)
-//            .disposed(by: disposeBag)
-
-        //검색 캔슬, 검색 입력 종료 시
-//        Observable.merge(searchController.searchBar.rx.cancelButtonClicked.map { _ in true },
-//                         searchController.searchBar.rx.textDidEndEditing.map { _ in false },
-//                         searchController.searchBar.rx.text.orEmpty.map {_ in false }) //검색 시 메인 리스트 바로 갱신하기 위해 추가,
-//        Observable.merge(searchController.searchBar.rx.cancelButtonClicked.map { _ in true }) //검색 시 메인 리스트 바로 갱신하기 위해 추가,
-////            .throttle(1.2, latest: false, scheduler: MainScheduler.instance) //캔슬버튼, 텍스트 종료 이벤트가 약간의 딜레이로 들어옴.
-////            .do(onNext: { [unowned self] _ in
-////                self.viewReloadRelay.accept(())
-////            })
-//            .filter { $0 } //차일드 뷰 날릴 지 여부
-//            .map {  }
-//            .bind(to: viewModel.flowRelay)
-//            .disposed(by: disposeBag)
-//
-        
         Observable
             .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(String.self))
             .do(onNext: { [weak self] ip, term in  //TODO: refactor to bind curry
@@ -160,37 +138,9 @@ class SearchViewController: UIViewController {
             .map { [TermSectionModel(header: "최근 검색어", items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
-
-        //output1 = history matching
-//        output.matches
-//            .map { [unowned self] in (FlowCoordinator.Step.matches(self.termRelay.value, $0, self.searchRelay), self.resultVc) }
-//            .drive(FlowCoordinator.shared.rx.flow)
-//            .disposed(by: disposeBag)
-        
-        //output2 - fetch and push
-//        searchRelay.asObservable()
-//            .do(onNext: { [unowned self] in
-//                self.searchController.searchBar.text = $0
-//                self.searchController.searchBar.resignFirstResponder()
-//            })
-//            .filter { !$0.isEmpty }
-//            .delay(0.01, scheduler: MainScheduler.instance)
-//
-//            .map { [unowned self] in (FlowCoordinator.Step.appList($0), self.resultVc) }
-//            .bind(to: FlowCoordinator.shared.rx.flow)
-//            .disposed(by: disposeBag)
     }
     
-    
-
-    // MARK: - * Main Logic --------------------
-
-
-    // MARK: - * UI Events --------------------
-
-
     // MARK: - * Memory Manage --------------------
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -219,7 +169,7 @@ extension SearchViewController: UISearchResultsUpdating {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        searchRelay.accept(self.searchController.searchBar.text)
+        searchRelay.accept(searchController.searchBar.text)
     }
 }
 

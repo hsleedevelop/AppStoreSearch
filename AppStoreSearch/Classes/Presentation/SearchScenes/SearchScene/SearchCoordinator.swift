@@ -24,6 +24,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     private var viewController: SearchViewController!
     
     private let termRelay = BehaviorRelay<String>(value: "")
+    private var appListCoordinatorDisposable: Disposable?
     
     // MARK: - * Initialize --------------------
     init(window: UIWindow) {
@@ -41,7 +42,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         viewController.viewModel = viewModel
         setupMatchTermCoodinator()
         
-        bindRx(viewModel: viewModel)
+        bindFlow(viewModel: viewModel)
 
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = .init(tabBarSystemItem: .search, tag: 0)
@@ -54,7 +55,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         return Observable.never()
     }
     
-    private func bindRx(viewModel: SearchViewModel) {
+    private func bindFlow(viewModel: SearchViewModel) {
         viewModel.flowRelay
             .subscribe(onNext: { [weak self] flow in
                 switch flow {
@@ -70,19 +71,19 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     }
     
     private func coordianteCancelSearch() {
-        viewController.resultViewController.children.forEach { vc in
-            vc.view.removeFromSuperview()
-            vc.removeFromParent()
-        }
+        var vc = viewController.resultViewController.children.first
+        vc?.view.removeFromSuperview()
+        vc?.removeFromParent()
+        vc = nil
+        
+        appListCoordinatorDisposable?.dispose()
     }
     
     private func coordinateSearch(with term: String) {
         let coordinator = AppListCoordinator(rootViewController: viewController.resultViewController, term: term)
-        coordinate(to: coordinator)
-            .subscribe(onNext: { _ in
-                
-            })
-            .disposed(by: disposeBag)
+        appListCoordinatorDisposable = coordinate(to: coordinator)
+            .debug("appListCoordinatorDisposable>>>>", trimOutput: false)
+            .subscribe()
     }
     
     private func coordianteMatching(with term: String) {
@@ -99,16 +100,15 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         coordinate(to: coordinator)
             .subscribe(onNext: { [weak self] result in
                 switch result {
-                case .flow(.search(let term)):
+                case .search(let term):
                     self?.coordinateSearch(with: term)
-                default:
-                    break
                 }
             })
             .disposed(by: disposeBag)
     }
     
     deinit {
+        appListCoordinatorDisposable?.dispose()
         logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

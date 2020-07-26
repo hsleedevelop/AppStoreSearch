@@ -37,10 +37,7 @@ class MatchesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupAppearances()
-        setupUI()
         setupTableView()
-
         setupDataSource()
         setupRx()
         bindViewModel()
@@ -48,14 +45,6 @@ class MatchesViewController: UIViewController {
 
 
     // MARK: - * Initialize --------------------
-    private func setupAppearances() {
-
-    }
-
-    private func setupUI() {
-
-    }
-
     private func setupTableView() {
         tableView.allowsSelection = true
         tableView.separatorStyle = .singleLine
@@ -102,14 +91,7 @@ class MatchesViewController: UIViewController {
             .disposed(by: disposeBag)
     }
 
-    // MARK: - * Main Logic --------------------
-
-
-    // MARK: - * UI Events --------------------
-
-
     // MARK: - * Memory Manage --------------------
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

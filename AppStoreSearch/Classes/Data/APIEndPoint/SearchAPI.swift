@@ -23,7 +23,7 @@ enum SearchAPI: API {
     var method: String {
         switch self {
         default:
-            return "GET" //method를 사용해야,,
+            return "GET"
         }
     }
 

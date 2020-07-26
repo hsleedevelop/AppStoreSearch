@@ -18,18 +18,12 @@ final class MatchesViewModel: ViewModelType {
     // MARK: - * Properties --------------------
     private var disposeBag = DisposeBag()
     
-    let matchesRelay: PublishRelay<String>
-    let cancelRelay: PublishRelay<Void>
-    
     // MARK: - * Properties  --------------------
     let flowRelay = PublishRelay<MatchesCoordinator.Flow>()
     
     init(termProvider: TermProviding, termObs: Observable<String>) {
         self.termProvider = termProvider
         self.termObs = termObs
-
-        self.matchesRelay = .init()
-        self.cancelRelay = .init()
     }
     
     func transform(input: Input) -> Output {

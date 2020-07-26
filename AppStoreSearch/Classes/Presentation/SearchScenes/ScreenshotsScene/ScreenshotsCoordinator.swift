@@ -10,10 +10,9 @@ import UIKit
 import RxSwift
 import RxSwiftExt
 
-final class ScreenshotsCoordinator: BaseCoordinator<ScreenshotsCoordinator.Result> {
+final class ScreenshotsCoordinator: BaseCoordinator<ScreenshotsCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
-    enum Result {
-        case currentIndex(Int)
+    enum Flow {
         case dismiss
     }
     

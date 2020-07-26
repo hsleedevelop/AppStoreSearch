@@ -22,7 +22,7 @@ class SearchCoordinatorTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testCoordinateDeinit() throws {
+    func testSearchCoordinateDeinit() throws {
         let window = UIWindow()
         var coordinator: SearchCoordinator! = SearchCoordinator(window: window)
         _ = coordinator.start().subscribe()

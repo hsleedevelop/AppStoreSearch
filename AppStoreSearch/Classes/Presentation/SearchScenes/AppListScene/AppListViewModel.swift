@@ -40,23 +40,14 @@ final class AppListViewModel: ViewModelType {
                     .map { (term, $0) }
                     .trackActivity(activityIndicator)
                     .trackError(errorTracker)
-//                    .catchError ({ error in
-//                        logW(error.localizedDescription)
-//                        return .just((term, nil)) //errorTracker?
-//                    })
             })
             .share()
-//            .do(onNext: { results in
-//                if results.1.resultCount > 0 {
-//                    _ = TermsProvider.shared.store(results.0) //결과가 있을 경우만 검색어를 저장함.
-//                        .subscribe()
-//                }
-//            })
-        
-        results
-            .map { AppListCoordinator.Flow.didFetch($0.0) }
-            .bind(to: flowRelay)
-            .disposed(by: disposeBag)
+            //.do(onNext: { results in
+            //    if results.1.resultCount > 0 {
+            //        _ = TermsProvider.shared.store(results.0) //결과가 있을 경우만 검색어를 저장함.
+            //            .subscribe()
+            //    }
+            //})
         
         return Output(result: results.asDriver(onErrorJustReturn: ("", [])),
                       isLoading: activityIndicator.asDriver(),
@@ -71,7 +62,6 @@ final class AppListViewModel: ViewModelType {
 extension AppListViewModel {
     
     struct Input {
-        //let search: Observable<String>
     }
     
     struct Output {

@@ -116,24 +116,24 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
     private func bindRx() {
         
         ///make prefetching workItem for screenshot collectionview cell
-        func nestedGenerateWorkItem(_ screenshotURL: String) -> DispatchWorkItem {
-            return DispatchWorkItem { [weak self] in
-                guard let self = self else { return }
+        func nestedGenerateWorkItem(_ screenshotURL: String, bag: DisposeBag) -> DispatchWorkItem {
+            return DispatchWorkItem {
                 ImageProvider.shared.get(screenshotURL)
                     .subscribe()
-                    .disposed(by: self.disposeBag)
+                    .disposed(by: bag)
             }
         }
         
         Driver.just(app)
             .unwrap()
             .do(onNext: { [weak self] app in //make prefetching workItem
-                self?.workItems = (app.screenshots ?? []).enumerated().reduce( [IndexPath: DispatchWorkItem]() ) {
+                guard let self = self else { return }
+                self.workItems = (app.screenshots ?? []).enumerated().reduce( [IndexPath: DispatchWorkItem]() ) {
                     var dict = $0
-                    dict[IndexPath(item: $1.offset, section: 0)] = nestedGenerateWorkItem($1.element)
+                    dict[IndexPath(item: $1.offset, section: 0)] = nestedGenerateWorkItem($1.element, bag: self.disposeBag)
                     return dict
                 }
-                logD("$0.screenshots?.enumerated().reduce(self?.workItems ?? [:]) \(self?.workItems.count ?? 0)")
+                logD("$0.screenshots?.enumerated().reduce(self?.workItems ?? [:]) \(self.workItems.count)")
             })
             .map { [ScreenshotSectionModel(items: $0.screenshots ?? [])] }
             .drive(collectionView.rx.items(dataSource: dataSource))

@@ -32,9 +32,10 @@ extension NetworkProvider {
         return Observable.create { observer in
             let request = NSMutableURLRequest(url: url)
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = api.method
             
             let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
-                logD("URLCache.shared:currentMemoryUsage= \(URLCache.shared.currentMemoryUsage)")
+                logI("URLCache.shared:currentMemoryUsage= \(URLCache.shared.currentMemoryUsage)")
                 
                 guard error == nil else {
                     observer.onError(NetworkError.generic(error!))

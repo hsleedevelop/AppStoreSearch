@@ -10,18 +10,19 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
-final class AppListCoordinator: BaseCoordinator<Void> {
+final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
-        case didFetch(String)
+        case main
         case detail(SearchResultApp)
     }
     
     // MARK: - * Properties --------------------
     private let term: String
     private let rootViewController: UIViewController
+    private var appDetailCoordinatorDisposable: Disposable?
     
-    lazy var viewController: AppListViewController = {
+    lazy var viewController: AppListViewController! = { [unowned self] in
         guard let viewController = UIStoryboard(name: "AppListScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "AppListViewController") as? AppListViewController else {
             fatalError("AppListViewController can't load")
         }
@@ -39,14 +40,14 @@ final class AppListCoordinator: BaseCoordinator<Void> {
     
 
     // MARK: - * Cooridate --------------------
-    override func start() -> Observable<Void> {
+    override func start() -> Observable<CoordinationResult> {
         self.add(childViewController: viewController, toParentViewController: rootViewController)
         
-        bindRx(viewModel: viewController.viewModel)
-        return Observable.never()
+        bindFlow(viewModel: viewController.viewModel)
+        return viewController.viewModel.flowRelay.asObservable().startWith(.main)
     }
     
-    private func bindRx(viewModel: AppListViewModel) {
+    private func bindFlow(viewModel: AppListViewModel) {
         viewModel.flowRelay
             .subscribe(onNext: { [weak self] flow in
                 switch flow {
@@ -64,11 +65,15 @@ final class AppListCoordinator: BaseCoordinator<Void> {
             return
         }
         let coordinator = AppDetailCoordinator(navigationController: navigationController, app: app)
-        coordinate(to: coordinator)
-            .subscribe(onNext: { _ in
-                
+        appDetailCoordinatorDisposable = coordinate(to: coordinator)
+            .subscribe(onNext: { [weak self] result in
+                switch result {
+                case .popup:
+                    self?.appDetailCoordinatorDisposable?.dispose()
+                default:
+                    break
+                }
             })
-            .disposed(by: disposeBag)
     }
     
     ///페어런트에 차일드를 등록함.
@@ -87,6 +92,7 @@ final class AppListCoordinator: BaseCoordinator<Void> {
     }
     
     deinit {
+        appDetailCoordinatorDisposable?.dispose()
         logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

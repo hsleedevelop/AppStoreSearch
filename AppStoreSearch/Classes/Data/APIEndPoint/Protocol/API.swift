@@ -9,4 +9,5 @@ import Foundation
 
 protocol API {
     var url: URL { get }
+    var method: String { get }
 }

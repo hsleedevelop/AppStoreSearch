@@ -22,7 +22,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
     var viewModel: ViewModelType!
     
     // MARK: - * properties --------------------
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     
     private var whatNewMoreRelay = BehaviorRelay<Bool>(value: false)
     private var screenshotRelay = PublishRelay<([String], Int)>()
@@ -51,11 +51,8 @@ class AppDetailViewController: UIViewController, AppPresentable {
     // MARK: - * LifeCycles --------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setupAppearances()
-        setupUI()
-        setupTableView()
 
+        setupTableView()
         setupDataSource()
         setupRx()
         bindViewModel()
@@ -76,14 +73,6 @@ class AppDetailViewController: UIViewController, AppPresentable {
      }
 
     // MARK: - * Initialize --------------------
-    private func setupAppearances() {
-
-    }
-
-    private func setupUI() {
-
-    }
-
     private func setupTableView() {
         tableView.allowsSelection = true
         tableView.separatorStyle = .singleLine
@@ -105,19 +94,19 @@ class AppDetailViewController: UIViewController, AppPresentable {
     }
     
     private func setupDataSource() {
-        let configureCell: AppDetailDataSource.ConfigureCell = { [weak self] (ds, tv, ip, model) in
-            guard ds.sectionModels.indices.contains(ip.section), let self = self else { return .init() }
+        let configureCell: AppDetailDataSource.ConfigureCell = { [weak self] (dataSource, tableView, indexPath, rowItem) in
+            guard dataSource.sectionModels.indices.contains(indexPath.section), let self = self else { return .init() }
             
             var cell: UITableViewCell?
             
-            switch model {
+            switch rowItem {
             case let .header(item):
-                if let tcell = tv.dequeueReusableCell(withIdentifier: "AppDetailHeaderTableViewCell") as? AppDetailHeaderTableViewCell {
+                if let tcell = tableView.dequeueReusableCell(withIdentifier: "AppDetailHeaderTableViewCell") as? AppDetailHeaderTableViewCell {
                     tcell.configure(item)
                     cell = tcell
                 }
             case let .whatsNew(item):
-                if let tcell = tv.dequeueReusableCell(withIdentifier: "AppDetailWhatsNewTableViewCell") as? AppDetailWhatsNewTableViewCell {
+                if let tcell = tableView.dequeueReusableCell(withIdentifier: "AppDetailWhatsNewTableViewCell") as? AppDetailWhatsNewTableViewCell {
                     tcell.configure(item)
                     tcell.rx.moreClicked //observe more sequence
                         .drive(self.whatNewMoreRelay)
@@ -126,7 +115,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
                     cell = tcell
                 }
             case let .preview(item):
-                if let tcell = tv.dequeueReusableCell(withIdentifier: "AppDetailScreenshotsTableViewCell") as? AppDetailScreenshotsTableViewCell {
+                if let tcell = tableView.dequeueReusableCell(withIdentifier: "AppDetailScreenshotsTableViewCell") as? AppDetailScreenshotsTableViewCell {
                     tcell.configure(item)
                     tcell.rx.screenshopPressed
                         .map { AppDetailCoordinator.Flow.showScreenshots($0.0, $0.1) }
@@ -136,7 +125,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
                     cell = tcell
                 }
             case let .description(item):
-                if let tcell = tv.dequeueReusableCell(withIdentifier: "AppDetailDescriptionTableViewCell") as? AppDetailDescriptionTableViewCell {
+                if let tcell = tableView.dequeueReusableCell(withIdentifier: "AppDetailDescriptionTableViewCell") as? AppDetailDescriptionTableViewCell {
                     tcell.configure(item)
                     tcell.rx.moreClicked //observe more sequence
                         .drive(self.descriptionMoreRelay)
@@ -145,7 +134,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
                     cell = tcell
                 }
             case let .information(item):
-                if let tcell = tv.dequeueReusableCell(withIdentifier: "AppDetailInformationCell") as? AppDetailInformationCell {
+                if let tcell = tableView.dequeueReusableCell(withIdentifier: "AppDetailInformationCell") as? AppDetailInformationCell {
                     tcell.configure(item)
                     cell = tcell
                 }
@@ -162,21 +151,16 @@ class AppDetailViewController: UIViewController, AppPresentable {
     }
     
     private func setupRx() {
-//        Observable
-//            .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(SearchResultApp.self))
-//            .do(onNext: { [weak self] ip, _ in  //TODO: refactor to bind curry
-//                self?.tableView.deselectRow(at: ip, animated: true)
-//            })
-//            .map { $0.1 }
-//            .map { AppDetailCoordinator.Flow.showCarousel($0) }
-//            .bind(to: viewModel.flowRelay)
-//            .disposed(by: disposeBag)
+        navigationController?.rx.willShow.asObservable()
+            .filter { $0.viewController is SearchViewController }
+            .map { _ in .popup }
+            .bind(to: viewModel.flowRelay)
+            .disposed(by: disposeBag)
         
         Driver.merge(whatNewMoreRelay.asDriver(),
                      descriptionMoreRelay.asDriver())
         .drive(onNext: { [weak self] _ in
-            guard let self = self else { return }
-            self.tableView.reloadData()
+            self?.tableView.reloadData()
         })
         .disposed(by: disposeBag)
     }
@@ -199,25 +183,11 @@ class AppDetailViewController: UIViewController, AppPresentable {
         }
         .drive(tableView.rx.items(dataSource: dataSource))
         .disposed(by: disposeBag)
-        
-        //no data
-//        noResultsRelay.asObservable()
-//            .map { [unowned self] in (FlowCoordinator.Step.noResults($0), self.parent ?? self)  }
-//            .bind(to: FlowCoordinator.shared.rx.flow)
-//            .disposed(by: disposeBag)
     }
 
-    // MARK: - * Main Logic --------------------
-
-
-    // MARK: - * UI Events --------------------
-
-
     // MARK: - * Memory Manage --------------------
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     deinit {
@@ -268,13 +238,5 @@ extension AppDetailViewController: UITableViewDelegate {
 extension AppDetailViewController {
     struct Metric {
         static let tableRowHeight: CGFloat = 600
-    }
-}
-
-extension Reactive where Base: AppDetailViewController {
-    var deselectRow: Binder<IndexPath> {
-        return Binder(self.base) { (view, value) in
-            view.tableView.deselectRow(at: value, animated: true)
-        }
     }
 }

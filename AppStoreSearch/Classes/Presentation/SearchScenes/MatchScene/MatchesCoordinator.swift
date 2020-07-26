@@ -10,13 +10,8 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
-final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Result> {
+final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
-    enum Result {
-        case flow(Flow)
-        case cancel
-    }
-    
     enum Flow {
         case search(String)
     }
@@ -24,7 +19,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Result> {
     // MARK: - * Properties --------------------
     private let termObs: Observable<String>
 
-    lazy var viewController: MatchesViewController = {
+    lazy var viewController: MatchesViewController = { [unowned self] in
         guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
             fatalError("MatchesViewController can't load")
         }
@@ -41,9 +36,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Result> {
 
     // MARK: - * Cooridate --------------------
     override func start() -> Observable<CoordinationResult> {
-        let flow = viewController.viewModel.flowRelay.map { CoordinationResult.flow($0) }
-        let cancel = viewController.viewModel.cancelRelay.map { _ in CoordinationResult.cancel }
-        return Observable.merge(flow, cancel)
+        return viewController.viewModel.flowRelay.asObservable()
     }
     
     deinit {

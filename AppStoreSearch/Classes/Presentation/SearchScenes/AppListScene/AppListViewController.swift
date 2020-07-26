@@ -22,26 +22,25 @@ class AppListViewController: UIViewController, Alertable {
     
     // MARK: - * properties --------------------
     private let disposeBag = DisposeBag()
-    
     private var searchRelay = PublishRelay<String>()
-    private var noResultsRelay = PublishRelay<String>()
-    
     private var dataSource: AppListDataSource!
     
-    
+
     private var dispatchQueue = DispatchQueue.init(label: "io.hsleedevelop.applist.queue", qos: DispatchQoS.default)
     private var workItems = [IndexPath: DispatchWorkItem]()
     
     // MARK: - * IBOutlets --------------------
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: UIView!
+
+    @IBOutlet weak var noResultsView: UIView!
+    @IBOutlet weak var forLabel: UILabel!
     
     // MARK: - * LifeCycles --------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupAppearances()
-        setupUI()
         setupTableView()
 
         setupDataSource()
@@ -58,11 +57,7 @@ class AppListViewController: UIViewController, Alertable {
 
     // MARK: - * Initialize --------------------
     private func setupAppearances() {
-
-    }
-
-    private func setupUI() {
-
+        noResultsView.isHidden = true
     }
 
     private func setupTableView() {
@@ -126,13 +121,14 @@ class AppListViewController: UIViewController, Alertable {
     // MARK: - * Binding --------------------
     private func bindViewModel() {
         ///make prefetching workItem for screenshots in uitableviewcell
-        func nestedGenerateWorkItem(_ app: SearchResultApp) -> DispatchWorkItem {
+        func nestedGenerateWorkItem(_ app: SearchResultApp, bag: DisposeBag) -> DispatchWorkItem {
             return DispatchWorkItem {
-                app.screenshots?.enumerated().forEach({ [weak self] offset, screenshotURL in
-                    guard offset < 3, let self = self else { return }
+                app.screenshots?.enumerated().forEach({ offset, screenshotURL in
+                    guard offset < 3 else { return }
                     ImageProvider.shared.get(screenshotURL)
+                        .debug("get image", trimOutput: false)
                         .subscribe()
-                        .disposed(by: self.disposeBag)
+                        .disposed(by: bag)
                 })
             }
         }
@@ -141,19 +137,19 @@ class AppListViewController: UIViewController, Alertable {
         
         output.result
             .do(onNext: { [weak self] in
-                if $0.1.count <= 0 {
-                    self?.noResultsRelay.accept($0.0)
-                }
+                guard let self = self else { return }
+                self.tableView.isHidden = $0.1.count <= 0
+                self.noResultsView.isHidden = !self.tableView.isHidden
             })
             .map { $0.1 }
             .do(onNext: { [weak self] result in //make prefetching workItem
-                self?.workItems = result.enumerated().reduce([IndexPath: DispatchWorkItem]()) {
+                guard let self = self else { return }
+                self.workItems = result.enumerated().reduce([IndexPath: DispatchWorkItem]()) {
                     var dict = $0
-                    dict[IndexPath(item: $1.offset, section: 0)] = nestedGenerateWorkItem($1.element)
+                    dict[IndexPath(item: $1.offset, section: 0)] = nestedGenerateWorkItem($1.element, bag: self.disposeBag)
                     return dict
                 }
-                
-                logD("result.results?.enumerated().reduce(self?.workItems ?? [:]) \(self?.workItems.count ?? 0)")
+                logD("result.results?.enumerated().reduce(self?.workItems ?? [:]) \(self.workItems.count)")
             })
             .map { [AppListSectionModel(section: 0, items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
@@ -169,25 +165,11 @@ class AppListViewController: UIViewController, Alertable {
                 self?.showAlert(message: error.localizedDescription)
             })
             .disposed(by: disposeBag)
-        
-        //no data
-        noResultsRelay.asObservable()
-//            .map { [unowned self] in (FlowCoordinator.Step.noResults($0), self.parent ?? self)  }
-//            .bind(to: FlowCoordinator.shared.rx.flow)
-//            .disposed(by: disposeBag)
     }
 
-    // MARK: - * Main Logic --------------------
-
-
-    // MARK: - * UI Events --------------------
-
-
     // MARK: - * Memory Manage --------------------
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     deinit {
@@ -199,13 +181,5 @@ class AppListViewController: UIViewController, Alertable {
 extension AppListViewController {
     struct Metric {
         static let tableRowHeight: CGFloat = 300
-    }
-}
-
-extension Reactive where Base: AppListViewController {
-    var deselectRow: Binder<IndexPath> {
-        return Binder(self.base) { (view, value) in
-            view.tableView.deselectRow(at: value, animated: true)
-        }
     }
 }

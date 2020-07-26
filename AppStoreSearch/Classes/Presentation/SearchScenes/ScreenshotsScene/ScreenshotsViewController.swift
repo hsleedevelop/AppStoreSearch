@@ -76,9 +76,9 @@ final class ScreenshotsViewController: UIViewController {
         let output = viewModel.transform(input: .init())
         
         output.screenshotURLsWithIndex
-            .do(afterNext: { [unowned self] item in
+            .do(afterNext: { [weak self] item in
                 DispatchQueue.main.async {
-                    self.collectionView.scrollToItem(at: .init(item: item.1, section: 0), at: .centeredHorizontally, animated: false)
+                    self?.collectionView.scrollToItem(at: .init(item: item.1, section: 0), at: .centeredHorizontally, animated: false)
                 }
             })
             .map { $0.0 }
@@ -96,6 +96,12 @@ final class ScreenshotsViewController: UIViewController {
     // MARK: - * UI Action --------------------
     @objc private func closeButtonTouched() {
         viewModel.coordinatorRelay.accept(.dismiss)
+    }
+    
+    // MARK: - * Memory Manage --------------------
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
     deinit {
