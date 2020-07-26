@@ -28,6 +28,9 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
     //MARK: * IBOutlets --------------------
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
+            // app code
+            collectionView.accessibilityIdentifier = "screenshotCollectionView"
+            
             collectionView.backgroundColor = .clear
             collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
             

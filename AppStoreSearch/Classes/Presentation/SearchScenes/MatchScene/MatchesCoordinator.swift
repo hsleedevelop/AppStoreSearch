@@ -22,8 +22,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Result> {
     }
 
     // MARK: - * Properties --------------------
-    //private let termObs: Observable<String>
-    private let termObs: String
+    private let termObs: Observable<String>
 
     lazy var viewController: MatchesViewController = {
         guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
@@ -36,8 +35,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Result> {
     }()
 
     // MARK: - * Initialize --------------------
-    //init(termObs: Observable<String>) {
-    init(termObs: String) {
+    init(termObs: Observable<String>) {
         self.termObs = termObs
     }
 

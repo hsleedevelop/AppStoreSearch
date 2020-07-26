@@ -41,6 +41,8 @@
 		3A4D90DF24C85F1D00D5C11F /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90D524C85F1D00D5C11F /* Alertable.swift */; };
 		3A4D90E524C8622300D5C11F /* TermSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90E424C8622300D5C11F /* TermSectionModel.swift */; };
 		3AE5DDF524C9B38D00488E4D /* TermProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */; };
+		48A72C5024CD4B8C0026D556 /* SearchCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */; };
+		48A72C5624CD51840026D556 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A72C5524CD51840026D556 /* XCUIElement+Extensions.swift */; };
 		48B8DB2424CA88BF004C2A8C /* AppListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8DB2324CA88BF004C2A8C /* AppListTableViewCell.swift */; };
 		48B8DB2B24CAA311004C2A8C /* AppPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8DB2A24CAA311004C2A8C /* AppPresentable.swift */; };
 		48B8DB2E24CAA37F004C2A8C /* AppDetailSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B8DB2D24CAA37F004C2A8C /* AppDetailSectionModel.swift */; };
@@ -143,6 +145,8 @@
 		3A4D90E424C8622300D5C11F /* TermSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermSectionModel.swift; sourceTree = "<group>"; };
 		3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermProviderTests.swift; sourceTree = "<group>"; };
 		3BD8AC261205DBE4A615F95D /* Pods_AppStoreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinatorTests.swift; sourceTree = "<group>"; };
+		48A72C5524CD51840026D556 /* XCUIElement+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Extensions.swift"; sourceTree = "<group>"; };
 		48B8DB2324CA88BF004C2A8C /* AppListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListTableViewCell.swift; sourceTree = "<group>"; };
 		48B8DB2A24CAA311004C2A8C /* AppPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPresentable.swift; sourceTree = "<group>"; };
 		48B8DB2D24CAA37F004C2A8C /* AppDetailSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDetailSectionModel.swift; sourceTree = "<group>"; };
@@ -270,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4D908324C7CFC100D5C11F /* AppStoreSearchTests.swift */,
+				48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */,
 				3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */,
 				3A4D908524C7CFC100D5C11F /* Info.plist */,
 			);
@@ -279,6 +284,7 @@
 		3A4D908D24C7CFC100D5C11F /* AppStoreSearchUITests */ = {
 			isa = PBXGroup;
 			children = (
+				48A72C5524CD51840026D556 /* XCUIElement+Extensions.swift */,
 				3A4D908E24C7CFC100D5C11F /* AppStoreSearchUITests.swift */,
 				3A4D909024C7CFC100D5C11F /* Info.plist */,
 			);
@@ -616,6 +622,7 @@
 				3A4D908624C7CFC100D5C11F /* Sources */,
 				3A4D908724C7CFC100D5C11F /* Frameworks */,
 				3A4D908824C7CFC100D5C11F /* Resources */,
+				A855A464DA1E12A6B06546B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -770,6 +777,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStoreSearch/Pods-AppStoreSearch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A855A464DA1E12A6B06546B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStoreSearchUITests/Pods-AppStoreSearchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppStoreSearchUITests/Pods-AppStoreSearchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppStoreSearchUITests/Pods-AppStoreSearchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FE616714EEEB7702867F6317 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -860,6 +884,7 @@
 			files = (
 				3AE5DDF524C9B38D00488E4D /* TermProviderTests.swift in Sources */,
 				3A4D908424C7CFC100D5C11F /* AppStoreSearchTests.swift in Sources */,
+				48A72C5024CD4B8C0026D556 /* SearchCoordinatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +892,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48A72C5624CD51840026D556 /* XCUIElement+Extensions.swift in Sources */,
 				3A4D908F24C7CFC100D5C11F /* AppStoreSearchUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1054,7 +1080,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EDC5F4463CEB9D18D5D94E2A /* Pods-AppStoreSearchTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRUHN5QC56;
@@ -1077,7 +1103,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE6C778917CC18F9964014E3 /* Pods-AppStoreSearchTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRUHN5QC56;
@@ -1100,7 +1126,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57B0602FD05904FCEFF01536 /* Pods-AppStoreSearchUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRUHN5QC56;
 				INFOPLIST_FILE = AppStoreSearchUITests/Info.plist;
@@ -1121,7 +1147,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3895111B127F69776AC9A1C5 /* Pods-AppStoreSearchUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LRUHN5QC56;
 				INFOPLIST_FILE = AppStoreSearchUITests/Info.plist;

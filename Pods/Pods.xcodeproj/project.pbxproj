@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -756,119 +756,140 @@
 		46EB2E00006820 /* Pods-AppStoreSearchTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00006810 /* Pods-AppStoreSearchTests-dummy.m */; };
 		46EB2E000068C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00002E50 /* Foundation.framework */; };
 		46EB2E00006930 /* Pods-AppStoreSearchUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46EB2E00006920 /* Pods-AppStoreSearchUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46EB2E00006970 /* Pods-AppStoreSearchUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00006960 /* Pods-AppStoreSearchUITests-dummy.m */; };
-		46EB2E00006B10 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B00 /* RxSwift.framework */; };
-		46EB2E00006B50 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B40 /* RxRelay.framework */; };
-		46EB2E00006B90 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B80 /* Differentiator.framework */; };
-		46EB2E00006BC0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B00 /* RxSwift.framework */; };
-		46EB2E00006C00 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006BF0 /* RxCocoa.framework */; };
-		46EB2E00006C30 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B00 /* RxSwift.framework */; };
-		46EB2E00006C60 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006BF0 /* RxCocoa.framework */; };
-		46EB2E00006C90 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B00 /* RxSwift.framework */; };
-		46EB2E00006CC0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006B00 /* RxSwift.framework */; };
-		46EB2E00006CF0 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006BF0 /* RxCocoa.framework */; };
+		46EB2E00006980 /* Pods-AppStoreSearchUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46EB2E00006970 /* Pods-AppStoreSearchUITests-dummy.m */; };
+		46EB2E00006C20 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C10 /* RxSwift.framework */; };
+		46EB2E00006C60 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C50 /* RxRelay.framework */; };
+		46EB2E00006CA0 /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C90 /* Differentiator.framework */; };
+		46EB2E00006CD0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C10 /* RxSwift.framework */; };
+		46EB2E00006D10 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006D00 /* RxCocoa.framework */; };
+		46EB2E00006D40 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C10 /* RxSwift.framework */; };
+		46EB2E00006D70 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006D00 /* RxCocoa.framework */; };
+		46EB2E00006DA0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C10 /* RxSwift.framework */; };
+		46EB2E00006DD0 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006C10 /* RxSwift.framework */; };
+		46EB2E00006E00 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46EB2E00006D00 /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		46EB2E00006980 /* PBXContainerItemProxy */ = {
+		46EB2E00006990 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 00F31BD5217A20974B5E9AAC6256D98E;
 			remoteInfo = Cosmos;
 		};
-		46EB2E000069A0 /* PBXContainerItemProxy */ = {
+		46EB2E000069B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 212F79CE462FC723AF42979B57FBB8A6;
 			remoteInfo = Differentiator;
 		};
-		46EB2E000069C0 /* PBXContainerItemProxy */ = {
+		46EB2E000069D0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3AEC09E383B46D12E00628362EB86D67;
 			remoteInfo = FLEX;
 		};
-		46EB2E000069E0 /* PBXContainerItemProxy */ = {
+		46EB2E000069F0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
 			remoteInfo = RxCocoa;
 		};
-		46EB2E00006A00 /* PBXContainerItemProxy */ = {
+		46EB2E00006A10 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 401909D4FB2014BF539896BF0CCA48C2;
 			remoteInfo = RxDataSources;
 		};
-		46EB2E00006A20 /* PBXContainerItemProxy */ = {
+		46EB2E00006A30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D77CA6E20D3F659D26E05339EBA33B59;
 			remoteInfo = RxGesture;
 		};
-		46EB2E00006A40 /* PBXContainerItemProxy */ = {
+		46EB2E00006A50 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4622BFEF3DC16E8BD15EEFC30D4D0084;
 			remoteInfo = RxRelay;
 		};
-		46EB2E00006A60 /* PBXContainerItemProxy */ = {
+		46EB2E00006A70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
 			remoteInfo = RxSwift;
 		};
-		46EB2E00006A80 /* PBXContainerItemProxy */ = {
+		46EB2E00006A90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = ED7124602AA1B5C6A257912C7E8B793B;
 			remoteInfo = RxSwiftExt;
 		};
-		46EB2E00006AA0 /* PBXContainerItemProxy */ = {
+		46EB2E00006AB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 9B0FD4A450F4EB81748B2A4E6D1C63EC;
 			remoteInfo = "Pods-AppStoreSearch";
 		};
-		46EB2E00006AC0 /* PBXContainerItemProxy */ = {
+		46EB2E00006AD0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9B0FD4A450F4EB81748B2A4E6D1C63EC;
-			remoteInfo = "Pods-AppStoreSearch";
+			remoteGlobalIDString = 00F31BD5217A20974B5E9AAC6256D98E;
+			remoteInfo = Cosmos;
 		};
-		46EB2E00006AE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E00000000 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
-			remoteInfo = RxSwift;
-		};
-		46EB2E00006B20 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 46EB2E00000000 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4622BFEF3DC16E8BD15EEFC30D4D0084;
-			remoteInfo = RxRelay;
-		};
-		46EB2E00006B60 /* PBXContainerItemProxy */ = {
+		46EB2E00006AF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 212F79CE462FC723AF42979B57FBB8A6;
 			remoteInfo = Differentiator;
 		};
-		46EB2E00006BA0 /* PBXContainerItemProxy */ = {
+		46EB2E00006B10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AEC09E383B46D12E00628362EB86D67;
+			remoteInfo = FLEX;
+		};
+		46EB2E00006B30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
+			remoteInfo = RxCocoa;
+		};
+		46EB2E00006B50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 401909D4FB2014BF539896BF0CCA48C2;
+			remoteInfo = RxDataSources;
+		};
+		46EB2E00006B70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D77CA6E20D3F659D26E05339EBA33B59;
+			remoteInfo = RxGesture;
+		};
+		46EB2E00006B90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4622BFEF3DC16E8BD15EEFC30D4D0084;
+			remoteInfo = RxRelay;
+		};
+		46EB2E00006BB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
@@ -879,38 +900,73 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
-			remoteInfo = RxCocoa;
+			remoteGlobalIDString = ED7124602AA1B5C6A257912C7E8B793B;
+			remoteInfo = RxSwiftExt;
 		};
-		46EB2E00006C10 /* PBXContainerItemProxy */ = {
+		46EB2E00006BF0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
 			remoteInfo = RxSwift;
 		};
-		46EB2E00006C40 /* PBXContainerItemProxy */ = {
+		46EB2E00006C30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
-			remoteInfo = RxCocoa;
+			remoteGlobalIDString = 4622BFEF3DC16E8BD15EEFC30D4D0084;
+			remoteInfo = RxRelay;
 		};
 		46EB2E00006C70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
-			remoteInfo = RxSwift;
+			remoteGlobalIDString = 212F79CE462FC723AF42979B57FBB8A6;
+			remoteInfo = Differentiator;
 		};
-		46EB2E00006CA0 /* PBXContainerItemProxy */ = {
+		46EB2E00006CB0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
 			remoteInfo = RxSwift;
 		};
-		46EB2E00006CD0 /* PBXContainerItemProxy */ = {
+		46EB2E00006CE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
+			remoteInfo = RxCocoa;
+		};
+		46EB2E00006D20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
+			remoteInfo = RxSwift;
+		};
+		46EB2E00006D50 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6;
+			remoteInfo = RxCocoa;
+		};
+		46EB2E00006D80 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
+			remoteInfo = RxSwift;
+		};
+		46EB2E00006DB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46EB2E00000000 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA9EA43B3B503823EE36C60D9C8A865F;
+			remoteInfo = RxSwift;
+		};
+		46EB2E00006DE0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46EB2E00000000 /* Project object */;
 			proxyType = 1;
@@ -1714,13 +1770,14 @@
 		46EB2E00006900 /* Pods-AppStoreSearchUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreSearchUITests-Info.plist"; sourceTree = "<group>"; };
 		46EB2E00006910 /* Pods-AppStoreSearchUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreSearchUITests.modulemap"; sourceTree = "<group>"; };
 		46EB2E00006920 /* Pods-AppStoreSearchUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreSearchUITests-umbrella.h"; sourceTree = "<group>"; };
-		46EB2E00006940 /* Pods-AppStoreSearchUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreSearchUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		46EB2E00006950 /* Pods-AppStoreSearchUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreSearchUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		46EB2E00006960 /* Pods-AppStoreSearchUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreSearchUITests-dummy.m"; sourceTree = "<group>"; };
-		46EB2E00006B00 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E00006B40 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E00006B80 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		46EB2E00006BF0 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E00006940 /* Pods-AppStoreSearchUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppStoreSearchUITests-frameworks.sh"; sourceTree = "<group>"; };
+		46EB2E00006950 /* Pods-AppStoreSearchUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreSearchUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		46EB2E00006960 /* Pods-AppStoreSearchUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreSearchUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		46EB2E00006970 /* Pods-AppStoreSearchUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreSearchUITests-dummy.m"; sourceTree = "<group>"; };
+		46EB2E00006C10 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E00006C50 /* RxRelay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxRelay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E00006C90 /* Differentiator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Differentiator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46EB2E00006D00 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AC7180564FE35A293CD0DD977EE56A8 /* FLEX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FLEX.framework; path = FLEX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7573034822F093BCAF13EC6B7B8454 /* RxGesture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxGesture.framework; path = RxGesture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6570EF80D3D9BAC37E653856E44EF351 /* RxSwiftExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RxSwiftExt.framework; path = RxSwiftExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1769,8 +1826,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00004880 /* Foundation.framework in Frameworks */,
-				46EB2E00006B50 /* RxRelay.framework in Frameworks */,
-				46EB2E00006B10 /* RxSwift.framework in Frameworks */,
+				46EB2E00006C60 /* RxRelay.framework in Frameworks */,
+				46EB2E00006C20 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1778,10 +1835,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00006B90 /* Differentiator.framework in Frameworks */,
+				46EB2E00006CA0 /* Differentiator.framework in Frameworks */,
 				46EB2E00005160 /* Foundation.framework in Frameworks */,
-				46EB2E00006C00 /* RxCocoa.framework in Frameworks */,
-				46EB2E00006BC0 /* RxSwift.framework in Frameworks */,
+				46EB2E00006D10 /* RxCocoa.framework in Frameworks */,
+				46EB2E00006CD0 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1790,8 +1847,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E00005390 /* Foundation.framework in Frameworks */,
-				46EB2E00006C60 /* RxCocoa.framework in Frameworks */,
-				46EB2E00006C30 /* RxSwift.framework in Frameworks */,
+				46EB2E00006D70 /* RxCocoa.framework in Frameworks */,
+				46EB2E00006D40 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1800,7 +1857,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E000055B0 /* Foundation.framework in Frameworks */,
-				46EB2E00006C90 /* RxSwift.framework in Frameworks */,
+				46EB2E00006DA0 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1817,8 +1874,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EB2E000061B0 /* Foundation.framework in Frameworks */,
-				46EB2E00006CF0 /* RxCocoa.framework in Frameworks */,
-				46EB2E00006CC0 /* RxSwift.framework in Frameworks */,
+				46EB2E00006E00 /* RxCocoa.framework in Frameworks */,
+				46EB2E00006DD0 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1882,10 +1939,10 @@
 		46EB2E00000060 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46EB2E00006B80 /* Differentiator.framework */,
-				46EB2E00006BF0 /* RxCocoa.framework */,
-				46EB2E00006B40 /* RxRelay.framework */,
-				46EB2E00006B00 /* RxSwift.framework */,
+				46EB2E00006C90 /* Differentiator.framework */,
+				46EB2E00006D00 /* RxCocoa.framework */,
+				46EB2E00006C50 /* RxRelay.framework */,
+				46EB2E00006C10 /* RxSwift.framework */,
 				46EB2E00002E40 /* iOS */,
 			);
 			name = Frameworks;
@@ -2899,9 +2956,10 @@
 			isa = PBXGroup;
 			children = (
 				46EB2E00006910 /* Pods-AppStoreSearchUITests.modulemap */,
-				46EB2E00006950 /* Pods-AppStoreSearchUITests-acknowledgements.markdown */,
-				46EB2E00006940 /* Pods-AppStoreSearchUITests-acknowledgements.plist */,
-				46EB2E00006960 /* Pods-AppStoreSearchUITests-dummy.m */,
+				46EB2E00006960 /* Pods-AppStoreSearchUITests-acknowledgements.markdown */,
+				46EB2E00006950 /* Pods-AppStoreSearchUITests-acknowledgements.plist */,
+				46EB2E00006970 /* Pods-AppStoreSearchUITests-dummy.m */,
+				46EB2E00006940 /* Pods-AppStoreSearchUITests-frameworks.sh */,
 				46EB2E00006900 /* Pods-AppStoreSearchUITests-Info.plist */,
 				46EB2E00006920 /* Pods-AppStoreSearchUITests-umbrella.h */,
 				46EB2E000068F0 /* Pods-AppStoreSearchUITests.debug.xcconfig */,
@@ -3222,7 +3280,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006AB0 /* PBXTargetDependency */,
+				46EB2E00006AC0 /* PBXTargetDependency */,
 			);
 			name = "Pods-AppStoreSearchTests";
 			productName = "Pods-AppStoreSearchTests";
@@ -3277,9 +3335,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006B70 /* PBXTargetDependency */,
-				46EB2E00006BE0 /* PBXTargetDependency */,
-				46EB2E00006BB0 /* PBXTargetDependency */,
+				46EB2E00006C80 /* PBXTargetDependency */,
+				46EB2E00006CF0 /* PBXTargetDependency */,
+				46EB2E00006CC0 /* PBXTargetDependency */,
 			);
 			name = RxDataSources;
 			productName = RxDataSources;
@@ -3298,7 +3356,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006C80 /* PBXTargetDependency */,
+				46EB2E00006D90 /* PBXTargetDependency */,
 			);
 			name = RxRelay;
 			productName = RxRelay;
@@ -3317,8 +3375,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006B30 /* PBXTargetDependency */,
-				46EB2E00006AF0 /* PBXTargetDependency */,
+				46EB2E00006C40 /* PBXTargetDependency */,
+				46EB2E00006C00 /* PBXTargetDependency */,
 			);
 			name = RxCocoa;
 			productName = RxCocoa;
@@ -3337,15 +3395,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006990 /* PBXTargetDependency */,
-				46EB2E000069B0 /* PBXTargetDependency */,
-				46EB2E000069D0 /* PBXTargetDependency */,
-				46EB2E000069F0 /* PBXTargetDependency */,
-				46EB2E00006A10 /* PBXTargetDependency */,
-				46EB2E00006A30 /* PBXTargetDependency */,
-				46EB2E00006A50 /* PBXTargetDependency */,
-				46EB2E00006A70 /* PBXTargetDependency */,
-				46EB2E00006A90 /* PBXTargetDependency */,
+				46EB2E000069A0 /* PBXTargetDependency */,
+				46EB2E000069C0 /* PBXTargetDependency */,
+				46EB2E000069E0 /* PBXTargetDependency */,
+				46EB2E00006A00 /* PBXTargetDependency */,
+				46EB2E00006A20 /* PBXTargetDependency */,
+				46EB2E00006A40 /* PBXTargetDependency */,
+				46EB2E00006A60 /* PBXTargetDependency */,
+				46EB2E00006A80 /* PBXTargetDependency */,
+				46EB2E00006AA0 /* PBXTargetDependency */,
 			);
 			name = "Pods-AppStoreSearch";
 			productName = "Pods-AppStoreSearch";
@@ -3364,7 +3422,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006AD0 /* PBXTargetDependency */,
+				46EB2E00006AE0 /* PBXTargetDependency */,
+				46EB2E00006B00 /* PBXTargetDependency */,
+				46EB2E00006B20 /* PBXTargetDependency */,
+				46EB2E00006B40 /* PBXTargetDependency */,
+				46EB2E00006B60 /* PBXTargetDependency */,
+				46EB2E00006B80 /* PBXTargetDependency */,
+				46EB2E00006BA0 /* PBXTargetDependency */,
+				46EB2E00006BC0 /* PBXTargetDependency */,
+				46EB2E00006BE0 /* PBXTargetDependency */,
 			);
 			name = "Pods-AppStoreSearchUITests";
 			productName = "Pods-AppStoreSearchUITests";
@@ -3383,8 +3449,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006C50 /* PBXTargetDependency */,
-				46EB2E00006C20 /* PBXTargetDependency */,
+				46EB2E00006D60 /* PBXTargetDependency */,
+				46EB2E00006D30 /* PBXTargetDependency */,
 			);
 			name = RxGesture;
 			productName = RxGesture;
@@ -3421,8 +3487,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				46EB2E00006CE0 /* PBXTargetDependency */,
-				46EB2E00006CB0 /* PBXTargetDependency */,
+				46EB2E00006DF0 /* PBXTargetDependency */,
+				46EB2E00006DC0 /* PBXTargetDependency */,
 			);
 			name = RxSwiftExt;
 			productName = RxSwiftExt;
@@ -3439,7 +3505,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 46EB2E00000030 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -4176,138 +4242,186 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EB2E00006970 /* Pods-AppStoreSearchUITests-dummy.m in Sources */,
+				46EB2E00006980 /* Pods-AppStoreSearchUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		46EB2E00006990 /* PBXTargetDependency */ = {
+		46EB2E000069A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Cosmos;
 			target = 00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */;
-			targetProxy = 46EB2E00006980 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006990 /* PBXContainerItemProxy */;
 		};
-		46EB2E000069B0 /* PBXTargetDependency */ = {
+		46EB2E000069C0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Differentiator;
 			target = 212F79CE462FC723AF42979B57FBB8A6 /* Differentiator */;
-			targetProxy = 46EB2E000069A0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000069B0 /* PBXContainerItemProxy */;
 		};
-		46EB2E000069D0 /* PBXTargetDependency */ = {
+		46EB2E000069E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FLEX;
 			target = 3AEC09E383B46D12E00628362EB86D67 /* FLEX */;
-			targetProxy = 46EB2E000069C0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000069D0 /* PBXContainerItemProxy */;
 		};
-		46EB2E000069F0 /* PBXTargetDependency */ = {
+		46EB2E00006A00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxCocoa;
 			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
-			targetProxy = 46EB2E000069E0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E000069F0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006A10 /* PBXTargetDependency */ = {
+		46EB2E00006A20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxDataSources;
 			target = 401909D4FB2014BF539896BF0CCA48C2 /* RxDataSources */;
-			targetProxy = 46EB2E00006A00 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006A10 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006A30 /* PBXTargetDependency */ = {
+		46EB2E00006A40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxGesture;
 			target = D77CA6E20D3F659D26E05339EBA33B59 /* RxGesture */;
-			targetProxy = 46EB2E00006A20 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006A30 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006A50 /* PBXTargetDependency */ = {
+		46EB2E00006A60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxRelay;
 			target = 4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */;
-			targetProxy = 46EB2E00006A40 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006A50 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006A70 /* PBXTargetDependency */ = {
+		46EB2E00006A80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
 			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
-			targetProxy = 46EB2E00006A60 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006A70 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006A90 /* PBXTargetDependency */ = {
+		46EB2E00006AA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwiftExt;
 			target = ED7124602AA1B5C6A257912C7E8B793B /* RxSwiftExt */;
-			targetProxy = 46EB2E00006A80 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006A90 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006AB0 /* PBXTargetDependency */ = {
+		46EB2E00006AC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-AppStoreSearch";
 			target = 9B0FD4A450F4EB81748B2A4E6D1C63EC /* Pods-AppStoreSearch */;
-			targetProxy = 46EB2E00006AA0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006AB0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006AD0 /* PBXTargetDependency */ = {
+		46EB2E00006AE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "Pods-AppStoreSearch";
-			target = 9B0FD4A450F4EB81748B2A4E6D1C63EC /* Pods-AppStoreSearch */;
-			targetProxy = 46EB2E00006AC0 /* PBXContainerItemProxy */;
+			name = Cosmos;
+			target = 00F31BD5217A20974B5E9AAC6256D98E /* Cosmos */;
+			targetProxy = 46EB2E00006AD0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006AF0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RxSwift;
-			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
-			targetProxy = 46EB2E00006AE0 /* PBXContainerItemProxy */;
-		};
-		46EB2E00006B30 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RxRelay;
-			target = 4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */;
-			targetProxy = 46EB2E00006B20 /* PBXContainerItemProxy */;
-		};
-		46EB2E00006B70 /* PBXTargetDependency */ = {
+		46EB2E00006B00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Differentiator;
 			target = 212F79CE462FC723AF42979B57FBB8A6 /* Differentiator */;
-			targetProxy = 46EB2E00006B60 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006AF0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006BB0 /* PBXTargetDependency */ = {
+		46EB2E00006B20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FLEX;
+			target = 3AEC09E383B46D12E00628362EB86D67 /* FLEX */;
+			targetProxy = 46EB2E00006B10 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006B40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxCocoa;
+			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
+			targetProxy = 46EB2E00006B30 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006B60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxDataSources;
+			target = 401909D4FB2014BF539896BF0CCA48C2 /* RxDataSources */;
+			targetProxy = 46EB2E00006B50 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006B80 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxGesture;
+			target = D77CA6E20D3F659D26E05339EBA33B59 /* RxGesture */;
+			targetProxy = 46EB2E00006B70 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006BA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxRelay;
+			target = 4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */;
+			targetProxy = 46EB2E00006B90 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006BC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
 			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
-			targetProxy = 46EB2E00006BA0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006BB0 /* PBXContainerItemProxy */;
 		};
 		46EB2E00006BE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RxCocoa;
-			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
+			name = RxSwiftExt;
+			target = ED7124602AA1B5C6A257912C7E8B793B /* RxSwiftExt */;
 			targetProxy = 46EB2E00006BD0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006C20 /* PBXTargetDependency */ = {
+		46EB2E00006C00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
 			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
-			targetProxy = 46EB2E00006C10 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006BF0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006C50 /* PBXTargetDependency */ = {
+		46EB2E00006C40 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RxCocoa;
-			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
-			targetProxy = 46EB2E00006C40 /* PBXContainerItemProxy */;
+			name = RxRelay;
+			target = 4622BFEF3DC16E8BD15EEFC30D4D0084 /* RxRelay */;
+			targetProxy = 46EB2E00006C30 /* PBXContainerItemProxy */;
 		};
 		46EB2E00006C80 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RxSwift;
-			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
+			name = Differentiator;
+			target = 212F79CE462FC723AF42979B57FBB8A6 /* Differentiator */;
 			targetProxy = 46EB2E00006C70 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006CB0 /* PBXTargetDependency */ = {
+		46EB2E00006CC0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxSwift;
 			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
-			targetProxy = 46EB2E00006CA0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006CB0 /* PBXContainerItemProxy */;
 		};
-		46EB2E00006CE0 /* PBXTargetDependency */ = {
+		46EB2E00006CF0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RxCocoa;
 			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
-			targetProxy = 46EB2E00006CD0 /* PBXContainerItemProxy */;
+			targetProxy = 46EB2E00006CE0 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006D30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxSwift;
+			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
+			targetProxy = 46EB2E00006D20 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006D60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxCocoa;
+			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
+			targetProxy = 46EB2E00006D50 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006D90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxSwift;
+			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
+			targetProxy = 46EB2E00006D80 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006DC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxSwift;
+			target = EA9EA43B3B503823EE36C60D9C8A865F /* RxSwift */;
+			targetProxy = 46EB2E00006DB0 /* PBXContainerItemProxy */;
+		};
+		46EB2E00006DF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RxCocoa;
+			target = 7AD0C6DCDC9CEC8A3C7C10C7FEE07BE6 /* RxCocoa */;
+			targetProxy = 46EB2E00006DE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

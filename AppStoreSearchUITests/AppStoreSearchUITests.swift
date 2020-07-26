@@ -22,15 +22,46 @@ class AppStoreSearchUITests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    
+    func testSearchCase1() throws {
+        
         let app = XCUIApplication()
         app.launch()
+        
+        let searchNavigationBar = app.navigationBars["Search"]
+        let appStoreSearchField = searchNavigationBar.searchFields["App Store"]
+        appStoreSearchField.tap()
+        appStoreSearchField.typeText("카카오뱅크")
+        
+        if app.buttons["search"].waitForExistence(timeout: 1) {
+            app.buttons["search"].tap()
+        }
+        
+        if app.buttons["검색"].waitForExistence(timeout: 1) {
+            app.buttons["검색"].tap()
+        }
+        
+        if app/*@START_MENU_TOKEN@*/.tables.cells.staticTexts["카카오뱅크 - 같지만 다른 은행"]/*[[".otherElements[\"Double-tap to dismiss\"].tables",".cells.staticTexts[\"카카오뱅크 - 같지만 다른 은행\"]",".staticTexts[\"카카오뱅크 - 같지만 다른 은행\"]",".tables"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,1]]@END_MENU_TOKEN@*/.waitForExistence(timeout: 5) {
+            app/*@START_MENU_TOKEN@*/.tables.cells.staticTexts["카카오뱅크 - 같지만 다른 은행"]/*[[".otherElements[\"Double-tap to dismiss\"].tables",".cells.staticTexts[\"카카오뱅크 - 같지만 다른 은행\"]",".staticTexts[\"카카오뱅크 - 같지만 다른 은행\"]",".tables"],[[[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0,1]]@END_MENU_TOKEN@*/.tap()
+        }
+        
+        //wait for screenshot image collection
+        let imageView = app.descendants(matching: .any)["screenshotImageView"].firstMatch
+        imageView.tap()
+        
+        app.collectionViews.firstMatch.swipeLeft()
+        app.collectionViews.firstMatch.swipeLeft()
+        app.collectionViews.firstMatch.swipeLeft()
+        app.collectionViews.firstMatch.swipeLeft()
+        
+        app.navigationBars["AppStoreSearch.ScreenshotsView"].buttons["Done"].tap()
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        searchNavigationBar.buttons["Search"].tap()
+        searchNavigationBar.buttons["Cancel"].tap()
+        
+        _ = app.descendants(matching: .any)["JUST_WAIT"].waitForExistence(timeout: 7)
     }
+
 
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {

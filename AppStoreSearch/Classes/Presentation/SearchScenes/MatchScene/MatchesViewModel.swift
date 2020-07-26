@@ -13,8 +13,7 @@ import RxSwiftExt
 final class MatchesViewModel: ViewModelType {
     // MARK: - * Dependencies --------------------
     private let termProvider: TermProviding
-    //private var termObs: Observable<String>
-    private var termObs: String
+    private var termObs: Observable<String>
 
     // MARK: - * Properties --------------------
     private var disposeBag = DisposeBag()
@@ -25,8 +24,7 @@ final class MatchesViewModel: ViewModelType {
     // MARK: - * Properties  --------------------
     let flowRelay = PublishRelay<MatchesCoordinator.Flow>()
     
-    //init(termProvider: TermProviding, termObs: Observable<String>) {
-    init(termProvider: TermProviding, termObs: String) {
+    init(termProvider: TermProviding, termObs: Observable<String>) {
         self.termProvider = termProvider
         self.termObs = termObs
 
@@ -41,7 +39,9 @@ final class MatchesViewModel: ViewModelType {
             .disposed(by: disposeBag)
         
         //서치 메인, 키워드 입력 시 매핑
-        let matches = Observable.just(termObs)
+        let matches = termObs
+            .filter { !$0.isEmpty }
+            .distinctUntilChanged()
             .flatMap ({ [weak self] term -> Observable<[String]> in
                 guard let self = self else { return Observable.empty() }
                 return self.termProvider.fetch()

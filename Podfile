@@ -30,9 +30,12 @@ target 'AppStoreSearch' do
     target 'AppStoreSearchTests' do
       inherit! :search_paths
     end
-    target 'AppStoreSearchUITests' do
-      inherit! :search_paths
-    end
+end
+
+target 'AppStoreSearchUITests' do
+  use_frameworks!
+  shared_pods
+  debug_pods
 end
 
 

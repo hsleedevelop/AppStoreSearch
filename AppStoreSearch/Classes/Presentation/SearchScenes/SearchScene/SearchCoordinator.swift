@@ -23,7 +23,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     private let window: UIWindow
     private var viewController: SearchViewController!
     
-    private let termRelay2 = PublishRelay<String>()
+    private let termRelay = BehaviorRelay<String>(value: "")
     
     // MARK: - * Initialize --------------------
     init(window: UIWindow) {
@@ -39,7 +39,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         
         let viewModel = SearchViewModel(termProvider: TermProvider())
         viewController.viewModel = viewModel
-        //coordinateMatchingTerm(termObs: termRelay2.asObservable())
+        setupMatchTermCoodinator()
         
         bindRx(viewModel: viewModel)
 
@@ -59,7 +59,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
             .subscribe(onNext: { [weak self] flow in
                 switch flow {
                 case .matchTerm(let term):
-                    self?.coordinateMatchingTerm(termObs: term)
+                    self?.coordianteMatching(with: term)
                 case .search(let term):
                     self?.coordinateSearch(with: term)
                 case .cancelSearch:
@@ -85,10 +85,15 @@ final class SearchCoordinator: BaseCoordinator<Void> {
             .disposed(by: disposeBag)
     }
     
-    //private func coordinateMatchingTerm(termObs: Observable<String>) {
-    private func coordinateMatchingTerm(termObs: String) {
-        //let coordinator = MatchesCoordinator(termObs: termObs)
-        let coordinator = MatchesCoordinator(termObs: termObs)
+    private func coordianteMatching(with term: String) {
+        if termRelay.value != term {
+            coordianteCancelSearch()
+        }
+        termRelay.accept(term)
+    }
+    
+    private func setupMatchTermCoodinator() {
+        let coordinator = MatchesCoordinator(termObs: termRelay.asObservable())
         viewController.resultViewController = coordinator.viewController
         
         coordinate(to: coordinator)

@@ -19,9 +19,16 @@ final class AppDetailScreenshotCollectionViewCell: UICollectionViewCell {
     
     var disposeBag = DisposeBag()
     
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        self.isAccessibilityElement = true
+    }
+    
     //MARK: * IBOutlets --------------------
     @IBOutlet weak var screenshotImageView: UIImageView! {
         didSet {
+            screenshotImageView.accessibilityIdentifier = "screenshotImageView"
             screenshotImageView.cornerRadius = 10
             screenshotImageView.borderColor = .lightGray
             screenshotImageView.borderWidth = 0.5

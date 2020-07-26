@@ -15,7 +15,7 @@ import RxDataSources
 class MatchesViewController: UIViewController {
     // MARK: - * type definition --------------------
     typealias ViewModelType = MatchesViewModel
-    typealias TermDataSource = RxTableViewSectionedAnimatedDataSource<TermSectionModel>
+    typealias TermDataSource = RxTableViewSectionedReloadDataSource<TermSectionModel>
     
     // MARK: - * dependencies --------------------
     var viewModel: ViewModelType!
@@ -77,7 +77,7 @@ class MatchesViewController: UIViewController {
             return cell
         }
         
-        self.dataSource = .init(animationConfiguration: .init(reloadAnimation: .fade), configureCell: configureCell)
+        self.dataSource = .init(configureCell: configureCell)
     }
     
     private func setupRx() {
