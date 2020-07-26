@@ -25,6 +25,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
     private let disposeBag = DisposeBag()
     
     private var whatNewMoreRelay = BehaviorRelay<Bool>(value: false)
+    private var screenshotRelay = PublishRelay<([String], Int)>()
     private var descriptionMoreRelay = BehaviorRelay<Bool>(value: false)
     
     private var dataSource: AppDetailDataSource!
@@ -59,10 +60,20 @@ class AppDetailViewController: UIViewController, AppPresentable {
         setupRx()
         bindViewModel()
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+         super.viewWillAppear(animated)
+         
+         navigationController?.navigationBar.prefersLargeTitles = false
+         navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
+     }
+     
+     override func viewWillDisappear(_ animated: Bool) {
+         super.viewWillDisappear(animated)
+         
+         navigationController?.navigationBar.prefersLargeTitles = true
+         navigationController?.navigationBar.setValue(false, forKey: "hidesShadow")
+     }
 
     // MARK: - * Initialize --------------------
     private func setupAppearances() {
@@ -76,16 +87,26 @@ class AppDetailViewController: UIViewController, AppPresentable {
     private func setupTableView() {
         tableView.allowsSelection = true
         tableView.separatorStyle = .singleLine
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .systemBackground
         tableView.tableFooterView = UIView()
     
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = Metric.tableRowHeight //max height for what's new and description
+        
+        tableView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
+        
+        tableView.register(.init(nibName: "AppDetailHeaderTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "AppDetailHeaderTableViewCell")
+        tableView.register(.init(nibName: "AppDetailWhatsNewTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "AppDetailWhatsNewTableViewCell")
+        tableView.register(.init(nibName: "AppDetailScreenshotsTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "AppDetailScreenshotsTableViewCell")
+        tableView.register(.init(nibName: "AppDetailDescriptionTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "AppDetailDescriptionTableViewCell")
+        tableView.register(.init(nibName: "AppDetailInformationCell", bundle: Bundle.main), forCellReuseIdentifier: "AppDetailInformationCell")
     }
     
     private func setupDataSource() {
         let configureCell: AppDetailDataSource.ConfigureCell = { [weak self] (ds, tv, ip, model) in
-            guard ds.sectionModels.count > ip.section, let self = self else { return .init() }
+            guard ds.sectionModels.indices.contains(ip.section), let self = self else { return .init() }
             
             var cell: UITableViewCell?
             
@@ -107,6 +128,11 @@ class AppDetailViewController: UIViewController, AppPresentable {
             case let .preview(item):
                 if let tcell = tv.dequeueReusableCell(withIdentifier: "AppDetailScreenshotsTableViewCell") as? AppDetailScreenshotsTableViewCell {
                     tcell.configure(item)
+                    tcell.rx.screenshopPressed
+                        .map { AppDetailCoordinator.Flow.showScreenshots($0.0, $0.1) }
+                        .bind(to: self.viewModel.flowRelay)
+                        .disposed(by: self.disposeBag)
+                    
                     cell = tcell
                 }
             case let .description(item):
@@ -136,15 +162,15 @@ class AppDetailViewController: UIViewController, AppPresentable {
     }
     
     private func setupRx() {
-        Observable
-            .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(SearchResultApp.self))
-            .do(onNext: { [weak self] ip, _ in  //TODO: refactor to bind curry
-                self?.tableView.deselectRow(at: ip, animated: true)
-            })
-            .map { $0.1 }
-            .map { AppDetailCoordinator.Flow.showCarousel($0) }
-            .bind(to: viewModel.flowRelay)
-            .disposed(by: disposeBag)
+//        Observable
+//            .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(SearchResultApp.self))
+//            .do(onNext: { [weak self] ip, _ in  //TODO: refactor to bind curry
+//                self?.tableView.deselectRow(at: ip, animated: true)
+//            })
+//            .map { $0.1 }
+//            .map { AppDetailCoordinator.Flow.showCarousel($0) }
+//            .bind(to: viewModel.flowRelay)
+//            .disposed(by: disposeBag)
         
         Driver.merge(whatNewMoreRelay.asDriver(),
                      descriptionMoreRelay.asDriver())
@@ -198,6 +224,45 @@ class AppDetailViewController: UIViewController, AppPresentable {
         logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }
+
+extension AppDetailViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        func nestedCalculateHeight(_ text: String, topMargin top: CGFloat) -> CGFloat {
+            
+            let width = UIScreen.main.bounds.size.width - 20 - 20 //label left, right margin
+            var numberOfLines = text.lineCount(pointSize: 16, fixedWidth: width) //lineHeight == 16
+            let adjustHeight: CGFloat = numberOfLines > 3 ? 5 + 28 : 0
+            
+            numberOfLines = numberOfLines > 3 ? 3 : numberOfLines
+            return top + CGFloat(numberOfLines * 16) + adjustHeight + 20 //top margin + label height + bottom margin + button height + bottom margin
+        }
+        
+        let section = dataSource.sectionModels[indexPath.section].items[indexPath.row]
+        switch section {
+        case .header:
+            return 220
+        case .preview:
+            let adjustHeight: CGFloat = 20 + 20 + 20 + 20 //top margin + header label + label margin + bottom margin
+            return screenshotSize.height > 0 ? screenshotSize.height + adjustHeight : 0
+        case .whatsNew:
+            if whatNewMoreRelay.value == false {
+                return nestedCalculateHeight(releaseNotes, topMargin: 80)
+            }
+            return UITableView.automaticDimension
+        case .description:
+            if descriptionMoreRelay.value == false {
+                return nestedCalculateHeight(appDescription, topMargin: 20)
+            }
+            return UITableView.automaticDimension
+        default:
+            return UITableView.automaticDimension
+        }
+    }
+}
+
+
 
 // MARK: - * Metric --------------------
 extension AppDetailViewController {

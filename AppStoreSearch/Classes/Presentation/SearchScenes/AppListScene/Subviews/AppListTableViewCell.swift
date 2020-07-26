@@ -65,8 +65,9 @@ final class AppListTableViewCell: UITableViewCell, AppPresentable {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
+    
 
-    //MARK: * Main Logic --------------------
+    //MARK: * binding --------------------
     func configure(_ app: SearchResultApp) {
         self.app = app
         selectionStyle = .none
@@ -81,12 +82,12 @@ final class AppListTableViewCell: UITableViewCell, AppPresentable {
             .disposed(by: disposeBag)
         
         screenshotsImageViews.enumerated().forEach { offset, imageView in
-            guard offset < (screenshotsUrls?.count ?? 0), let screenshotUrl = screenshotsUrls?[offset] else {
+            guard screenshotURLs?.indices.contains(offset) == true, let screenshotURL = screenshotURLs?[offset] else {
                 imageView.isHidden = true
                 return
             }
             
-            ImageProvider.shared.get(screenshotUrl)
+            ImageProvider.shared.get(screenshotURL)
                 .observeOn(MainScheduler.instance)
                 .do(onNext: { [weak imageView] _ in
                     imageView?.isHidden = false
@@ -97,5 +98,9 @@ final class AppListTableViewCell: UITableViewCell, AppPresentable {
                 .bind(to: imageView.rx.image)
                 .disposed(by: disposeBag)
         }
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

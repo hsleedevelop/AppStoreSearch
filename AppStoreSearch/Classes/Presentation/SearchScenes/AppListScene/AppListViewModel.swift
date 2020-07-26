@@ -29,16 +29,21 @@ final class AppListViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
         
+        let activityIndicator = ActivityIndicator()
+        let errorTracker = ErrorTracker()
+        
         //검색 요청 시
         let results = Observable.just(term)
-            .flatMap ({ [weak self] term -> Observable<(String, SearchResponse?)> in
-                guard let self = self else { return Observable<(String, SearchResponse?)>.empty() }
+            .flatMap ({ [weak self] term -> Observable<(String, [SearchResultApp])> in
+                guard let self = self else { return Observable<(String, [SearchResultApp])>.empty() }
                 return self.searchProvider.search(term: term)
                     .map { (term, $0) }
-                    .catchError ({ error in
-                        logW(error.localizedDescription)
-                        return .just((term, nil)) //errorTracker?
-                    })
+                    .trackActivity(activityIndicator)
+                    .trackError(errorTracker)
+//                    .catchError ({ error in
+//                        logW(error.localizedDescription)
+//                        return .just((term, nil)) //errorTracker?
+//                    })
             })
             .share()
 //            .do(onNext: { results in
@@ -53,7 +58,13 @@ final class AppListViewModel: ViewModelType {
             .bind(to: flowRelay)
             .disposed(by: disposeBag)
         
-        return Output(result: results.asDriver(onErrorJustReturn: ("", nil)))
+        return Output(result: results.asDriver(onErrorJustReturn: ("", [])),
+                      isLoading: activityIndicator.asDriver(),
+                      error: errorTracker.asDriver())
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }
 
@@ -64,6 +75,8 @@ extension AppListViewModel {
     }
     
     struct Output {
-        let result: Driver<(String, SearchResponse?)>
+        let result: Driver<(String, [SearchResultApp])>
+        var isLoading: Driver<Bool>
+        var error: Driver<Error>
     }
 }

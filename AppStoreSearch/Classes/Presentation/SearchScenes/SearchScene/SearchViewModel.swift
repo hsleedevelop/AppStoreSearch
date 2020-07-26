@@ -34,26 +34,18 @@ final class SearchViewModel: ViewModelType {
     
     func transform(input: Input) -> Output {
 
-        //서치 메인, 키워드 입력 시 매핑
+        //검색어 목록 조회
         let terms = input.fetchTerms
             .flatMap { [weak self] _ -> Observable<[String]> in
                 guard let self = self else { return Observable.empty() }
                 return self.termProvider.fetch()
             }
-        
-//        //서치 메인, 키워드 입력 시 매핑
-//        let matches = input.searchTerm
-//            .flatMap ({ [weak self] term -> Observable<[String]> in
-//                guard let self = self else  { return Observable.empty() }
-//                return self.searchTermProvider.fetch()
-//                    .map { terms in
-//                        terms.filter { $0.contains(term) || term.isEmpty }
-//                }
-//            })
-        
-        let searchTermObs = input.term
+
+        //검색어 입력 이벤트
+        let searchTermObs = input.matchTerm
             .map { SearchCoordinator.Flow.matchTerm($0) }
         
+        //검색 요청
         let searchObs = input.search
             .flatMap({ [weak self] term -> Observable<String> in
                 guard let self = self else { return Observable.empty() }
@@ -62,6 +54,14 @@ final class SearchViewModel: ViewModelType {
                     .map { _ in term }
             })
             .map { SearchCoordinator.Flow.search($0) }
+            .share()
+        
+        //검색 요청 시, 저장된 검색 목록 갱신
+        let terms2 = searchObs
+            .flatMap { [weak self] _ -> Observable<[String]> in
+                guard let self = self else { return Observable.empty() }
+                return self.termProvider.fetch().delaySubscription(RxTimeInterval.microseconds(500000), scheduler: MainScheduler.instance)
+            }
         
         let searchCancelObs = input.searchCancel
             .map { SearchCoordinator.Flow.cancelSearch }
@@ -70,7 +70,7 @@ final class SearchViewModel: ViewModelType {
             .bind(to: flowRelay)
             .disposed(by: disposeBag)
         
-        return Output(terms: terms.asDriver(onErrorJustReturn: []))
+        return Output(terms: Observable.merge(terms, terms2).asDriver(onErrorJustReturn: []))
     }
     
     deinit {
@@ -81,7 +81,7 @@ final class SearchViewModel: ViewModelType {
 extension SearchViewModel {
     struct Input {
         let fetchTerms: Observable<Void>
-        let term: Observable<String>
+        let matchTerm: Observable<String>
         let search: Observable<String>
         let searchCancel: Observable<Void>
     }

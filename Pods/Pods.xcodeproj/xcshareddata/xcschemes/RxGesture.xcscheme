@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D77CA6E20D3F659D26E05339EBA33B59"
-               BuildableName = "libRxGesture.a"
+               BuildableName = "RxGesture.framework"
                BlueprintName = "RxGesture"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D77CA6E20D3F659D26E05339EBA33B59"
-            BuildableName = "libRxGesture.a"
+            BuildableName = "RxGesture.framework"
             BlueprintName = "RxGesture"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

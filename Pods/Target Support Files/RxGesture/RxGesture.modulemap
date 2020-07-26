@@ -1,4 +1,4 @@
-module RxGesture {
+framework module RxGesture {
   umbrella header "RxGesture-umbrella.h"
 
   export *

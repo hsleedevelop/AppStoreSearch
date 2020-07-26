@@ -18,12 +18,10 @@ enum NetworkError: Error {
     case urlGeneration
 }
 
-
 protocol NetworkProvider {
     associatedtype T: API
     func request(api: T) -> Observable<Data>
 }
-
 
 extension NetworkProvider {
     /// - Parameter api: api path generic
@@ -36,6 +34,8 @@ extension NetworkProvider {
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             
             let task = URLSession.shared.dataTask(with: request as URLRequest) { data, response, error in
+                logD("URLCache.shared:currentMemoryUsage= \(URLCache.shared.currentMemoryUsage)")
+                
                 guard error == nil else {
                     observer.onError(NetworkError.generic(error!))
                     return

@@ -53,8 +53,14 @@ final class AppDetailHeaderTableViewCell: UITableViewCell, AppPresentable {
     @IBOutlet weak var rankLabel: UILabel!
     @IBOutlet weak var advisoryLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
+        
+    //MARK: * override --------------------
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        disposeBag = DisposeBag()
+    }
 
-    //MARK: * Main Logic --------------------
+    //MARK: * Binding --------------------
     func configure(_ app: SearchResultApp) {
         self.app = app
         
@@ -63,13 +69,17 @@ final class AppDetailHeaderTableViewCell: UITableViewCell, AppPresentable {
         genreLabel.text = genre
         ratingView.rating = rating
         ratingCountLabel.text = ratingCount + " Ratings"
-        ratingLabel.text = "\(rating)"
+        ratingLabel.text = ratingText
         rankLabel.text = "100" //제공안함.
         advisoryLabel.text = contentAdvisoryRating
         
         ImageProvider.shared.get(iconUrl)
             .bind(to: iconImageView.rx.image)
             .disposed(by: disposeBag)
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }
 

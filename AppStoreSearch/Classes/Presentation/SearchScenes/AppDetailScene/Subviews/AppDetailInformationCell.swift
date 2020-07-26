@@ -26,9 +26,13 @@ final class AppDetailInformationCell: UITableViewCell {//, AppPresentable {
         disposeBag = DisposeBag()
     }
     
-    //MARK: * Main Logic --------------------
+    //MARK: * Binding --------------------
     func configure(_ info: AppInformationType) {
         subjectLabel.text = info.subject
         contentLabel.text = info.content
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

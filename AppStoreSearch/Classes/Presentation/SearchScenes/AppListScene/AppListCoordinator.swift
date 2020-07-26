@@ -11,6 +11,7 @@ import RxSwift
 import RxSwiftExt
 
 final class AppListCoordinator: BaseCoordinator<Void> {
+    // MARK: - * Type Defines --------------------
     enum Flow {
         case didFetch(String)
         case detail(SearchResultApp)
@@ -41,13 +42,28 @@ final class AppListCoordinator: BaseCoordinator<Void> {
     override func start() -> Observable<Void> {
         self.add(childViewController: viewController, toParentViewController: rootViewController)
         
-        
+        bindRx(viewModel: viewController.viewModel)
         return Observable.never()
     }
     
+    private func bindRx(viewModel: AppListViewModel) {
+        viewModel.flowRelay
+            .subscribe(onNext: { [weak self] flow in
+                switch flow {
+                case .detail(let app):
+                    self?.showDetail(with: app)
+                default:
+                    break
+                }
+            })
+            .disposed(by: disposeBag)
+    }
     
     private func showDetail(with app: SearchResultApp) {
-        let coordinator = AppDetailCoordinator(rootViewController: viewController, app: app)
+        guard let navigationController = viewController.navigationController ?? viewController.presentingViewController?.navigationController else {
+            return
+        }
+        let coordinator = AppDetailCoordinator(navigationController: navigationController, app: app)
         coordinate(to: coordinator)
             .subscribe(onNext: { _ in
                 
@@ -68,5 +84,9 @@ final class AppListCoordinator: BaseCoordinator<Void> {
         child.view.trailingAnchor.constraint(equalTo: parent.view.trailingAnchor).isActive = true
         
         child.didMove(toParent: parent)
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

@@ -38,6 +38,10 @@ extension AppPresentable {
         return app?.rating ?? app?.currentRating ?? 0
     }
     
+    var ratingText: String {
+        return String(format: "%.1f", rating)
+    }
+    
     var ratingCount: String {
         let count = app?.ratingCount ?? app?.currentRatingCount ?? 0
         var fcount = count >= 1000 ? String(format: "%.2fK", Double(count) * 0.001) : "\(count)"
@@ -49,7 +53,7 @@ extension AppPresentable {
         return app?.artwork ?? ""
     }
     
-    var screenshotsUrls: [String]? {
+    var screenshotURLs: [String]? {
         return app?.screenshots
     }
     
@@ -77,7 +81,7 @@ extension AppPresentable {
     }
     
     var screenshotSize: CGSize {
-        return screenshotsUrls?.count ?? 0 > 0 ? CGSize(width: 180, height: 300) : CGSize.zero
+        return screenshotURLs?.count ?? 0 > 0 ? CGSize(width: 180, height: 300) : CGSize.zero
     }
     
     var fileSize: String {
@@ -96,7 +100,7 @@ extension AppPresentable {
                 AppInformationType(subject: "Languages", content: "KO"),
                 AppInformationType(subject: "Age Rating", content: contentAdvisoryRating),
                 AppInformationType(subject: "Copyright", content: "제공안됨"),
-                AppInformationType(subject: "Developer Website", content: sellerUrl),
+                AppInformationType(subject: "Developer Website", content: sellerUrl, isLink: sellerUrl.hasPrefix("http")),
                 AppInformationType(subject: "Private Policy", content: "제공안됨")]
     }
 }

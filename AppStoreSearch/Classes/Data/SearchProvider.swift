@@ -10,14 +10,15 @@ import Foundation
 import RxSwift
 
 protocol SearchProviding {
-    func search(term: String) -> Observable<SearchResponse>
+    func search(term: String) -> Observable<[SearchResultApp]>
 }
 
 final class SearchProvider: NetworkProvider, SearchProviding {
     typealias T = SearchAPI
-    //static let shared = SearchProvider()
-    func search(term: String) -> Observable<SearchResponse> { //TODO: refactor -> 메소드 시그니쳐,
+
+    func search(term: String) -> Observable<[SearchResultApp]> { //TODO: refactor -> 메소드 시그니쳐,
         return request(api: .search(term, "software", "KR", 20))
             .map(SearchResponse.self)
+            .map { $0.results ?? [] }
     }
 }

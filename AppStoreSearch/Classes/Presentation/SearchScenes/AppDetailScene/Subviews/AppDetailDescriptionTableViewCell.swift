@@ -30,7 +30,7 @@ final class AppDetailDescriptionTableViewCell: UITableViewCell, AppPresentable {
         disposeBag = DisposeBag()
     }
     
-    //MARK: * Main Logic --------------------
+    //MARK: * Binding --------------------
     func configure(_ app: SearchResultApp) {
         self.app = app
         
@@ -41,7 +41,10 @@ final class AppDetailDescriptionTableViewCell: UITableViewCell, AppPresentable {
             moreButton.isHidden = numberOfLines <= 3
         }
     }
-
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
+    }
 }
 
 extension Reactive where Base: AppDetailDescriptionTableViewCell {

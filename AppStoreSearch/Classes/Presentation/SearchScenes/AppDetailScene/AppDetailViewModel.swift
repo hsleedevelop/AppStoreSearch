@@ -45,6 +45,10 @@ final class AppDetailViewModel: ViewModelType {
         
         return Output(selectedApp: .just(app))
     }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
+    }
 }
 
 extension AppDetailViewModel {

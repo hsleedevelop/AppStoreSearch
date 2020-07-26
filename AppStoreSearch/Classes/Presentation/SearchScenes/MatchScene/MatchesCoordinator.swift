@@ -10,24 +10,24 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
-final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.MatchesResult> {
+final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Result> {
     // MARK: - * Type Defines --------------------
-    enum MatchesResult {
+    enum Result {
         case flow(Flow)
         case cancel
     }
     
     enum Flow {
-        case main
         case search(String)
     }
 
     // MARK: - * Properties --------------------
-    private let termObs: Observable<String>
+    //private let termObs: Observable<String>
+    private let termObs: String
 
     lazy var viewController: MatchesViewController = {
         guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
-            fatalError("TermViewController can't load")
+            fatalError("MatchesViewController can't load")
         }
         
         let viewModel = MatchesViewModel(termProvider: TermProvider(), termObs: self.termObs)
@@ -36,7 +36,8 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.MatchesResult
     }()
 
     // MARK: - * Initialize --------------------
-    init(termObs: Observable<String>) {
+    //init(termObs: Observable<String>) {
+    init(termObs: String) {
         self.termObs = termObs
     }
 
@@ -45,5 +46,9 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.MatchesResult
         let flow = viewController.viewModel.flowRelay.map { CoordinationResult.flow($0) }
         let cancel = viewController.viewModel.cancelRelay.map { _ in CoordinationResult.cancel }
         return Observable.merge(flow, cancel)
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

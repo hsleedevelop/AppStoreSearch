@@ -46,6 +46,7 @@ func == (lhs: DetailSection, rhs: DetailSection) -> Bool {
 struct AppInformationType {
     var subject: String
     var content: String
+    var isLink: Bool = false
 }
 
 ///app detail sectiomodel

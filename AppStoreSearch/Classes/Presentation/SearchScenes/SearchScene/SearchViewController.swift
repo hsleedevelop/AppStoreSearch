@@ -62,7 +62,7 @@ class SearchViewController: UIViewController {
         title = "Search"
         
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.barTintColor = .systemBackground
         
         navigationItem.hidesSearchBarWhenScrolling = false
         navigationItem.searchController = searchController
@@ -82,7 +82,7 @@ class SearchViewController: UIViewController {
     private func setupTableView() {
         tableView.allowsSelection = true
         tableView.separatorStyle = .singleLine
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .systemBackground
         tableView.tableFooterView = UIView()
         
         tableView.sectionHeaderHeight = Metric.sectionHeaderHeight
@@ -116,14 +116,6 @@ class SearchViewController: UIViewController {
 //            .bind(to: termRelay)
 //            .disposed(by: disposeBag)
 
-        //검색 클릭 시
-//        searchController.searchBar.rx.searchButtonClicked
-//            .map ({ [unowned self] in
-//                self.searchController.searchBar.text ?? ""
-//            })
-//            .bind(to: searchRelay)
-//            .disposed(by: disposeBag)
-
         //검색 캔슬, 검색 입력 종료 시
 //        Observable.merge(searchController.searchBar.rx.cancelButtonClicked.map { _ in true },
 //                         searchController.searchBar.rx.textDidEndEditing.map { _ in false },
@@ -138,25 +130,13 @@ class SearchViewController: UIViewController {
 //            .bind(to: viewModel.flowRelay)
 //            .disposed(by: disposeBag)
 //
-
-//        tableView.rx.itemSelected
-//            .do(onNext: { [weak self] ip in
-//                self?.rx.deselectRow.onNext(ip)
-//                self?.searchController.isActive = true
-//            })
-//            .map { [unowned self] in self.dataSource.sectionModels[$0.section].items[$0.row] }
-//            .subscribe(onNext: { [weak self] in
-//                self?.searchRelay.accept($0)
-//            })
-//            .disposed(by: disposeBag)
-
         
         Observable
             .zip(tableView.rx.itemSelected, tableView.rx.modelSelected(String.self))
             .do(onNext: { [weak self] ip, term in  //TODO: refactor to bind curry
-                //self?.searchController.isActive = true
                 self?.tableView.deselectRow(at: ip, animated: true)
-                self?.searchController.searchBar.becomeFirstResponder()
+
+                self?.searchController.isActive = true
                 self?.searchController.searchBar.text = term
             })
             .map { $0.1 }
@@ -165,14 +145,13 @@ class SearchViewController: UIViewController {
     }
     
     // MARK: - * Binding --------------------
-    
     private func bindViewModel() {
         
         let searchCancel = searchController.searchBar.rx.cancelButtonClicked.asObservable()
         let fetchTerms = Observable.merge(viewWillAppearRelay.asObservable(), searchCancel)
         
         let input = ViewModelType.Input(fetchTerms: fetchTerms,
-                                        term: termRelay.asObservable().unwrap(),
+                                        matchTerm: termRelay.asObservable().unwrap(),
                                         search: searchRelay.asObservable().unwrap(),
                                         searchCancel: searchCancel) //초기화
         let output = viewModel.transform(input: input)
@@ -228,7 +207,7 @@ extension SearchViewController: UISearchBarDelegate {
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        searchController.searchBar.text = ""
+        //searchController.searchBar.text = ""
         return true
     }
 }

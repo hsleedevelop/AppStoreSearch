@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CEC571DD26445E0078E905FB6BC0E368"
-               BuildableName = "libPods-AppStoreSearchUITests.a"
+               BuildableName = "Pods_AppStoreSearchUITests.framework"
                BlueprintName = "Pods-AppStoreSearchUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -51,7 +51,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CEC571DD26445E0078E905FB6BC0E368"
-            BuildableName = "libPods-AppStoreSearchUITests.a"
+            BuildableName = "Pods_AppStoreSearchUITests.framework"
             BlueprintName = "Pods-AppStoreSearchUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>

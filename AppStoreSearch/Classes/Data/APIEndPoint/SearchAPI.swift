@@ -28,7 +28,7 @@ enum SearchAPI: API {
     }
 
     var url: URL {
-        let urlString = AppConfiguration.init().apiBaseURL + self.path
+        let urlString = AppConfiguration.shared.apiBaseURL + self.path
         guard let url = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "") else {
             fatalError("wrong url")
         }

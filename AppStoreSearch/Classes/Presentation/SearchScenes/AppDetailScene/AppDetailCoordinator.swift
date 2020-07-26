@@ -11,15 +11,14 @@ import RxSwift
 import RxSwiftExt
 
 final class AppDetailCoordinator: BaseCoordinator<Void> {
+    // MARK: - * Type Defines --------------------
     enum Flow {
-        case main
-        case showCarousel(SearchResultApp)
-        case pop
+        case showScreenshots([String], Int)
     }
     
     // MARK: - * Properties --------------------
     private let app: SearchResultApp
-    private let rootViewController: UIViewController
+    private let navigationController: UINavigationController
     
     lazy var viewController: AppDetailViewController = {
         guard let viewController = UIStoryboard(name: "AppDetailScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "AppDetailViewController") as? AppDetailViewController else {
@@ -32,14 +31,47 @@ final class AppDetailCoordinator: BaseCoordinator<Void> {
     }()
 
     // MARK: - * Initialize --------------------
-    init(rootViewController: UIViewController, app: SearchResultApp) {
-        self.rootViewController = rootViewController
+    init(navigationController: UINavigationController, app: SearchResultApp) {
+        self.navigationController = navigationController
         self.app = app
     }
     
     // MARK: - * Cooridate --------------------
     override func start() -> Observable<Void> {
-        rootViewController.navigationController?.pushViewController(viewController, animated: true)
+        navigationController.pushViewController(viewController, animated: true)
+        bindRx(viewModel: viewController.viewModel)
+        
         return Observable.never()
+    }
+    
+    private func bindRx(viewModel: AppDetailViewModel) {
+        viewModel.flowRelay
+            .subscribe(onNext: { [weak self] flow in
+                switch flow {
+                case let .showScreenshots(screenshotURLs, index):
+                    self?.showScreenshotsCarousel(screenshotURLs: screenshotURLs, index: index)
+                default:
+                    break
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func showScreenshotsCarousel(screenshotURLs: [String], index: Int) {
+        let coordinator = ScreenshotsCoordinator(rootViewController: viewController, screenshotURLs: screenshotURLs, index: index)
+        coordinate(to: coordinator)
+            .subscribe(onNext: { result in
+                switch result {
+                case .dismiss:
+                    self.viewController.dismiss(animated: true, completion: nil)
+                case .currentIndex(_):
+                    break
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
     }
 }

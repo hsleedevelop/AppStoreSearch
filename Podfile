@@ -24,6 +24,7 @@ end
 
 # 각 target 별 pods 선언
 target 'AppStoreSearch' do
+    use_frameworks!
     shared_pods
     debug_pods
     target 'AppStoreSearchTests' do

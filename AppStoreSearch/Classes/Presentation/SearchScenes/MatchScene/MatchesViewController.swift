@@ -59,7 +59,7 @@ class MatchesViewController: UIViewController {
     private func setupTableView() {
         tableView.allowsSelection = true
         tableView.separatorStyle = .singleLine
-        tableView.backgroundColor = .white
+        tableView.backgroundColor = .systemBackground
         tableView.tableFooterView = UIView()
     
         tableView.rowHeight = Metric.tableRowHeight
@@ -93,7 +93,7 @@ class MatchesViewController: UIViewController {
     
     // MARK: - * Binding --------------------
     private func bindViewModel() {
-        let input = ViewModelType.Input(search: .empty())
+        let input = ViewModelType.Input(search: searchRelay.asObservable())
         let output = viewModel.transform(input: input)
         
         output.matches

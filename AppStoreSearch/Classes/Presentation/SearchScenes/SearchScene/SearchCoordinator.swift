@@ -12,25 +12,25 @@ import RxCocoa
 import RxSwiftExt
 
 final class SearchCoordinator: BaseCoordinator<Void> {
-    
+    // MARK: - * Type Defines --------------------
     enum Flow {
-        case main
-        case result
         case matchTerm(String)
         case search(String)
         case cancelSearch
     }
     
+    // MARK: - * Properties --------------------
     private let window: UIWindow
     private var viewController: SearchViewController!
-    private var termRelay: PublishRelay<String>
     
+    private let termRelay2 = PublishRelay<String>()
+    
+    // MARK: - * Initialize --------------------
     init(window: UIWindow) {
         self.window = window
-        
-        termRelay = .init()
     }
     
+    // MARK: - * Coordinante --------------------
     override func start() -> Observable<Void> {
         guard let viewController = UIStoryboard(name: "SearchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController else {
             fatalError("SearchViewController can't load")
@@ -39,21 +39,9 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         
         let viewModel = SearchViewModel(termProvider: TermProvider())
         viewController.viewModel = viewModel
-        coordinateMatchingTerm(termObs: termRelay.asObservable())
+        //coordinateMatchingTerm(termObs: termRelay2.asObservable())
         
-        setupRx(viewModel: viewModel)
-        
-        //viewController.resultViewController = resultViewController
-        //setupResultViewController(resultViewController, searchObs: viewModel.search.asObservable())
-        
-//        viewModel.showCarousel
-//            .flatMap ({ [unowned self] in
-//                self.showCarousel(photosObs: $0.0, index: $0.1, on: viewController)
-//            })
-//            .filter { $0 != nil }
-//            .map { $0! }
-//            .bind(to: viewModel.carouselIndex)
-//            .disposed(by: disposeBag)
+        bindRx(viewModel: viewModel)
 
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.tabBarItem = .init(tabBarSystemItem: .search, tag: 0)
@@ -66,34 +54,27 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         return Observable.never()
     }
     
-    private func setupRx(viewModel: SearchViewModel) {
+    private func bindRx(viewModel: SearchViewModel) {
         viewModel.flowRelay
             .subscribe(onNext: { [weak self] flow in
                 switch flow {
                 case .matchTerm(let term):
-                    self?.termRelay.accept(term)
+                    self?.coordinateMatchingTerm(termObs: term)
                 case .search(let term):
                     self?.coordinateSearch(with: term)
                 case .cancelSearch:
-                    self?.xxx()
-                default:
-                    break
+                    self?.coordianteCancelSearch()
                 }
             })
             .disposed(by: disposeBag)
     }
     
-    private func xxx() {
+    private func coordianteCancelSearch() {
         viewController.resultViewController.children.forEach { vc in
             vc.view.removeFromSuperview()
             vc.removeFromParent()
         }
     }
-    
-    private func match(with term: String) {
-        
-    }
-    
     
     private func coordinateSearch(with term: String) {
         let coordinator = AppListCoordinator(rootViewController: viewController.resultViewController, term: term)
@@ -104,19 +85,13 @@ final class SearchCoordinator: BaseCoordinator<Void> {
             .disposed(by: disposeBag)
     }
     
-    private func coordinateMatchingTerm(termObs: Observable<String>) {
+    //private func coordinateMatchingTerm(termObs: Observable<String>) {
+    private func coordinateMatchingTerm(termObs: String) {
+        //let coordinator = MatchesCoordinator(termObs: termObs)
         let coordinator = MatchesCoordinator(termObs: termObs)
         viewController.resultViewController = coordinator.viewController
         
         coordinate(to: coordinator)
-//            .map ({ [weak self] result in
-//                switch result {
-//                case .flow(.search(let term)):
-//                    self?.search(with: term)
-//                default:
-//                    break
-//                }
-//            })
             .subscribe(onNext: { [weak self] result in
                 switch result {
                 case .flow(.search(let term)):
@@ -126,31 +101,9 @@ final class SearchCoordinator: BaseCoordinator<Void> {
                 }
             })
             .disposed(by: disposeBag)
-        
-//        let matchesViewModel = MatchesViewModel(termObs: termRelay.asObservable())
-//        matchesViewController.viewModel = matchesViewModel
-
-//        matchesViewModel.showCarousel
-//            .flatMap ({ [unowned self] in
-//                self.showCarousel(photosObs: $0.0, index: $0.1, on: resultViewController)
-//            })
-//            .filter { $0 != nil }
-//            .map { $0! }
-//            .bind(to: matchesViewModel.carouselIndex)
-//            .disposed(by: disposeBag)
     }
-
-//    private func showCarousel(photosObs: Observable<[Photo]>, index: Int, on rootViewController: UIViewController) -> Observable<Int?> {
-//        let coordinator = CarouselCoordinator(photosObs: photosObs, index: index, rootViewController: rootViewController)
-//        return coordinate(to: coordinator)
-//            .map { result in
-//                switch result {
-//                case .photo(let photoId):
-//                    return photoId
-//                case .cancel:
-//                    self.viewController.parent?.dismiss(animated: true, completion: nil)
-//                    return nil
-//                }
-//            }
-//    }
+    
+    deinit {
+        logD("\(NSStringFromClass(type(of: self))) deinit")
+    }
 }
