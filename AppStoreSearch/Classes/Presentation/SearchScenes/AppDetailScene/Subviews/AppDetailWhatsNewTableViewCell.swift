@@ -43,8 +43,10 @@ final class AppDetailWhatsNewTableViewCell: UITableViewCell, AppPresentable {
         releaseDateLabel.text = !releaseDateLabel.isHidden ? releaseDate : ""
         releaseNotesLabel.text = releaseNotes
         
-        let numberOfLines = releaseNotes.lineCount(pointSize: releaseNotesLabel.font.pointSize, fixedWidth: releaseNotesLabel.frame.size.width)
-        moreButton.isHidden = numberOfLines <= 3
+        if moreButton.isHidden == false {
+            let numberOfLines = releaseNotes.lineCount(pointSize: releaseNotesLabel.font.pointSize, fixedWidth: releaseNotesLabel.frame.size.width)
+            moreButton.isHidden = numberOfLines <= 3
+        }
         
         releaseNotesLabel.getConstraint(attribute: .bottom)?.constant = moreButton.isHidden ? 0 : 5
     }

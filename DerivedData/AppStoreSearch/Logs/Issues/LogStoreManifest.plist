@@ -202,34 +202,6 @@
 			<key>uniqueIdentifier</key>
 			<string>4EB45A7A-FDD0-4F5B-92BA-91880A0E9B41</string>
 		</dict>
-		<key>52CB52F6-D807-49D4-9C43-0EC187082B7C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogMajorGroupSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
-			<key>fileName</key>
-			<string>52CB52F6-D807-49D4-9C43-0EC187082B7C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>S</string>
-			</dict>
-			<key>signature</key>
-			<string>AppStoreSearch-enhgwttkatnssmcqoezxsnpowvpr</string>
-			<key>timeStartedRecording</key>
-			<real>617521548.93788099</real>
-			<key>timeStoppedRecording</key>
-			<real>617521550.10362196</real>
-			<key>title</key>
-			<string>Build target AppStoreSearch</string>
-			<key>uniqueIdentifier</key>
-			<string>52CB52F6-D807-49D4-9C43-0EC187082B7C</string>
-		</dict>
 		<key>88B46DA1-77E0-48B5-920A-5A934D5EFA77</key>
 		<dict>
 			<key>className</key>
@@ -257,6 +229,34 @@
 			<string>Build target RxCocoa</string>
 			<key>uniqueIdentifier</key>
 			<string>88B46DA1-77E0-48B5-920A-5A934D5EFA77</string>
+		</dict>
+		<key>B387C655-6170-469A-AEFC-AA9FB509BE33</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.application</string>
+			<key>fileName</key>
+			<string>B387C655-6170-469A-AEFC-AA9FB509BE33.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>signature</key>
+			<string>AppStoreSearch-enhgwttkatnssmcqoezxsnpowvpr</string>
+			<key>timeStartedRecording</key>
+			<real>617523400.55927098</real>
+			<key>timeStoppedRecording</key>
+			<real>617523401.46204698</real>
+			<key>title</key>
+			<string>Build target AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>B387C655-6170-469A-AEFC-AA9FB509BE33</string>
 		</dict>
 		<key>C87D36CE-3FF9-4385-ADD9-A2254791D07A</key>
 		<dict>

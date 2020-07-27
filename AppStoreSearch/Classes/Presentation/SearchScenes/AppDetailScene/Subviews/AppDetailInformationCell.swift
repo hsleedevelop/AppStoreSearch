@@ -25,6 +25,12 @@ final class AppDetailInformationCell: UITableViewCell {//, AppPresentable {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
+
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        self.contentView.frame = self.bounds
+        self.contentView.layoutIfNeeded()
+        return self.contentView.frame.size
+    }
     
     //MARK: * Binding --------------------
     func configure(_ info: AppInformationType) {

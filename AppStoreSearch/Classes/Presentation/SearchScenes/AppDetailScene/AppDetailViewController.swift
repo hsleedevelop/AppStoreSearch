@@ -237,7 +237,6 @@ extension AppDetailViewController: UITableViewDelegate {
 // MARK: - * Metric --------------------
 extension AppDetailViewController {
     struct Metric {
-        static let tableRowHeight: CGFloat = 1000
         static let screenshotRowHeight: CGFloat = 300
     }
 }
