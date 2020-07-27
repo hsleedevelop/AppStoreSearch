@@ -1,5 +1,5 @@
 //
-//  TermProvider.swift
+//  UserDefaultsProvider.swift
 //  AppStoreSearch
 //
 //  Created by HS Lee on 2020/07/22.
@@ -9,13 +9,7 @@
 import Foundation
 import RxSwift
 
-protocol TermProviding: class {
-    @discardableResult
-    func store(_ term: String) -> Observable<Bool>
-    func fetch() -> Observable<[String]>
-}
-
-final class TermProvider: TermProviding {
+final class UserDefaultsProvider: TermProviding {
     static let termsKey = "SEARCH_TERMS"
     static let maxTermsCount = 10
     

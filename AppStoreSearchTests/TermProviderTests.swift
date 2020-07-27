@@ -26,7 +26,7 @@ class TermProviderTests: XCTestCase {
     }
 
     func testStore() throws {
-        let provider = TermProvider()
+        let provider = UserDefaultsProvider()
         
         provider.store("앱스토어1")
             .subscribe(onNext: { result in

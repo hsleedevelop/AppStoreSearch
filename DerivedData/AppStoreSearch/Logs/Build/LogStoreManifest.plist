@@ -74,6 +74,40 @@
 			<key>uniqueIdentifier</key>
 			<string>369A5EFD-98B0-4C8E-8E0E-0804EE34ECF5</string>
 		</dict>
+		<key>4A5DED15-6361-4AEB-BBB1-B8EE8EFC77C0</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>4A5DED15-6361-4AEB-BBB1-B8EE8EFC77C0.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617531538.88524103</real>
+			<key>timeStoppedRecording</key>
+			<real>617531541.00204098</real>
+			<key>title</key>
+			<string>Build AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>4A5DED15-6361-4AEB-BBB1-B8EE8EFC77C0</string>
+		</dict>
 		<key>56198FA1-FDBD-45B2-A9C5-92E2569108F1</key>
 		<dict>
 			<key>className</key>
@@ -176,6 +210,40 @@
 			<key>uniqueIdentifier</key>
 			<string>76D78DAC-F1E4-43B4-8FF6-1C69086C4B68</string>
 		</dict>
+		<key>C8D0E5D4-8C82-4382-8502-81DA1D739477</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C8D0E5D4-8C82-4382-8502-81DA1D739477.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617531630.02013302</real>
+			<key>timeStoppedRecording</key>
+			<real>617531630.10101998</real>
+			<key>title</key>
+			<string>Build AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>C8D0E5D4-8C82-4382-8502-81DA1D739477</string>
+		</dict>
 		<key>C96E4FC8-F7DC-484A-A4AE-37E5015E2905</key>
 		<dict>
 			<key>className</key>
@@ -277,6 +345,40 @@
 			<string>Build AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
 			<string>DD510050-BAFB-4A02-8BF5-5CC0417A2BC7</string>
+		</dict>
+		<key>FF5FC64E-1862-4520-8117-08AEF5FB3E94</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>FF5FC64E-1862-4520-8117-08AEF5FB3E94.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>AppStoreSearch project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>AppStoreSearch</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Build AppStoreSearch</string>
+			<key>timeStartedRecording</key>
+			<real>617531612.49653399</real>
+			<key>timeStoppedRecording</key>
+			<real>617531617.46310997</real>
+			<key>title</key>
+			<string>Build AppStoreSearch</string>
+			<key>uniqueIdentifier</key>
+			<string>FF5FC64E-1862-4520-8117-08AEF5FB3E94</string>
 		</dict>
 	</dict>
 </dict>

@@ -31,7 +31,7 @@
 		3A4D90BF24C8225C00D5C11F /* SearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90BE24C8225C00D5C11F /* SearchAPI.swift */; };
 		3A4D90C124C8227800D5C11F /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90C024C8227800D5C11F /* API.swift */; };
 		3A4D90C424C822C100D5C11F /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90C324C822C100D5C11F /* AppConfiguration.swift */; };
-		3A4D90C824C84DA600D5C11F /* TermProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90C724C84DA600D5C11F /* TermProvider.swift */; };
+		3A4D90C824C84DA600D5C11F /* UserDefaultsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90C724C84DA600D5C11F /* UserDefaultsProvider.swift */; };
 		3A4D90CB24C8534D00D5C11F /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90CA24C8534D00D5C11F /* Validator.swift */; };
 		3A4D90D924C85F1D00D5C11F /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90CD24C85F1C00D5C11F /* ActivityIndicator.swift */; };
 		3A4D90DA24C85F1D00D5C11F /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90CF24C85F1C00D5C11F /* ObservableType+Extensions.swift */; };
@@ -41,6 +41,7 @@
 		3A4D90DF24C85F1D00D5C11F /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90D524C85F1D00D5C11F /* Alertable.swift */; };
 		3A4D90E524C8622300D5C11F /* TermSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90E424C8622300D5C11F /* TermSectionModel.swift */; };
 		3A8C6BA324CEA9AA003BF35A /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C6BA224CEA9AA003BF35A /* RealmProvider.swift */; };
+		3AB99BF124CEC8C8002F079F /* TermProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB99BF024CEC8C8002F079F /* TermProviding.swift */; };
 		3AE5DDF524C9B38D00488E4D /* TermProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */; };
 		48A72C5024CD4B8C0026D556 /* SearchCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */; };
 		48A72C5624CD51840026D556 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A72C5524CD51840026D556 /* XCUIElement+Extensions.swift */; };
@@ -140,7 +141,7 @@
 		3A4D90BE24C8225C00D5C11F /* SearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPI.swift; sourceTree = "<group>"; };
 		3A4D90C024C8227800D5C11F /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3A4D90C324C822C100D5C11F /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
-		3A4D90C724C84DA600D5C11F /* TermProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermProvider.swift; sourceTree = "<group>"; };
+		3A4D90C724C84DA600D5C11F /* UserDefaultsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsProvider.swift; sourceTree = "<group>"; };
 		3A4D90CA24C8534D00D5C11F /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		3A4D90CD24C85F1C00D5C11F /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		3A4D90CF24C85F1C00D5C11F /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extensions.swift"; sourceTree = "<group>"; };
@@ -150,6 +151,7 @@
 		3A4D90D524C85F1D00D5C11F /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		3A4D90E424C8622300D5C11F /* TermSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermSectionModel.swift; sourceTree = "<group>"; };
 		3A8C6BA224CEA9AA003BF35A /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		3AB99BF024CEC8C8002F079F /* TermProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermProviding.swift; sourceTree = "<group>"; };
 		3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermProviderTests.swift; sourceTree = "<group>"; };
 		3BD8AC261205DBE4A615F95D /* Pods_AppStoreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -465,7 +467,8 @@
 		48A0B0E224CDC43D006460FF /* PersistentStorage */ = {
 			isa = PBXGroup;
 			children = (
-				3A4D90C724C84DA600D5C11F /* TermProvider.swift */,
+				3AB99BF024CEC8C8002F079F /* TermProviding.swift */,
+				3A4D90C724C84DA600D5C11F /* UserDefaultsProvider.swift */,
 				3A8C6BA224CEA9AA003BF35A /* RealmProvider.swift */,
 			);
 			path = PersistentStorage;
@@ -874,6 +877,7 @@
 				48B8DB6024CAEA63004C2A8C /* String+Extensions.swift in Sources */,
 				3A12DD9624C973C6004728B9 /* AppListViewController.swift in Sources */,
 				48B8DB4224CACEEE004C2A8C /* UIViewController+Extensions.swift in Sources */,
+				3AB99BF124CEC8C8002F079F /* TermProviding.swift in Sources */,
 				3A4D90BF24C8225C00D5C11F /* SearchAPI.swift in Sources */,
 				48B8DB5C24CAE98E004C2A8C /* AppDetailInformationCell.swift in Sources */,
 				3A4D90AF24C81D9100D5C11F /* SearchViewController.swift in Sources */,
@@ -905,7 +909,7 @@
 				48B8DB5224CAE956004C2A8C /* AppDetailHeaderTableViewCell.swift in Sources */,
 				3A4D90DE24C85F1D00D5C11F /* Utilities.swift in Sources */,
 				3A4D90B124C81DBF00D5C11F /* SearchCoordinator.swift in Sources */,
-				3A4D90C824C84DA600D5C11F /* TermProvider.swift in Sources */,
+				3A4D90C824C84DA600D5C11F /* UserDefaultsProvider.swift in Sources */,
 				48B8DB3C24CAAE66004C2A8C /* URLCacheImageProvider.swift in Sources */,
 				3A4D90DA24C85F1D00D5C11F /* ObservableType+Extensions.swift in Sources */,
 				48B8DB3724CAAB86004C2A8C /* SearchResultApp.swift in Sources */,
