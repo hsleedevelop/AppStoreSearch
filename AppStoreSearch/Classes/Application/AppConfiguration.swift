@@ -26,23 +26,9 @@ final class AppConfiguration {
         let urlCache = URLCache(memoryCapacity: memoryCapacity, diskCapacity: 0, diskPath: nil)
         return urlCache
     }()
-
-    // MARK: - * Initialize --------------------
-    init() {
-        setupRx()
-    }
     
     // MARK: - * Setup --------------------
     func setupDefaultURLCache() {
         URLCache.shared = appURLCache
-    }
-    
-    private func setupRx() {
-        UIApplication.shared.rx
-            .methodInvoked(#selector(UIApplicationDelegate.applicationDidReceiveMemoryWarning(_:)))
-            .subscribe(onNext: { _ in
-                URLCache.shared.removeAllCachedResponses()
-            })
-            .disposed(by: disposeBag)
     }
 }

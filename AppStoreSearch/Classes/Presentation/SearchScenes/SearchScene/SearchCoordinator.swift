@@ -82,7 +82,6 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     private func coordinateSearch(with term: String) {
         let coordinator = AppListCoordinator(rootViewController: viewController.resultViewController, term: term)
         appListCoordinatorDisposable = coordinate(to: coordinator)
-            .debug("appListCoordinatorDisposable>>>>", trimOutput: false)
             .subscribe()
     }
     
@@ -101,6 +100,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
             .subscribe(onNext: { [weak self] result in
                 switch result {
                 case .search(let term):
+                    self?.viewController.viewModel.flowRelay.accept(.cancelSearch)
                     self?.coordinateSearch(with: term)
                 }
             })

@@ -57,14 +57,24 @@ final class SearchViewModel: ViewModelType {
                 return self.termProvider.fetch().delaySubscription(RxTimeInterval.microseconds(500000), scheduler: MainScheduler.instance)
             }
         
-        let searchCancelObs = input.searchCancel
+        let searchCancelObs = input.cancelSearch
             .map { SearchCoordinator.Flow.cancelSearch }
         
         Observable.merge(searchTermObs, searchObs, searchCancelObs)
             .bind(to: flowRelay)
             .disposed(by: disposeBag)
         
-        return Output(terms: Observable.merge(terms, terms2).asDriver(onErrorJustReturn: []))
+        let cancelSearch = flowRelay.asObservable()
+            .filter ({
+                if case .cancelSearch = $0 {
+                    return true
+                }
+                return false
+            })
+            .mapToVoid()
+
+        return Output(terms: Observable.merge(terms, terms2).asDriver(onErrorJustReturn: []),
+                      cancelSearch: cancelSearch.asDriverOnErrorJustComplete())
     }
     
     deinit {
@@ -77,10 +87,11 @@ extension SearchViewModel {
         let fetchTerms: Observable<Void>
         let matchTerm: Observable<String>
         let search: Observable<String>
-        let searchCancel: Observable<Void>
+        let cancelSearch: Observable<Void>
     }
     
     struct Output {
         let terms: Driver<[String]>
+        let cancelSearch: Driver<Void>
     }
 }

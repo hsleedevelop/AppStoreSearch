@@ -80,7 +80,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
         tableView.tableFooterView = UIView()
     
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = Metric.tableRowHeight //max height for what's new and description
+        tableView.estimatedRowHeight = UITableView.automaticDimension //max height for what's new and description
         
         tableView.rx
             .setDelegate(self)
@@ -110,7 +110,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
                     tcell.configure(item)
                     tcell.rx.moreClicked //observe more sequence
                         .drive(self.whatNewMoreRelay)
-                        .disposed(by: self.disposeBag)
+                        .disposed(by: tcell.disposeBag)
                     
                     cell = tcell
                 }
@@ -120,7 +120,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
                     tcell.rx.screenshopPressed
                         .map { AppDetailCoordinator.Flow.showScreenshots($0.0, $0.1) }
                         .bind(to: self.viewModel.flowRelay)
-                        .disposed(by: self.disposeBag)
+                        .disposed(by: tcell.disposeBag)
                     
                     cell = tcell
                 }
@@ -129,7 +129,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
                     tcell.configure(item)
                     tcell.rx.moreClicked //observe more sequence
                         .drive(self.descriptionMoreRelay)
-                        .disposed(by: self.disposeBag)
+                        .disposed(by: tcell.disposeBag)
                     
                     cell = tcell
                 }
@@ -215,7 +215,7 @@ extension AppDetailViewController: UITableViewDelegate {
             return 220
         case .preview:
             let adjustHeight: CGFloat = 20 + 20 + 20 + 20 //top margin + header label + label margin + bottom margin
-            return screenshotSize.height > 0 ? screenshotSize.height + adjustHeight : 0
+            return Metric.screenshotRowHeight + adjustHeight
         case .whatsNew:
             if whatNewMoreRelay.value == false {
                 return nestedCalculateHeight(releaseNotes, topMargin: 80)
@@ -237,6 +237,7 @@ extension AppDetailViewController: UITableViewDelegate {
 // MARK: - * Metric --------------------
 extension AppDetailViewController {
     struct Metric {
-        static let tableRowHeight: CGFloat = 600
+        static let tableRowHeight: CGFloat = 1000
+        static let screenshotRowHeight: CGFloat = 300
     }
 }

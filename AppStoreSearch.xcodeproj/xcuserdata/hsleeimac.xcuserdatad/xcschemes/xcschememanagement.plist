@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>AppStoreSearchTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>AppStoreSearchUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
 	</dict>
 </dict>
 </plist>

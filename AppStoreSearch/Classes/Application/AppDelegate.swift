@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setupAppConfiguration()
-        
         return true
     }
 
@@ -34,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setupAppConfiguration() {
         AppConfiguration.shared.setupDefaultURLCache()
+    }
+    
+    func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+        URLCache.shared.removeAllCachedResponses()
     }
 }
 

@@ -126,7 +126,7 @@ class AppListViewController: UIViewController, Alertable {
                 app.screenshots?.enumerated().forEach({ offset, screenshotURL in
                     guard offset < 3 else { return }
                     ImageProvider.shared.get(screenshotURL)
-                        .debug("get image", trimOutput: false)
+                        //.debug("get image", trimOutput: false)
                         .subscribe()
                         .disposed(by: bag)
                 })

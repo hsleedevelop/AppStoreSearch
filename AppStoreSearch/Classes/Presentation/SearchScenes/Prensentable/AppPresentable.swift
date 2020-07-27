@@ -80,10 +80,6 @@ extension AppPresentable {
         return app?.description ?? ""
     }
     
-    var screenshotSize: CGSize {
-        return screenshotURLs?.count ?? 0 > 0 ? CGSize(width: 180, height: 300) : CGSize.zero
-    }
-    
     var fileSize: String {
         let size = Double(app?.fileSize ?? "0") ?? 0
         var fsize = size >= 1024 ? String(format: "%.2fK", size * 0.001) : "\(size)"

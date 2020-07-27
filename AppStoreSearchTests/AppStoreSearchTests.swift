@@ -26,6 +26,13 @@ class AppStoreSearchTests: XCTestCase {
         //viewController.viewDidLoad()
         viewController = nil
     }
+    
+    func testLeakForSearchCoordinator() throws {
+        let window = UIWindow()
+        var coordinator: SearchCoordinator! = SearchCoordinator(window: window)
+        _ = coordinator.start()
+        coordinator = nil
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

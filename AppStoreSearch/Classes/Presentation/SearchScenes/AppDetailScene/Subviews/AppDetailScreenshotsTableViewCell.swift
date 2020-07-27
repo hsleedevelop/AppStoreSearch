@@ -11,13 +11,14 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 
-final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
+final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable, UICollectionViewDelegate {
     // MARK: - * Type defines --------------------
     typealias ScreenshotDataSource = RxCollectionViewSectionedReloadDataSource<ScreenshotSectionModel>
     
     //MARK: * properties --------------------
     var app: SearchResultApp?
-    private var disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
+    
     fileprivate var screenShotPressRelay = PublishRelay<([String], Int)>()
     
     private var dispatchQueue = DispatchQueue.init(label: "io.hsleedevelop.screenshot.queue", qos: DispatchQoS.default)
@@ -26,23 +27,7 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
     private var dataSource: ScreenshotDataSource!
     
     //MARK: * IBOutlets --------------------
-    @IBOutlet weak var collectionView: UICollectionView! {
-        didSet {
-            // app code
-            collectionView.accessibilityIdentifier = "screenshotCollectionView"
-            
-            collectionView.backgroundColor = .clear
-            collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-            
-            collectionView.showsHorizontalScrollIndicator = false
-            collectionView.showsVerticalScrollIndicator = false
-            
-            collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
-            collectionView.scrollsToTop = false
-            
-            collectionView.register(.init(nibName: "AppDetailScreenshotCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "AppDetailScreenshotCollectionViewCell")
-        }
-    }
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func removeFromSuperview() {
         super.removeFromSuperview()
@@ -56,38 +41,68 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
         super.prepareForReuse()
         disposeBag = DisposeBag()
     }
-
-    //MARK: * Binding --------------------
-    func configure(_ app: SearchResultApp) {
-        self.app = app
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         setupCollectionView()
-        bindRx()
+        setupDataSource()
+        updateCollectionViewLayout()
+        
+        setupRx()
+        bindData()
+    }
+
+    //MARK: * Binding --------------------
+    let bindDataRelay = PublishRelay<SearchResultApp>()
+    func configure(_ app: SearchResultApp) {
+        guard self.app != app else { return }
+        self.app = app
+        bindDataRelay.accept(app)
     }
     
     private func setupCollectionView() {
+        collectionView.accessibilityIdentifier = "screenshotCollectionView"
         
+        collectionView.backgroundColor = .clear
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
+        
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
+        collectionView.scrollsToTop = false
+        
+        collectionView.register(.init(nibName: "AppDetailScreenshotCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "AppDetailScreenshotCollectionViewCell")
+    }
+    
+    private func setupDataSource() {
+        dataSource = ScreenshotDataSource(configureCell: { [weak self] dataSource, collectionView, indexPath, item in
+            guard let self = self, let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppDetailScreenshotCollectionViewCell", for: indexPath)
+                as? AppDetailScreenshotCollectionViewCell else { return .init() }
+            
+            cell.configure(item, index: indexPath.item)
+            cell.rx.screenshopPressed
+                .map { (dataSource.sectionModels.first?.items ?? [], $0 ) }
+                .bind(to: self.screenShotPressRelay)
+                .disposed(by: cell.disposeBag)
+            
+            return cell
+        })
+    }
+    
+    private func updateCollectionViewLayout() {
         if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
             layout.minimumLineSpacing = 10
             layout.minimumInteritemSpacing = 0
             layout.scrollDirection = .horizontal
-            layout.itemSize = screenshotSize
+            layout.itemSize = CGSize(width: 180, height: 300)
+            layout.invalidateLayout()
         }
-        
-        //define datasource
-        dataSource = ScreenshotDataSource(configureCell: { [weak self] ds, cv, ip, item in
-            guard let self = self, let cell = cv.dequeueReusableCell(withReuseIdentifier: "AppDetailScreenshotCollectionViewCell", for: ip)
-                as? AppDetailScreenshotCollectionViewCell else { return .init() }
-            
-            cell.configure(item, index: ip.item)
-            cell.rx.screenshopPressed
-                .map { (ds.sectionModels.first?.items ?? [], $0 ) }
-                .bind(to: self.screenShotPressRelay)
-                .disposed(by: cell.disposeBag)
-
-            return cell
-        })
-        
+        self.layoutIfNeeded()
+    }
+    
+    private func setupRx() {
         //prefetching
         collectionView.rx.prefetchItems.asObservable()
             .subscribe(onNext: { [weak self] indexPaths in
@@ -113,8 +128,7 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
             .disposed(by: disposeBag)
     }
     
-    private func bindRx() {
-        
+    private func bindData() {
         ///make prefetching workItem for screenshot collectionview cell
         func nestedGenerateWorkItem(_ screenshotURL: String, bag: DisposeBag) -> DispatchWorkItem {
             return DispatchWorkItem {
@@ -124,8 +138,7 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable {
             }
         }
         
-        Driver.just(app)
-            .unwrap()
+        bindDataRelay.asDriverOnErrorJustComplete()
             .do(onNext: { [weak self] app in //make prefetching workItem
                 guard let self = self else { return }
                 self.workItems = (app.screenshots ?? []).enumerated().reduce( [IndexPath: DispatchWorkItem]() ) {

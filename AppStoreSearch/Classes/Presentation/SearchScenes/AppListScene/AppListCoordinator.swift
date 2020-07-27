@@ -13,7 +13,7 @@ import RxSwiftExt
 final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
-        case main
+        case landing
         case detail(SearchResultApp)
     }
     
@@ -44,7 +44,7 @@ final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
         self.add(childViewController: viewController, toParentViewController: rootViewController)
         
         bindFlow(viewModel: viewController.viewModel)
-        return viewController.viewModel.flowRelay.asObservable().startWith(.main)
+        return viewController.viewModel.flowRelay.asObservable().startWith(.landing)
     }
     
     private func bindFlow(viewModel: AppListViewModel) {

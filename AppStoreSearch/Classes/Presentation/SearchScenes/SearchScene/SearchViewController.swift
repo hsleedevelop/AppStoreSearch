@@ -36,7 +36,6 @@ class SearchViewController: UIViewController {
     
     // MARK: - * IBOutlets --------------------
     @IBOutlet weak var tableView: UITableView!
-    
 
     // MARK: - * LifeCycles --------------------
     override func viewDidLoad() {
@@ -46,9 +45,9 @@ class SearchViewController: UIViewController {
         setupSearchController()
         setupTableView()
         
-        setupDataSource()
-        setupRx()
-        bindViewModel()
+        self.setupDataSource()
+        self.setupRx()
+        self.bindViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -125,18 +124,24 @@ class SearchViewController: UIViewController {
     // MARK: - * Binding --------------------
     private func bindViewModel() {
         
-        let searchCancel = searchController.searchBar.rx.cancelButtonClicked.asObservable()
-        let fetchTerms = Observable.merge(viewWillAppearRelay.asObservable(), searchCancel)
+        let cancelSearch = searchController.searchBar.rx.cancelButtonClicked.asObservable()
+        let fetchTerms = Observable.merge(viewWillAppearRelay.asObservable(), cancelSearch)
         
         let input = ViewModelType.Input(fetchTerms: fetchTerms,
                                         matchTerm: termRelay.asObservable().unwrap(),
                                         search: searchRelay.asObservable().unwrap(),
-                                        searchCancel: searchCancel) //초기화
+                                        cancelSearch: cancelSearch) //초기화
         let output = viewModel.transform(input: input)
         
         output.terms
             .map { [TermSectionModel(header: "최근 검색어", items: $0)] }
             .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
+        
+        output.cancelSearch
+            .drive(onNext: { [weak self] in
+                self?.searchController.searchBar.resignFirstResponder()
+            })
             .disposed(by: disposeBag)
     }
     
