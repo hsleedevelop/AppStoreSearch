@@ -20,16 +20,19 @@ class AppStoreSearchTests: XCTestCase {
     }
 
     func testLeakForSearchViewController() throws {
-        
         var viewController: SearchViewController! = UIStoryboard(name: "SearchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
+        
         viewController.viewModel = .init(termProvider: RealmProvider())
-        //viewController.viewDidLoad()
+        viewController.beginAppearanceTransition(true, animated: false)
+        viewController.endAppearanceTransition()
+        
         viewController = nil
     }
     
     func testLeakForSearchCoordinator() throws {
         let window = UIWindow()
-        var coordinator: SearchCoordinator! = SearchCoordinator(window: window)
+        let searchDependency = SearchDependency(window: window, termProviding: RealmProvider(), searchProviding: SearchProvider())
+        var coordinator: SearchCoordinator! = SearchCoordinator(dependency: searchDependency)
         _ = coordinator.start()
         coordinator = nil
     }

@@ -13,9 +13,7 @@ AppStoreSearch
 ## Build
 
 1. Download codes and run (this repo with Pods sources)
-```ruby
-pod install
-```
+
 2. Open AppStoreSearch.xcworkspace in XCode 11.x
 
 ## License

@@ -10,6 +10,24 @@ import UIKit
 import RxSwift
 import RxSwiftExt
 
+protocol ScreenshotsDependencyProtocol: Dependency {
+    var presentingViewController: UIViewController { get set }
+    var screenshotURLs: [String] { get set }
+    var index: Int { get set }
+}
+
+final class ScreenshotsDependency: ScreenshotsDependencyProtocol {
+    var presentingViewController: UIViewController
+    var screenshotURLs: [String]
+    var index: Int
+    
+    init(presentingViewController: UIViewController, screenshotURLs: [String], index: Int) {
+        self.presentingViewController = presentingViewController
+        self.screenshotURLs = screenshotURLs
+        self.index = index
+    }
+}
+
 final class ScreenshotsCoordinator: BaseCoordinator<ScreenshotsCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
@@ -17,15 +35,11 @@ final class ScreenshotsCoordinator: BaseCoordinator<ScreenshotsCoordinator.Flow>
     }
     
     // MARK: - * Properties --------------------
-    private let rootViewController: UIViewController
-    private let screenshotURLs: [String]
-    private let index: Int
+    private let dependency: ScreenshotsDependency
     
     // MARK: - * Initialize --------------------
-    init(rootViewController: UIViewController, screenshotURLs: [String], index: Int) {
-        self.rootViewController = rootViewController
-        self.screenshotURLs = screenshotURLs
-        self.index = index
+    init(dependency: ScreenshotsDependency) {
+        self.dependency = dependency
     }
     
     // MARK: - * Coordinante --------------------
@@ -34,13 +48,13 @@ final class ScreenshotsCoordinator: BaseCoordinator<ScreenshotsCoordinator.Flow>
             fatalError("ScreenshotsViewController can't load")
         }
 
-        let viewModel = ScreenshotsViewModel(screenshotURLs: screenshotURLs, index: index)
+        let viewModel = ScreenshotsViewModel(screenshotURLs: self.dependency.screenshotURLs, index: self.dependency.index)
         viewController.viewModel = viewModel
                 
         let navigationController = UINavigationController(rootViewController: viewController)
         navigationController.modalTransitionStyle = .crossDissolve
         navigationController.modalPresentationStyle = .fullScreen
-        rootViewController.present(navigationController, animated: true)
+        self.dependency.presentingViewController.present(navigationController, animated: true)
         
         return viewModel.coordinatorRelay.asObservable()
     }

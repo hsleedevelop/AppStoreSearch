@@ -21,7 +21,10 @@ class AppCoordinator: BaseCoordinator<Void> {
 
     // MARK: - * Coordinate --------------------
     override func start() -> Observable<Void> {
-        let serachCoordinator = SearchCoordinator(window: window)
+        let searchDependency = SearchDependency(window: window,
+                                                termProviding: RealmProvider(),
+                                                searchProviding: SearchProvider())
+        let serachCoordinator = SearchCoordinator(dependency: searchDependency)
         return coordinate(to: serachCoordinator)
     }
 }

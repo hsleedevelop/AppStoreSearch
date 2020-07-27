@@ -11,6 +11,26 @@ import RxSwift
 import RxCocoa
 import RxSwiftExt
 
+public protocol Dependency: class {}
+
+protocol SearchDependencyProtocol: Dependency {
+    var window: UIWindow { get set }
+    var termProviding: TermProviding { get set }
+    var searchProviding: SearchProviding  { get set }
+}
+
+final class SearchDependency: SearchDependencyProtocol {
+    var termProviding: TermProviding
+    var searchProviding: SearchProviding
+    var window: UIWindow
+    
+    init(window: UIWindow, termProviding: TermProviding, searchProviding: SearchProviding) {
+        self.termProviding = termProviding
+        self.searchProviding = searchProviding
+        self.window = window
+    }
+}
+
 final class SearchCoordinator: BaseCoordinator<Void> {
     // MARK: - * Type Defines --------------------
     enum Flow {
@@ -20,15 +40,17 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     }
     
     // MARK: - * Properties --------------------
-    private let window: UIWindow
+    //private let window: UIWindow
     private var viewController: SearchViewController!
     
     private let termRelay = BehaviorRelay<String>(value: "")
     private var appListCoordinatorDisposable: Disposable?
     
+    private let dependency: SearchDependency
+    
     // MARK: - * Initialize --------------------
-    init(window: UIWindow) {
-        self.window = window
+    init(dependency: SearchDependency) {
+        self.dependency = dependency
     }
     
     // MARK: - * Coordinante --------------------
@@ -38,7 +60,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         }
         self.viewController = viewController
         
-        let viewModel = SearchViewModel(termProvider: RealmProvider())
+        let viewModel = SearchViewModel(termProvider: self.dependency.termProviding)
         viewController.viewModel = viewModel
         setupMatchTermCoodinator()
         
@@ -49,8 +71,8 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         
         let tabBarController = UITabBarController()
         tabBarController.setViewControllers([navigationController], animated: false)
-        window.rootViewController = tabBarController
-        window.makeKeyAndVisible()
+        dependency.window.rootViewController = tabBarController
+        dependency.window.makeKeyAndVisible()
 
         return Observable.never()
     }
@@ -80,7 +102,10 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     }
     
     private func coordinateSearch(with term: String) {
-        let coordinator = AppListCoordinator(rootViewController: viewController.resultViewController, term: term)
+        let appListDependency = AppListDependency(viewController: viewController.resultViewController,
+                                                  searchProviding: SearchProvider(),
+                                                  term: term)
+        let coordinator = AppListCoordinator(dependency: appListDependency)
         appListCoordinatorDisposable = coordinate(to: coordinator)
             .subscribe()
     }
@@ -93,7 +118,9 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     }
     
     private func setupMatchTermCoodinator() {
-        let coordinator = MatchesCoordinator(termObs: termRelay.asObservable())
+        let matchesDependency = MatchesDependency(termProviding: self.dependency.termProviding,
+                                                  termObs: termRelay.asObservable())
+        let coordinator = MatchesCoordinator(dependency: matchesDependency)
         viewController.resultViewController = coordinator.viewController
         
         coordinate(to: coordinator)

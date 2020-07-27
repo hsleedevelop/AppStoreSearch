@@ -10,6 +10,24 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
+protocol AppListDependencyProtocol: Dependency {
+    var viewController: UIViewController { get set }
+    var searchProviding: SearchProviding  { get set }
+    var term: String { get set }
+}
+
+final class AppListDependency: AppListDependencyProtocol {
+    var viewController: UIViewController
+    var searchProviding: SearchProviding
+    var term: String
+    
+    init(viewController: UIViewController, searchProviding: SearchProviding, term: String) {
+        self.viewController = viewController
+        self.searchProviding = searchProviding
+        self.term = term
+    }
+}
+
 final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
@@ -18,8 +36,7 @@ final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
     }
     
     // MARK: - * Properties --------------------
-    private let term: String
-    private let rootViewController: UIViewController
+    private let dependency: AppListDependency
     private var appDetailCoordinatorDisposable: Disposable?
     
     lazy var viewController: AppListViewController! = { [unowned self] in
@@ -27,21 +44,19 @@ final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
             fatalError("AppListViewController can't load")
         }
         
-        let viewModel = AppListViewModel(searchProvider: SearchProvider(), term: self.term)
+        let viewModel = AppListViewModel(searchProvider: self.dependency.searchProviding, term: self.dependency.term)
         viewController.viewModel = viewModel
         return viewController
     }()
 
     // MARK: - * Initialize --------------------
-    init(rootViewController: UIViewController, term: String) {
-        self.rootViewController = rootViewController
-        self.term = term
+    init(dependency: AppListDependency) {
+        self.dependency = dependency
     }
     
-
     // MARK: - * Cooridate --------------------
     override func start() -> Observable<CoordinationResult> {
-        self.add(childViewController: viewController, toParentViewController: rootViewController)
+        self.add(childViewController: viewController, toParentViewController: dependency.viewController)
         
         bindFlow(viewModel: viewController.viewModel)
         return viewController.viewModel.flowRelay.asObservable().startWith(.landing)
@@ -64,7 +79,8 @@ final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
         guard let navigationController = viewController.navigationController ?? viewController.presentingViewController?.navigationController else {
             return
         }
-        let coordinator = AppDetailCoordinator(navigationController: navigationController, app: app)
+        let appDetailDependency = AppDetailDependency(navigationController: navigationController, app: app)
+        let coordinator = AppDetailCoordinator(dependency: appDetailDependency)
         appDetailCoordinatorDisposable = coordinate(to: coordinator)
             .subscribe(onNext: { [weak self] result in
                 switch result {

@@ -18,10 +18,14 @@ class AppListCoordinatorTests: XCTestCase {
     }
 
     func testAppListCoordinateDeinit() throws {
-        let rooteViewController = UIViewController()
+        let viewController = UIViewController()
         let term = "카카오뱅크"
         
-        var coordinator: AppListCoordinator! = AppListCoordinator(rootViewController: rooteViewController, term: term)
+        let appListDependency = AppListDependency(viewController: viewController,
+                                                  searchProviding: SearchProvider(),
+                                                  term: term)
+        
+        var coordinator: AppListCoordinator! = AppListCoordinator(dependency: appListDependency)
         _ = coordinator.start().subscribe()
         coordinator = nil
     }

@@ -40,7 +40,9 @@ class AppDetailCoordinatorTests: XCTestCase {
         }
         
         let navigationController = UINavigationController()
-        var coordinator: AppDetailCoordinator! = AppDetailCoordinator(navigationController: navigationController, app: searchResultApp)
+        let appDetailDependency = AppDetailDependency(navigationController: navigationController, app: searchResultApp)
+        
+        var coordinator: AppDetailCoordinator! = AppDetailCoordinator(dependency: appDetailDependency)
         _ = coordinator.start().subscribe()
         coordinator = nil
     }

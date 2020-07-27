@@ -10,6 +10,21 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
+protocol MatchesDependencyProtocol: Dependency {
+    var termObs: Observable<String> { get set }
+    var termProviding: TermProviding { get set }
+}
+
+final class MatchesDependency: MatchesDependencyProtocol {
+    var termObs: Observable<String>
+    var termProviding: TermProviding
+    
+    init(termProviding: TermProviding, termObs: Observable<String>) {
+        self.termProviding = termProviding
+        self.termObs = termObs
+    }
+}
+
 final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
@@ -17,21 +32,21 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Flow> {
     }
 
     // MARK: - * Properties --------------------
-    private let termObs: Observable<String>
+    private let dependency: MatchesDependency
 
     lazy var viewController: MatchesViewController = { [unowned self] in
         guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
             fatalError("MatchesViewController can't load")
         }
         
-        let viewModel = MatchesViewModel(termProvider: RealmProvider(), termObs: self.termObs)
+        let viewModel = MatchesViewModel(termProvider: self.dependency.termProviding, termObs: self.dependency.termObs)
         viewController.viewModel = viewModel
         return viewController
     }()
 
     // MARK: - * Initialize --------------------
-    init(termObs: Observable<String>) {
-        self.termObs = termObs
+    init(dependency: MatchesDependency) {
+        self.dependency = dependency
     }
 
     // MARK: - * Cooridate --------------------

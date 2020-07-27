@@ -10,6 +10,21 @@ import Foundation
 import RxSwift
 import RxSwiftExt
 
+protocol AppDetailDependencyProtocol: Dependency {
+    var navigationController: UINavigationController { get set }
+    var app: SearchResultApp { get set }
+}
+
+final class AppDetailDependency: AppDetailDependencyProtocol {
+    var navigationController: UINavigationController
+    var app: SearchResultApp
+    
+    init(navigationController: UINavigationController, app: SearchResultApp) {
+        self.navigationController = navigationController
+        self.app = app
+    }
+}
+
 final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
     // MARK: - * Type Defines --------------------
     enum Flow {
@@ -18,8 +33,7 @@ final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
     }
     
     // MARK: - * Properties --------------------
-    private let app: SearchResultApp
-    private let navigationController: UINavigationController
+    private let dependency: AppDetailDependency
     private var screenshotsCoordinatorDisposable: Disposable?
     
     lazy var viewController: AppDetailViewController = { [unowned self] in
@@ -27,20 +41,19 @@ final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
             fatalError("AppDetailViewController can't load")
         }
         
-        let viewModel = AppDetailViewModel(app: self.app)
+        let viewModel = AppDetailViewModel(app: self.dependency.app)
         viewController.viewModel = viewModel
         return viewController
     }()
 
     // MARK: - * Initialize --------------------
-    init(navigationController: UINavigationController, app: SearchResultApp) {
-        self.navigationController = navigationController
-        self.app = app
+    init(dependency: AppDetailDependency) {
+        self.dependency = dependency
     }
     
     // MARK: - * Cooridate --------------------
     override func start() -> Observable<CoordinationResult> {
-        navigationController.pushViewController(viewController, animated: true)
+        self.dependency.navigationController.pushViewController(viewController, animated: true)
         bindFlow(viewModel: viewController.viewModel)
         
         return viewController.viewModel.flowRelay.asObservable()
@@ -60,7 +73,10 @@ final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
     }
     
     private func showScreenshotsCarousel(screenshotURLs: [String], index: Int) {
-        let coordinator = ScreenshotsCoordinator(rootViewController: viewController, screenshotURLs: screenshotURLs, index: index)
+        let screenshotsDependency = ScreenshotsDependency(presentingViewController: viewController,
+                                                          screenshotURLs: screenshotURLs,
+                                                          index: index)
+        let coordinator = ScreenshotsCoordinator(dependency: screenshotsDependency)
         screenshotsCoordinatorDisposable = coordinate(to: coordinator)
             .subscribe(onNext: { [unowned self] result in
                 switch result {

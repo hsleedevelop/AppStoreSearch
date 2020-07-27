@@ -24,7 +24,8 @@ class SearchCoordinatorTests: XCTestCase {
 
     func testSearchCoordinateDeinit() throws {
         let window = UIWindow()
-        var coordinator: SearchCoordinator! = SearchCoordinator(window: window)
+        let searchDependency = SearchDependency(window: window, termProviding: RealmProvider(), searchProviding: SearchProvider())
+        var coordinator: SearchCoordinator! = SearchCoordinator(dependency: searchDependency)
         _ = coordinator.start().subscribe()
         coordinator = nil
     }
