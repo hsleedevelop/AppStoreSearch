@@ -22,7 +22,7 @@ class AppStoreSearchTests: XCTestCase {
     func testLeakForSearchViewController() throws {
         
         var viewController: SearchViewController! = UIStoryboard(name: "SearchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "SearchViewController") as? SearchViewController
-        viewController.viewModel = .init(termProvider: TermProvider())
+        viewController.viewModel = .init(termProvider: RealmProvider())
         //viewController.viewDidLoad()
         viewController = nil
     }

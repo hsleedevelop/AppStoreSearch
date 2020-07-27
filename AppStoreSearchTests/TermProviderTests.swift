@@ -9,6 +9,7 @@
 import XCTest
 import RxSwift
 import RxCocoa
+import RealmSwift
 
 @testable import AppStoreSearch
 
@@ -39,7 +40,28 @@ class TermProviderTests: XCTestCase {
             })
             .disposed(by: disposeBag)
     }
-
+    
+    func testStoreToRealm() throws {
+        let provider = RealmProvider()
+        
+        provider.store("앱스토어1")
+            .subscribe(onNext: { result in
+                XCTAssert(result == true)
+            })
+            .disposed(by: disposeBag)
+        
+        provider.store("앱스토어2")
+            .subscribe(onNext: { result in
+                XCTAssert(result == true)
+            })
+            .disposed(by: disposeBag)
+        
+        provider.fetch()
+            .debug()
+            .subscribe()
+            .disposed(by: disposeBag)
+    }
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

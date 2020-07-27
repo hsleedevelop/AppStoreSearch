@@ -54,7 +54,8 @@ final class ScreenshotsCollectionViewCell: UICollectionViewCell {
         }
         
         ImageProvider.shared.get(screenshotURL)
-            .bind(to: self.imageView.rx.image)
+            .asDriverOnErrorJustComplete()
+            .drive(self.imageView.rx.image)
             .disposed(by: disposeBag)
     }
     

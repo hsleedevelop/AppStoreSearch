@@ -6,14 +6,14 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>664D5C77-FF5D-4E8A-B946-4F35220AAEE7</key>
+		<key>A61B79D6-BBA3-4F92-AD08-9C21B09F9CC4</key>
 		<dict>
 			<key>auxiliaryLogUniqueIdentifier</key>
-			<string>F71244B0-E146-45FE-BC66-6A63A452B85F</string>
+			<string>2BAB8D1B-5538-4E10-B6F6-79CC1FCFE521</string>
 			<key>auxiliaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>S</string>
 			</dict>
 			<key>className</key>
 			<string>IDESchemeActionsInvocationRecord</string>
@@ -22,7 +22,7 @@
 			<key>domainType</key>
 			<string>com.apple.dt.unit.cocoaUnitTest</string>
 			<key>fileName</key>
-			<string>Test-AppStoreSearch-2020.07.27_11-17-54-+0900.xcresult</string>
+			<string>Test-AppStoreSearch-2020.07.27_16-45-43-+0900.xcresult</string>
 			<key>hasAuxiliaryLog</key>
 			<true/>
 			<key>hasPrimaryLog</key>
@@ -30,7 +30,7 @@
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>E</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>AppStoreSearch project</string>
@@ -41,13 +41,13 @@
 			<key>signature</key>
 			<string>Test AppStoreSearch</string>
 			<key>timeStartedRecording</key>
-			<real>617509074.85797906</real>
+			<real>617528743.23048103</real>
 			<key>timeStoppedRecording</key>
 			<real>0.0</real>
 			<key>title</key>
 			<string>Test AppStoreSearch</string>
 			<key>uniqueIdentifier</key>
-			<string>664D5C77-FF5D-4E8A-B946-4F35220AAEE7</string>
+			<string>A61B79D6-BBA3-4F92-AD08-9C21B09F9CC4</string>
 		</dict>
 	</dict>
 </dict>

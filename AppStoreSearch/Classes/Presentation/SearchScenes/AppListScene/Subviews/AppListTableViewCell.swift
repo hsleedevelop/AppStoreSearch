@@ -79,25 +79,20 @@ final class AppListTableViewCell: UITableViewCell, AppPresentable {
         
         //icon
         ImageProvider.shared.get(iconUrl)
-            .bind(to: iconImageView.rx.image)
+            .asDriverOnErrorJustComplete()
+            .drive(iconImageView.rx.image)
             .disposed(by: disposeBag)
         
         //screenshot
-        screenshotsImageViews.enumerated().forEach { [weak self] offset, imageView in
+        screenshotsImageViews.enumerated().forEach { offset, imageView in
             guard screenshotURLs?.indices.contains(offset) == true, let screenshotURL = screenshotURLs?[offset] else {
                 imageView.isHidden = true
                 return
             }
             
             ImageProvider.shared.get(screenshotURL)
-                .observeOn(MainScheduler.instance)
-                .do(onNext: { _ in
-                    self?.imageView?.isHidden = false
-                    }, onError: { error in
-                        logW(error)
-                        self?.imageView?.isHidden = true
-                })
-                .bind(to: imageView.rx.image)
+                .asDriverOnErrorJustComplete()
+                .drive(imageView.rx.image)
                 .disposed(by: disposeBag)
         }
     }

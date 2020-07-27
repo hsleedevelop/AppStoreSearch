@@ -140,6 +140,9 @@ class AppListViewController: UIViewController, Alertable {
                 guard let self = self else { return }
                 self.tableView.isHidden = $0.1.count <= 0
                 self.noResultsView.isHidden = !self.tableView.isHidden
+                if !self.noResultsView.isHidden {
+                    self.forLabel.text = "for \"\($0.0)\""
+                }
             })
             .map { $0.1 }
             .do(onNext: { [weak self] result in //make prefetching workItem

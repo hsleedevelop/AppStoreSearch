@@ -40,6 +40,7 @@
 		3A4D90DE24C85F1D00D5C11F /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90D324C85F1C00D5C11F /* Utilities.swift */; };
 		3A4D90DF24C85F1D00D5C11F /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90D524C85F1D00D5C11F /* Alertable.swift */; };
 		3A4D90E524C8622300D5C11F /* TermSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D90E424C8622300D5C11F /* TermSectionModel.swift */; };
+		3A8C6BA324CEA9AA003BF35A /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8C6BA224CEA9AA003BF35A /* RealmProvider.swift */; };
 		3AE5DDF524C9B38D00488E4D /* TermProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */; };
 		48A72C5024CD4B8C0026D556 /* SearchCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */; };
 		48A72C5624CD51840026D556 /* XCUIElement+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A72C5524CD51840026D556 /* XCUIElement+Extensions.swift */; };
@@ -148,6 +149,7 @@
 		3A4D90D324C85F1C00D5C11F /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		3A4D90D524C85F1D00D5C11F /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		3A4D90E424C8622300D5C11F /* TermSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermSectionModel.swift; sourceTree = "<group>"; };
+		3A8C6BA224CEA9AA003BF35A /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		3AE5DDF424C9B38D00488E4D /* TermProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermProviderTests.swift; sourceTree = "<group>"; };
 		3BD8AC261205DBE4A615F95D /* Pods_AppStoreSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48A72C4F24CD4B8C0026D556 /* SearchCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				3A4D90C724C84DA600D5C11F /* TermProvider.swift */,
+				3A8C6BA224CEA9AA003BF35A /* RealmProvider.swift */,
 			);
 			path = PersistentStorage;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				48B8DB3E24CAAF4E004C2A8C /* NetworkProvider.swift in Sources */,
 				3A12DD9A24C973D8004728B9 /* AppListViewModel.swift in Sources */,
 				48B8DB2B24CAA311004C2A8C /* AppPresentable.swift in Sources */,
+				3A8C6BA324CEA9AA003BF35A /* RealmProvider.swift in Sources */,
 				48B8DB5824CAE97A004C2A8C /* AppDetailWhatsNewTableViewCell.swift in Sources */,
 				48B8DB3824CAAB86004C2A8C /* SearchResponse.swift in Sources */,
 				48B8DB5A24CAE985004C2A8C /* AppDetailDescriptionTableViewCell.swift in Sources */,

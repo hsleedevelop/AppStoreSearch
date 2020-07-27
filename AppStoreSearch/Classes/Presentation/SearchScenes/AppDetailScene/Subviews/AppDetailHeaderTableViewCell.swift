@@ -74,7 +74,8 @@ final class AppDetailHeaderTableViewCell: UITableViewCell, AppPresentable {
         advisoryLabel.text = contentAdvisoryRating
         
         ImageProvider.shared.get(iconUrl)
-            .bind(to: iconImageView.rx.image)
+            .asDriverOnErrorJustComplete()
+            .drive(iconImageView.rx.image)
             .disposed(by: disposeBag)
     }
     

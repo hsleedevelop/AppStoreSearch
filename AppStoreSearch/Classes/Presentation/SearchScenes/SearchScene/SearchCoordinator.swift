@@ -38,7 +38,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
         }
         self.viewController = viewController
         
-        let viewModel = SearchViewModel(termProvider: TermProvider())
+        let viewModel = SearchViewModel(termProvider: RealmProvider())
         viewController.viewModel = viewModel
         setupMatchTermCoodinator()
         

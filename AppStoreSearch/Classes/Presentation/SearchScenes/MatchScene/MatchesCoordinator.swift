@@ -24,7 +24,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Flow> {
             fatalError("MatchesViewController can't load")
         }
         
-        let viewModel = MatchesViewModel(termProvider: TermProvider(), termObs: self.termObs)
+        let viewModel = MatchesViewModel(termProvider: RealmProvider(), termObs: self.termObs)
         viewController.viewModel = viewModel
         return viewController
     }()

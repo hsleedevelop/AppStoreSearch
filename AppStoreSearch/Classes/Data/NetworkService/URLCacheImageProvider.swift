@@ -43,7 +43,7 @@ final class URLCacheImageProvider: ImageProvider {
             let task = Self.urlCache.session.dataTask(with: url) { data, response, error in
                 logI("Image Cache:currentMemoryUsage= \(Self.urlCache.session.configuration.urlCache?.currentMemoryUsage ?? 0)")
                 logI("Image Cache:currentDiskUsage= \(Self.urlCache.session.configuration.urlCache?.currentDiskUsage ?? 0)" )
-                
+                observer.onError(NetworkError.withMessage("no data."))
                 guard error == nil else {
                     observer.onError(NetworkError.generic(error!))
                     return
