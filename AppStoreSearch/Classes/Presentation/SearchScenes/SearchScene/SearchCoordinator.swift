@@ -46,10 +46,10 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     private let termRelay = BehaviorRelay<String>(value: "")
     private var appListCoordinatorDisposable: Disposable?
     
-    private let dependency: SearchDependency
+    private let dependency: SearchDependencyProtocol
     
     // MARK: - * Initialize --------------------
-    init(dependency: SearchDependency) {
+    init(dependency: SearchDependencyProtocol) {
         self.dependency = dependency
     }
     
