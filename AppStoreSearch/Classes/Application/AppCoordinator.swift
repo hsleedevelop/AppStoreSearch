@@ -24,7 +24,7 @@ class AppCoordinator: BaseCoordinator<Void> {
         let searchDependency = SearchDependency(window: window,
                                                 termProviding: RealmProvider(),
                                                 searchProviding: SearchProvider())
-        let serachCoordinator = SearchCoordinator(dependency: searchDependency)
-        return coordinate(to: serachCoordinator)
+        let searchCoordinator = SearchCoordinator(dependency: searchDependency)
+        return coordinate(to: searchCoordinator)
     }
 }
