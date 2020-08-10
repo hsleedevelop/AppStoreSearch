@@ -103,7 +103,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     
     private func coordinateSearch(with term: String) {
         let appListDependency = AppListDependency(viewController: viewController.resultViewController,
-                                                  searchProviding: SearchProvider(),
+                                                  searchProviding: dependency.searchProviding,
                                                   term: term)
         let coordinator = AppListCoordinator(dependency: appListDependency)
         appListCoordinatorDisposable = coordinate(to: coordinator)
@@ -118,7 +118,7 @@ final class SearchCoordinator: BaseCoordinator<Void> {
     }
     
     private func setupMatchTermCoodinator() {
-        let matchesDependency = MatchesDependency(termProviding: self.dependency.termProviding,
+        let matchesDependency = MatchesDependency(termProviding: dependency.termProviding,
                                                   termObs: termRelay.asObservable())
         let coordinator = MatchesCoordinator(dependency: matchesDependency)
         viewController.resultViewController = coordinator.viewController

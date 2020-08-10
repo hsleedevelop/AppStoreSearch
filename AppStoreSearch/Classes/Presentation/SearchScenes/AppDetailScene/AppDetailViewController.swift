@@ -117,7 +117,7 @@ class AppDetailViewController: UIViewController, AppPresentable {
             case let .preview(item):
                 if let tcell = tableView.dequeueReusableCell(withIdentifier: "AppDetailScreenshotsTableViewCell") as? AppDetailScreenshotsTableViewCell {
                     tcell.configure(item)
-                    tcell.rx.screenshopPressed
+                    tcell.rx.screenshotPressed
                         .map { AppDetailCoordinator.Flow.showScreenshots($0.0, $0.1) }
                         .bind(to: self.viewModel.flowRelay)
                         .disposed(by: tcell.disposeBag)

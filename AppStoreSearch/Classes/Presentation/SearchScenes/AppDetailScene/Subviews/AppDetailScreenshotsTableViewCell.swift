@@ -82,7 +82,7 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable, 
                 as? AppDetailScreenshotCollectionViewCell else { return .init() }
             
             cell.configure(item, index: indexPath.item)
-            cell.rx.screenshopPressed
+            cell.rx.screenshotPressed
                 .map { (dataSource.sectionModels.first?.items ?? [], $0 ) }
                 .bind(to: self.screenShotPressRelay)
                 .disposed(by: cell.disposeBag)
@@ -159,7 +159,7 @@ final class AppDetailScreenshotsTableViewCell: UITableViewCell, AppPresentable, 
 }
 
 extension Reactive where Base: AppDetailScreenshotsTableViewCell {
-    var screenshopPressed: Observable<([String], Int)> {
+    var screenshotPressed: Observable<([String], Int)> {
         return base.screenShotPressRelay.asObservable()
     }
 }
