@@ -13,12 +13,19 @@ protocol SearchProviding {
     func search(term: String) -> Observable<[SearchResultApp]>
 }
 
+//struct SearchProvider: NetworkProvider, SearchProviding {
 final class SearchProvider: NetworkProvider, SearchProviding {
     typealias T = SearchAPI
 
-    func search(term: String) -> Observable<[SearchResultApp]> { //TODO: refactor -> 메소드 시그니쳐,
+    func search(term: String) -> Observable<[SearchResultApp]> {
+        printSearch()
         return request(api: .search(term, "software", "KR", 20))
             .map(SearchResponse.self)
             .map { $0.results ?? [] }
+    }
+    
+    func printSearch() {
+        let xxx = search(term:)
+        print(xxx)
     }
 }

@@ -37,11 +37,15 @@ class AppStoreSearchTests: XCTestCase {
         coordinator = nil
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testSearchAddress() throws {
+        let a = SearchProvider()
+        let b = a
+        
+        a.printSearch()
+        b.printSearch()
+        
+        let xxx =  a.search(term:)
+        let xxxx = b.search(term:)
     }
 
 }

@@ -33,7 +33,7 @@ final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
     }
     
     // MARK: - * Properties --------------------
-    private let dependency: AppDetailDependency
+    private let dependency: AppDetailDependencyProtocol
     private var screenshotsCoordinatorDisposable: Disposable?
     
     lazy var viewController: AppDetailViewController = { [unowned self] in
@@ -47,7 +47,7 @@ final class AppDetailCoordinator: BaseCoordinator<AppDetailCoordinator.Flow> {
     }()
 
     // MARK: - * Initialize --------------------
-    init(dependency: AppDetailDependency) {
+    init(dependency: AppDetailDependencyProtocol) {
         self.dependency = dependency
     }
     

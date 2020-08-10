@@ -32,7 +32,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Flow> {
     }
 
     // MARK: - * Properties --------------------
-    private let dependency: MatchesDependency
+    private let dependency: MatchesDependencyProtocol
 
     lazy var viewController: MatchesViewController = { [unowned self] in
         guard let viewController = UIStoryboard(name: "MatchScene", bundle: Bundle.main).instantiateViewController(withIdentifier: "MatchesViewController") as? MatchesViewController else {
@@ -45,7 +45,7 @@ final class MatchesCoordinator: BaseCoordinator<MatchesCoordinator.Flow> {
     }()
 
     // MARK: - * Initialize --------------------
-    init(dependency: MatchesDependency) {
+    init(dependency: MatchesDependencyProtocol) {
         self.dependency = dependency
     }
 

@@ -35,10 +35,10 @@ final class ScreenshotsCoordinator: BaseCoordinator<ScreenshotsCoordinator.Flow>
     }
     
     // MARK: - * Properties --------------------
-    private let dependency: ScreenshotsDependency
+    private let dependency: ScreenshotsDependencyProtocol
     
     // MARK: - * Initialize --------------------
-    init(dependency: ScreenshotsDependency) {
+    init(dependency: ScreenshotsDependencyProtocol) {
         self.dependency = dependency
     }
     

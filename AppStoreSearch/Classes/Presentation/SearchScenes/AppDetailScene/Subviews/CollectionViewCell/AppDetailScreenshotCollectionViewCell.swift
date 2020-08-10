@@ -68,7 +68,7 @@ final class AppDetailScreenshotCollectionViewCell: UICollectionViewCell {
 }
 
 extension Reactive where Base: AppDetailScreenshotCollectionViewCell {
-    var screenshopPressed: Observable<Int> {
+    var screenshotPressed: Observable<Int> {
         guard let sequence = base.index.map(base.screenshotImageView.rx.tapGesture().when(.recognized).mapTo) else {
             return .empty()
         }

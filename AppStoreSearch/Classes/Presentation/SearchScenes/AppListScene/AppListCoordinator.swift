@@ -36,7 +36,7 @@ final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
     }
     
     // MARK: - * Properties --------------------
-    private let dependency: AppListDependency
+    private let dependency: AppListDependencyProtocol
     private var appDetailCoordinatorDisposable: Disposable?
     
     lazy var viewController: AppListViewController! = { [unowned self] in
@@ -50,7 +50,7 @@ final class AppListCoordinator: BaseCoordinator<AppListCoordinator.Flow> {
     }()
 
     // MARK: - * Initialize --------------------
-    init(dependency: AppListDependency) {
+    init(dependency: AppListDependencyProtocol) {
         self.dependency = dependency
     }
     
